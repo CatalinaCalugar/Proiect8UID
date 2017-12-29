@@ -10,7 +10,7 @@
 <head>
     <!-- Compiled and minified CSS -->
     <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">--%>
-    <link href="/resources/css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/materialize.min.css" rel="stylesheet" type="text/css"/>
     <!-- Compiled and minified JavaScript -->
     <script src="/resources/js/materialize.min.js"></script>
 
@@ -45,7 +45,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="username" type="text" class="validate">
-                <label for="username">email</label>
+                <label for="username">Username</label>
             </div>
         </div>
 

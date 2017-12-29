@@ -1,13 +1,7 @@
 package com.spr.controller;
 
-import com.spr.exception.AdoptionNotFound;
 import com.spr.exception.ContractNotFound;
-import com.spr.exception.PetNotFound;
 import com.spr.model.*;
-import com.spr.service.AdoptionService;
-import com.spr.service.ClientService;
-import com.spr.service.ContractService;
-import com.spr.service.PetService;
 import com.spr.utils.PdfReport;
 import com.spr.utils.Report;
 import com.spr.validation.ContractValidator;
@@ -20,17 +14,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.*;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,17 +30,6 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/contract")
 public class ContractController {
-    @Autowired
-    private ContractService contractService;
-
-    @Autowired
-    private AdoptionService adoptionService;
-
-    @Autowired
-    private PetService petService;
-
-    @Autowired
-    private ClientService clientService;
 
     @Autowired
     private ContractValidator contractValidator;
@@ -63,15 +42,15 @@ public class ContractController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public ModelAndView newContractPage() {
         ModelAndView mav = new ModelAndView("contract-new", "contract", new Contract());
-        List<Adoption> adoptionList = adoptionService.findAllWithoutContract();
-        mav.addObject("adoptionList", adoptionList);
-        List<Client> clientList = clientService.findAll();
-        mav.addObject("clientList", clientList);
-        List<Integer> adId = new ArrayList<>();
-        for (Adoption a : adoptionList) {
-            adId.add(a.getId());
-        }
-        mav.addObject("adoptionId", adId);
+//        List<Adoption> adoptionList = adoptionService.findAllWithoutContract();
+//        mav.addObject("adoptionList", adoptionList);
+//        List<Client> clientList = clientService.findAll();
+//        mav.addObject("clientList", clientList);
+//        List<Integer> adId = new ArrayList<>();
+//        for (Adoption a : adoptionList) {
+//            adId.add(a.getId());
+//        }
+        mav.addObject("adoptionId", 1);
         return mav;
     }
 
@@ -80,7 +59,7 @@ public class ContractController {
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView createNewContract(@ModelAttribute @Valid Contract contract, HttpServletResponse response,
                                           BindingResult result, @RequestParam("type") Integer id,
-                                          final RedirectAttributes redirectAttributes, HttpSession session) throws AdoptionNotFound, PetNotFound {
+                                          final RedirectAttributes redirectAttributes, HttpSession session){
 
         if (result.hasErrors())
             return new ModelAndView("contract-new");
@@ -88,22 +67,22 @@ public class ContractController {
         ModelAndView mav = new ModelAndView();
         String message = "New contract " + contract.getId() + " was successfully created.";
 
-        Contract check = contractService.create(contract);
-        if (check == null)
-            message = "FAIL: Contract already exists!";
-        else {
-            Adoption ad = adoptionService.findById(id);
-            ad.setIdEmployee(((Employee) session.getAttribute("logedEmployee")).getId());
-            ad.setIdContract(check.getId());
-            contractId = ad.getIdContract();
-            adoptionService.update(ad);
-            Client cl = clientService.findById(ad.getIdClient());
-            Pet adoptedPet = petService.findById(ad.getIdPet());
-            adoptedPet.setAvailable(false);
-            petService.update(adoptedPet);
-            Report r = new PdfReport();
-            r.generate(contract, ad, cl, adoptedPet.getPrice());
-        }
+//       Contract check = contractService.create(contract);
+//        if (check == null)
+//            message = "FAIL: Contract already exists!";
+//        else {
+//            Adoption ad = adoptionService.findById(id);
+//            ad.setIdEmployee(((Employee) session.getAttribute("logedEmployee")).getId());
+//            ad.setIdContract(check.getId());
+//            contractId = ad.getIdContract();
+//            adoptionService.update(ad);
+//            Client cl = clientService.findById(ad.getIdClient());
+//            Pet adoptedPet = petService.findById(ad.getIdPet());
+//            adoptedPet.setAvailable(false);
+//            petService.update(adoptedPet);
+//            Report r = new PdfReport();
+//            r.generate(contract, ad, cl, adoptedPet.getPrice());
+//        }
         mav.setViewName("contract-download");
 
         redirectAttributes.addFlashAttribute("message", message);
@@ -113,7 +92,8 @@ public class ContractController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ModelAndView contractListPage() {
         ModelAndView mav = new ModelAndView("contract-list");
-        List<Contract> contractList = contractService.findAll();
+        List<Contract> contractList = new ArrayList<>();
+
         mav.addObject("contractList", contractList);
         return mav;
     }
@@ -121,7 +101,8 @@ public class ContractController {
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public ModelAndView editContractPage(@PathVariable Integer id) {
         ModelAndView mav = new ModelAndView("contract-edit");
-        Contract contract = contractService.findById(id);
+
+        Contract contract = new Contract();
         mav.addObject("contract", contract);
         return mav;
     }
@@ -138,7 +119,6 @@ public class ContractController {
         ModelAndView mav = new ModelAndView("redirect:/user-page.html");
         String message = "Contract was successfully updated.";
 
-        contractService.update(contract);
 
         redirectAttributes.addFlashAttribute("message", message);
         return mav;
@@ -150,8 +130,7 @@ public class ContractController {
 
         ModelAndView mav = new ModelAndView("redirect:/user-page.html");
 
-        Contract contract = contractService.delete(id);
-        String message = "The contract " + contract.getId() + " was successfully deleted.";
+        String message = "The contract " + id + " was successfully deleted.";
 
         redirectAttributes.addFlashAttribute("message", message);
         return mav;

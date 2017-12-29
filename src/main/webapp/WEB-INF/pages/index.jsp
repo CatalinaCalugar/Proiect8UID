@@ -3,8 +3,11 @@
 <head>
     <title>Adopting animals</title>
     <meta charset="iso-8859-1">
-    <link href="/resources/css/materialize.min.css" rel="stylesheet" type="text/css">
-    <script src="/resources/js/materialize.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link href="/resources/css/materialize.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Compiled and minified JavaScript -->
+    <%--<script src="/resources/js/materialize.min.js"></script>--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 </head>
 <body>

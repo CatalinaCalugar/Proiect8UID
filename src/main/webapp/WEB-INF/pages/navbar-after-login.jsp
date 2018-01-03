@@ -12,8 +12,10 @@
     <nav>
         <div class="nav-wrapper">
             <ul class="hide-on-med-and-down">
-                <div class="left">
+                <div class="left center">
+                    <li><p>       </p></li>
                     <li><img src="/resources/images/coworkingLogo.jpg" height="64" alt=""></li>
+                    <li><p>       </p></li>
                     <li>
                         <form>
                             <div class="input-field">
@@ -30,7 +32,7 @@
                     <!-- Dropdown Trigger -->
                     <li><a class='dropdown-button' data-activates='dropdown1'>User</a></li>
                     <li><img src="/resources/images/userLogo.jpg" alt="user image"></li>
-
+                    <li><p>       </p></li>
                 </div>
             </ul>
         </div>

@@ -1,57 +1,38 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: cata_
+  Date: 12/29/2017
+  Time: 2:32 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Adopting animals</title>
-    <meta charset="iso-8859-1">
-    <!-- Compiled and minified CSS -->
-    <link href="/resources/css/materialize.min.css" rel="stylesheet" type="text/css"/>
-    <!-- Compiled and minified JavaScript -->
-    <%--<script src="/resources/js/materialize.min.js"></script>--%>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/resources/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/resources/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/resources/js/materialize.js"></script>
+    <script src="/resources/js/init.js"></script>
+
+    <title>Login</title>
 
 </head>
 <body>
-<div id="header"><a href="${pageContext.request.contextPath}/index.html" id="logo"><img src="/resources/images/logo.gif"
-                                                                                        width="310" height="114" alt=""></a>
-    <ul class="navigation">
-        <li><a href="${pageContext.request.contextPath}/index.html"> Home page </a></li>
-        <li><a href="${pageContext.request.contextPath}/client-page"> Shop </a></li>
-        <li><a href="${pageContext.request.contextPath}/employee/login.html"> Login </a></li>
-        <li><a href="${pageContext.request.contextPath}/employee/logout.html">Logout</a></li>
-    </ul>
-</div>
-<div id="body">
-    <div class="banner">&nbsp;</div>
-    <div id="content">
-        <div class="content">
-            <ul>
-                <li><a href="#"><img src="/resources/images/puppy.jpg" width="114" height="160" alt=""></a>
-                    <h2>What they need</h2>
-                    <p>
-                        Animals need food, water, shelter, and space to survive.
-                        Herbivores can live only where plant food is available.
-                        Carnivores can live only where they can catch their food.
-                        Omnivores can live in many places because they eat both plants and animals.
-                        Habitat is the physical area where an animal lives. </p>
-                </li>
-                <li><a href="https://seaworld.org/en/animal-info/animal-infobooks/animal-training/train-your-pet"><img src="/resources/images/bird.jpg" width="114" height="160" alt=""></a>
-                    <h2>How to train them</h2>
-                    <p>With a little know-how and a lot of patience, you can train your pet to perform many behaviors.
-                        You can apply animal training techniques to almost any kind of pet. Positive reinforcement is
-                        the key to strengthening behaviors. Use a variety of interesting, stimulating, and fun rewards -
-                        snacks, toys, a back scratch, or favorite activity are all good examples.</p>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+<jsp:include page="navbar-before-login.jsp"></jsp:include>
+
+<div class="row">
+   Home page
 </div>
 
-<div id="footer">
-    <div id="footnote">
-        <div class="section">Copyright &copy; 2017 <a href="#">Pet Adoption</a> All rights reserved | By Catalina
-            Calugar
-        </div>
-    </div>
-</div>
+<jsp:include page="footer.jsp"></jsp:include>
+
 </body>
+
 </html>

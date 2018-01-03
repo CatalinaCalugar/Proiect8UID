@@ -8,17 +8,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <!-- Compiled and minified CSS -->
-    <link href="/resources/css/materialize.min.css" rel="stylesheet" type="text/css"/>
-    <!-- Compiled and minified JavaScript -->
-    <%--<script src="/resources/js/materialize.min.js"></script>--%>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/resources/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/resources/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/resources/js/materialize.js"></script>
+    <script src="/resources/js/init.js"></script>
+
     <title>Login</title>
 
 </head>
 <body>
 
-<jsp:include page="navbar-before-login.jsp"></jsp:include>
+<jsp:include page="navbar-after-login.jsp"></jsp:include>
 
 <div class="row">
     <form class="col s12">
@@ -50,14 +57,5 @@
 <jsp:include page="footer.jsp"></jsp:include>
 
 </body>
-
-<script language="JavaScript">
-
-    // A $( document ).ready() block.
-    $(document).ready(function () {
-        $(".dropdown-button").dropdown();
-    });
-
-</script>
 
 </html>

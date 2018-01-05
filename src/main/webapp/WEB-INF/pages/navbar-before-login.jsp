@@ -1,3 +1,5 @@
+
+
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper">
@@ -19,10 +21,46 @@
                 <div class="right">
                     <li><a href="${pageContext.request.contextPath}/index.html">Home</a></li>
                     <li><a href="${pageContext.request.contextPath}/contact.html">Contact us</a></li>
-                    <li><a href="${pageContext.request.contextPath}/employee/login.html">Login</a></li>
+                    <li><a href="${pageContext.request.contextPath}/user/login.html">Login</a></li>
                 </div>
             </ul>
         </div>
     </nav>
 </div>
 
+<%--<!-- Modal Structure -->--%>
+<%--<div id="modal1" class="modal">--%>
+    <%--<div class="modal-content">--%>
+        <%--<h4>Modal Header</h4>--%>
+        <%--<div class="row">--%>
+            <%--<form class="col s12" method="POST" commandName="user"--%>
+                  <%--action="${pageContext.request.contextPath}/user/login.html">--%>
+                <%--<div class="row">--%>
+                    <%--<div class="input-field col s12">--%>
+                        <%--<input id="username" name="username" type="text" class="validate">--%>
+                        <%--<label for="username">Username</label>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+
+                <%--<br>--%>
+
+                <%--<div class="row">--%>
+                    <%--<div class="input-field col s12">--%>
+                        <%--<input id="password" name="password" type="password" class="validate">--%>
+                        <%--<label for="password">Password</label>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+
+                <%--<br>--%>
+
+                <%--<button class="btn waves-effect waves-light waves-ripple " type="submit" name="action">Login--%>
+                    <%--<i class="material-icons right"></i>--%>
+                <%--</button>--%>
+
+            <%--</form>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+    <%--<div class="modal-footer">--%>
+        <%--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>--%>
+    <%--</div>--%>
+<%--</div>--%>

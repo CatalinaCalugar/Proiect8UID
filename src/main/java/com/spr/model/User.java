@@ -9,8 +9,8 @@ import javax.persistence.Table;
  * Created by Dan on 26.03.2017.
  */
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "user")
+public class User {
     @Id
     @GeneratedValue
     private Integer id;
@@ -23,16 +23,16 @@ public class Employee {
 
     private String type;
 
-    public Employee(){
+    public User(){
 
     }
 
-    public Employee(String username, String password) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public Employee(String name, String username, String password, String type) {
+    public User(String name, String username, String password, String type) {
         this.name = name;
         this.username = username;
         this.password = password;

@@ -72,7 +72,7 @@ public class ContractController {
 //            message = "FAIL: Contract already exists!";
 //        else {
 //            Adoption ad = adoptionService.findById(id);
-//            ad.setIdEmployee(((Employee) session.getAttribute("logedEmployee")).getId());
+//            ad.setIdUser(((User) session.getAttribute("logedUser")).getId());
 //            ad.setIdContract(check.getId());
 //            contractId = ad.getIdContract();
 //            adoptionService.update(ad);

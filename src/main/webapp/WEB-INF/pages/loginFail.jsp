@@ -29,11 +29,11 @@
             <i style="color: fuchsia">${message}</i><br/>
             <br/><br/>
             <ul>
-                <li><a href="${pageContext.request.contextPath}/employee/login.html"><img
+                <li><a href="${pageContext.request.contextPath}/user/login.html"><img
                         src="/resources/images/login.jpg" width="160" height="114" alt=""></a>
                     <h2>Login</h2>
                     <p><a class="more"
-                          href="${pageContext.request.contextPath}/employee/login.html">Login now</a></p>
+                          href="${pageContext.request.contextPath}/user/login.html">Login now</a></p>
                 </li>
             </ul>
         </div>

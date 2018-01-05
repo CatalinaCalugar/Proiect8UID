@@ -19,7 +19,7 @@
 <div id="body">
     <div id="content">
         <i></i><br/><br/><br/><br/>
-        <form:form method="post" action="/employee/loginReg.html" class="login-box animated fadeInUp">
+        <form:form method="post" action="/user/loginReg.html" class="login-box animated fadeInUp">
 
             <form:label path="username">Username </form:label>
             <input name="username" type="text" path="username"/>

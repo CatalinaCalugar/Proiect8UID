@@ -5,7 +5,7 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.spr.model.Contract;
-import com.spr.model.Employee;
+import com.spr.model.User;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ import java.io.FileOutputStream;
  */
 public class PdfReport implements Report {
     @Override
-    public void generate(Contract contract, Employee client, Float total) {
+    public void generate(Contract contract, User client, Float total) {
         Document document = new Document();
         String pdfFilePath = "E:\\Catalina\\AnIII_Sem2\\SD\\Lab\\Project\\proiect\\";
         String pdfFile = "Contract" + contract.getId().toString() + ".pdf";
@@ -34,7 +34,7 @@ public class PdfReport implements Report {
 //            document.add(new Paragraph("Client Email: " + client.getEmail()));
 //            document.add(new Paragraph("Client Address: " + client.getAddress()));
 //            document.add(new Paragraph("      "));
-//            document.add(new Paragraph("Employee ID: " + adoption.getIdEmployee().toString()));
+//            document.add(new Paragraph("User ID: " + adoption.getIdUser().toString()));
             document.add(new Paragraph("      "));
             document.add(new Paragraph("Total: " + total + " lei"));
             document.close();

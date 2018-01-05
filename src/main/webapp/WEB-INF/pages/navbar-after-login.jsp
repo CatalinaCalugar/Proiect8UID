@@ -1,11 +1,12 @@
 <!-- Dropdown Structure -->
 <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
+    <li><a href="${pageContext.request.contextPath}/my-account.html">My account</a></li>
     <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    <li><a href="${pageContext.request.contextPath}/space/create.html">Add coworking space</a></li>
+    <li class="divider"></li>
+    <li><a href="${pageContext.request.contextPath}/space/edit.html">Manage existing space</a></li>
+    <li class="divider"></li>
+    <li><a href="${pageContext.request.contextPath}/user/logout.html">Log out</a></li>
 </ul>
 
 <div class="navbar-fixed">
@@ -30,7 +31,7 @@
                     <li><a href="${pageContext.request.contextPath}/index.html">Home</a></li>
                     <li><a href="${pageContext.request.contextPath}/contact.html">Contact us</a></li>
                     <!-- Dropdown Trigger -->
-                    <li><a class='dropdown-button' data-activates='dropdown1'>User</a></li>
+                    <li><a class='dropdown-button' data-activates='dropdown1'>${username}</a></li>
                     <li><img src="/resources/images/userLogo.jpg" alt="user image"></li>
                     <li><p>       </p></li>
                 </div>

@@ -28,10 +28,11 @@
 <jsp:include page="navbar-after-login.jsp"></jsp:include>
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" method="POST" commandName="user"
+          action="${pageContext.request.contextPath}/user/login.html">
         <div class="row">
             <div class="input-field col s12">
-                <input id="username" type="text" class="validate">
+                <input id="username" name="username" type="text" class="validate">
                 <label for="username">Username</label>
             </div>
         </div>
@@ -40,19 +41,21 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
+                <input id="password" name="password" type="password" class="validate">
                 <label for="password">Password</label>
             </div>
         </div>
 
         <br>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Login
+        <button class="btn waves-effect waves-light waves-ripple " type="submit" name="action">Login
             <i class="material-icons right"></i>
         </button>
 
     </form>
 </div>
+</div>
+
 
 <jsp:include page="footer.jsp"></jsp:include>
 

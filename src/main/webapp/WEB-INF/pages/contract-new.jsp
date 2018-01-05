@@ -24,7 +24,7 @@
     <ul class="navigation">
         <li><a href="${pageContext.request.contextPath}/index.html"> Home page </a></li>
         <li><a href="${pageContext.request.contextPath}/user-page.html"> User page </a></li>
-        <li><a href="${pageContext.request.contextPath}/employee/logout.html">Logout</a></li>
+        <li><a href="${pageContext.request.contextPath}/user/logout.html">Logout</a></li>
     </ul>
 </div>
 

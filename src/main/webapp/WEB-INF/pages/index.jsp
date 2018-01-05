@@ -38,23 +38,105 @@
     <div class="w3-content w3-display-container">
 
         <div class="w3-display-container mySlides">
-            <img src="/resources/images/dog2.jpg" style="width:50%">
-            <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-black">
-                Beautiful Mountains
+            <div class="row">
+
+                <div class="col s4">
+                    <a href="${pageContext.request.contextPath}/space/view/{1}.html" id="logo1"><img src="/resources/images/genSp1.jpg"></a>
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 1
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+                <div class="col s4">
+                    <img src="/resources/images/genSp2.jpg">
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 2
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+                <div class="col s4">
+                    <img src="/resources/images/genSp3.jpg">
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 3
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <div class="row">
+
+                <div class="col s4">
+                    <a href="${pageContext.request.contextPath}/space/view/{4}.html" id="logo4"><img src="/resources/images/genSp4.jpg"></a>
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 4
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+                <div class="col s4">
+                    <img src="/resources/images/genSp5.jpg">
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 5
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+                <div class="col s4">
+                    <img src="/resources/images/genSp6.jpg">
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 6
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="w3-display-container mySlides">
-            <img src="/resources/images/cat.jpg" style="width:50%">
-            <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-black">
-                The Rain Forest
-            </div>
-        </div>
+            <div class="row">
 
-        <div class="w3-display-container mySlides">
-            <img src="/resources/images/dog.jpg" style="width:50%">
-            <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-black">
-                Mountains!
+                <div class="col s4">
+                    <a href="${pageContext.request.contextPath}/space/view/{7}.html" id="logo"><img src="/resources/images/genSp7.jpg"></a>
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 7
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+                <div class="col s4">
+                    <img src="/resources/images/genSp8.jpg">
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 8
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+                <div class="col s4">
+                    <img src="/resources/images/genSp9.jpg">
+                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                        Space 9
+                    </div>
+                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                        dsd adsa dasdv fawaw sefe
+                    </div>
+                </div>
+
             </div>
         </div>
 

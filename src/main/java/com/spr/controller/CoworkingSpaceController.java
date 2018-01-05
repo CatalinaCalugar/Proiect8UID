@@ -1,8 +1,8 @@
 package com.spr.controller;
 
-import com.spr.exception.ContractNotFound;
+import com.spr.exception.CoworkingSpaceNotFound;
 import com.spr.model.CoworkingSpace;
-import com.spr.validation.ContractValidator;
+import com.spr.validation.CoworkingSpaceValidator;
 import com.spr.validation.CoworkingSpaceValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,18 +24,18 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/space")
 public class CoworkingSpaceController {
-    @Autowired
-    private CoworkingSpaceValidator coworkingSpaceValidator;
-
-    @InitBinder
-    private void initBinder(WebDataBinder binder) {
-        binder.setValidator(coworkingSpaceValidator);
-    }
+//    @Autowired
+//    private CoworkingSpaceValidator coworkingSpaceValidator;
+//
+//    @InitBinder
+//    private void initBinder(WebDataBinder binder) {
+//        binder.setValidator(coworkingSpaceValidator);
+//    }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
-    public ModelAndView newContractPage() {
+    public ModelAndView newCoworkingSpacePage() {
         ModelAndView mav = new ModelAndView("add-space", "coworkingSpace", new CoworkingSpace());
-//        List<Adoption> adoptionList = adoptionService.findAllWithoutContract();
+//        List<Adoption> adoptionList = adoptionService.findAllWithoutCoworkingSpace();
 //        mav.addObject("adoptionList", adoptionList);
 //        List<Client> clientList = clientService.findAll();
 //        mav.addObject("clientList", clientList);
@@ -50,7 +50,7 @@ public class CoworkingSpaceController {
     private int coworkingSpaceId;
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public ModelAndView createNewContract(@ModelAttribute @Valid CoworkingSpace coworkingSpace, HttpServletResponse response,
+    public ModelAndView createNewCoworkingSpace(@ModelAttribute @Valid CoworkingSpace coworkingSpace, HttpServletResponse response,
                                           BindingResult result, @RequestParam("type") Integer id,
                                           final RedirectAttributes redirectAttributes, HttpSession session){
 
@@ -66,8 +66,8 @@ public class CoworkingSpaceController {
 //        else {
 //            Adoption ad = adoptionService.findById(id);
 //            ad.setIdUser(((User) session.getAttribute("logedUser")).getId());
-//            ad.setIdContract(check.getId());
-//            coworkingSpaceId = ad.getIdContract();
+//            ad.setIdCoworkingSpace(check.getId());
+//            coworkingSpaceId = ad.getIdCoworkingSpace();
 //            adoptionService.update(ad);
 //            Client cl = clientService.findById(ad.getIdClient());
 //            Pet adoptedPet = petService.findById(ad.getIdPet());
@@ -92,7 +92,7 @@ public class CoworkingSpaceController {
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public ModelAndView editContractPage(@PathVariable Integer id) {
+    public ModelAndView editCoworkingSpacePage(@PathVariable Integer id) {
         ModelAndView mav = new ModelAndView("manage-space");
 
         CoworkingSpace coworkingSpace = new CoworkingSpace();
@@ -101,10 +101,10 @@ public class CoworkingSpaceController {
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
-    public ModelAndView editContract(@ModelAttribute @Valid CoworkingSpace coworkingSpace,
+    public ModelAndView editCoworkingSpace(@ModelAttribute @Valid CoworkingSpace coworkingSpace,
                                      BindingResult result,
                                      @PathVariable Integer id,
-                                     final RedirectAttributes redirectAttributes, HttpSession session) throws ContractNotFound {
+                                     final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
         if (result.hasErrors())
             return new ModelAndView("manage-space");
@@ -118,10 +118,22 @@ public class CoworkingSpaceController {
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
-    public ModelAndView deleteContract(@PathVariable Integer id,
-                                       final RedirectAttributes redirectAttributes, HttpSession session) throws ContractNotFound {
+    public ModelAndView deleteCoworkingSpace(@PathVariable Integer id,
+                                       final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
         ModelAndView mav = new ModelAndView("redirect:/user-page.html");
+
+        String message = "The coworkingSpace " + id + " was successfully deleted.";
+
+        redirectAttributes.addFlashAttribute("message", message);
+        return mav;
+    }
+
+    @RequestMapping(value = "/view/{id}", method = RequestMethod.POST)
+    public ModelAndView viewSpace(@PathVariable Integer id,
+                                       final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+
+        ModelAndView mav = new ModelAndView("redirect:/view-space.html");
 
         String message = "The coworkingSpace " + id + " was successfully deleted.";
 

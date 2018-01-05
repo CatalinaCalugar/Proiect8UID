@@ -18,7 +18,7 @@
 <body>
 
 <h2>Login</h2>
-<form:form method = "POST" action = "${pageContext.request.contextPath}/employee/logout">
+<form:form method = "POST" action = "${pageContext.request.contextPath}/user/logout">
     <input type = "submit" value = "OK"/>
 </form:form>
 </body>

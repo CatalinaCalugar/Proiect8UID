@@ -20,8 +20,8 @@
                                                                                         width="310" height="114" alt=""></a>
     <ul class="navigation">
         <li><a href="${pageContext.request.contextPath}/index.html"> Home page </a></li>
-        <li><a href="${pageContext.request.contextPath}/employee/login.html"> Login </a></li>
-        <li><a href="${pageContext.request.contextPath}/employee/logout.html">Logout</a></li>
+        <li><a href="${pageContext.request.contextPath}/user/login.html"> Login </a></li>
+        <li><a href="${pageContext.request.contextPath}/user/logout.html">Logout</a></li>
         <li><a href="${pageContext.request.contextPath}/accessorises/buy.html">Accessorises</a></li>
         <li><a href="${pageContext.request.contextPath}/accessorises/viewBacket.html">ViewCart</a><br/></li>
     </ul>

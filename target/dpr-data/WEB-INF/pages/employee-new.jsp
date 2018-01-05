@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
-    <title>New Employee page</title>
+    <title>New User page</title>
     <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -21,7 +21,7 @@
     <ul class="navigation">
         <li><a href="${pageContext.request.contextPath}/index.html"> Home page </a></li>
         <li><a href="${pageContext.request.contextPath}/user-page.html"> User page </a></li>
-        <li><a href="${pageContext.request.contextPath}/employee/logout.html">Logout</a></li>
+        <li><a href="${pageContext.request.contextPath}/user/logout.html">Logout</a></li>
     </ul>
 </div>
 
@@ -31,12 +31,12 @@
     <div id="content">
         <i></i><br/><br/><br/>
         <div class="content">
-            <form:form method="POST" commandName="employee"
-                       action="${pageContext.request.contextPath}/employee/create.html">
+            <form:form method="POST" commandName="user"
+                       action="${pageContext.request.contextPath}/user/create.html">
                 <table>
                     <tbody>
                     <tr>
-                        <td>Employee name:</td>
+                        <td>User name:</td>
                         <td><form:input path="name"/></td>
                         <td><form:errors path="name" cssStyle="color: red;"/></td>
                     </tr>

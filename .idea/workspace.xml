@@ -1,155 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0b0045e-1b67-48c2-b613-903a6becb572" name="Default" comment="starter project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/footer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-before-login.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/materialize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/materialize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/AccesorisesController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/AdoptionController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/ClientController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/PetController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/exception/AccesorisesNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/exception/AdoptionNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/exception/ClientNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/exception/PetNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/exception/StockAccessorisesNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/model/Accessorises.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/model/Adoption.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/model/Client.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/model/Pet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/repository/AccesorisesRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/repository/AdoptionRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/repository/ClientRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/repository/ContractRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/repository/EmployeeRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/repository/PaymentRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/repository/PetRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/AccesorisesService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/AccesorisesServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/AdoptionService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/AdoptionServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/ClientService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/ClientServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/ContractService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/ContractServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/EmployeeService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/EmployeeServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/PaymentService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/PaymentServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/PetService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/service/PetServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/validation/AccesorisesValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/validation/AdoptionValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/validation/ClientValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/validation/PetValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/AccesorisesController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/AdoptionController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/ClientController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/ConsultationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/PetController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/ScheduleController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/AccesorisesNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/AdoptionNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/ClientNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/ConsultationNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/PetNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/ScheduleNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/StockAccessorisesNotFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/model/Accessorises.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/model/Adoption.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/model/Client.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/model/Consultation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/model/Pet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/model/Schedule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/AccesorisesRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/AdoptionRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/ClientRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/ConsultationRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/ContractRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/EmployeeRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/PaymentRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/PetRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/repository/ScheduleRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/AccesorisesService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/AccesorisesServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/AdoptionService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/AdoptionServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ClientService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ClientServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ComparatorClass.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ConsultationService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ConsultationServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ContractService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ContractServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/EmployeeService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/EmployeeServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/PaymentService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/PaymentServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/PetService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/PetServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ScheduleService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/service/ScheduleServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/validation/AccesorisesValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/validation/AdoptionValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/validation/ClientValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/validation/ConsultationValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/validation/PetValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/validation/ScheduleValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/accessorises-buy.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/accessorises-edit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/accessorises-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/accessorises-new.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/adoption-edit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/adoption-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/adoption-new.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/client-edit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/client-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/client-new.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/client-page.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/consultation-available.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/consultation-edit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/consultation-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/consultation-listForDoctor.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/consultation-new.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/consultation-selectData.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/doctor-page.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/doctors-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/employee-activity.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/employee-edit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/employee-genReport.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/employee-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/pet-edit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/pet-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/pet-listAdmin.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/pet-new.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/pet-unavailable.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/pet-view.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/schedule-list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/secretary-page.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/resources/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/resources/js/materialize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/resources/js/materialize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/resources/styleLog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/resources/styles.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/ContractController.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/controller/ContractController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/controller/EmployeeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/NavigationController.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/controller/NavigationController.class" />
+    <list default="true" id="e0b0045e-1b67-48c2-b613-903a6becb572" name="Default" comment="starter project v5">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/EmployeeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/exception/EmployeeNotFound.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/model/Employee.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/spr/validation/EmployeeValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/EmployeeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/exception/EmployeeNotFound.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/model/Employee.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/validation/EmployeeValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/admin-page.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/utils/CsvReport.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/utils/CsvReport.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/utils/PdfReport.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/utils/PdfReport.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/utils/Report.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/utils/Report.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/ContractController.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/ContractController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/EmployeeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/NavigationController.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/NavigationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/utils/CsvReport.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/utils/CsvReport.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/utils/PdfReport.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/utils/PdfReport.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/utils/Report.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/utils/Report.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/i18n/messages.properties" afterPath="$PROJECT_DIR$/target/classes/i18n/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/i18n/messages.properties" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/i18n/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/basket-view.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/basket-view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contract-download.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contract-download.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contract-list.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contract-list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contract-new.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contract-new.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/employee-new.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/employee-new.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/login-register.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/login-register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/loginFail.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/loginFail.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/logout.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/logout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/user-page.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/user-page.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/resources/css/materialize.css" afterPath="$PROJECT_DIR$/target/dpr-data/resources/css/materialize.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/resources/css/materialize.min.css" afterPath="$PROJECT_DIR$/target/dpr-data/resources/css/materialize.min.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -185,56 +68,27 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="WebAppConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/init/WebAppConfig.java">
+      <file leaf-file-name="CoworkingSpaceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/CoworkingSpaceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="60" column="61" lean-forward="false" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+            <state relative-caret-position="675">
+              <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+      <file leaf-file-name="ContractController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/ContractController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Initializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/init/Initializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="-532">
+              <caret line="136" column="5" lean-forward="true" selection-start-line="41" selection-start-column="3" selection-end-line="136" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1174#1175#0" expanded="true" />
+                <element signature="e#1228#1229#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavigationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/NavigationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="materialize.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/materialize.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66318">
-              <caret line="3158" column="31" lean-forward="false" selection-start-line="3158" selection-start-column="29" selection-end-line="3158" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -242,8 +96,8 @@
       <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="161">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -252,8 +106,42 @@
       <file leaf-file-name="navbar-before-login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-before-login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            <state relative-caret-position="-28">
+              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="40" column="68" lean-forward="false" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -262,28 +150,8 @@
       <file leaf-file-name="navbar-after-login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/footer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -298,46 +166,48 @@
         <option value="CSS File" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Adoption</find>
-      <find>datei</find>
-      <find>!session.getAttributeNames()</find>
-      <find>pet-view</find>
-      <find>login</find>
-      <find>loginReg</find>
-      <find>mav</find>
-      <find>employee</find>
-      <find>ul</find>
-      <find>.nav-wrapper</find>
-      <find>hide-on-med-and-down</find>
-      <find>.dropdown-content</find>
-      <find>background-color:</find>
-      <find>3s</find>
-      <find>#ee6e73</find>
-      <find>nav-wrapper</find>
-      <find>E</find>
-      <find>Empl</find>
-      <find>Employy</find>
-      <find>Employ</find>
-      <find>Employee</find>
-      <find>EmployeeS</find>
-      <find>EmployeeSe</find>
-      <find>EmployeeSer</find>
-      <find>EmployeeServ</find>
-      <find>EmployeeServi</find>
-      <find>EmployeeServic</find>
-      <find>EmployeeService</find>
-      <find>nav</find>
       <find>#e0ebeb</find>
+      <find>dropdown</find>
+      <find>Top%20Coworking%20Spaces%20in%20Cluj-Napoca,%20Romania_files</find>
+      <find>color</find>
+      <find>#D3D3D3</find>
+      <find>#fff</find>
+      <find>#ee6e73</find>
+      <find>background-color: #000000;</find>
+      <find>img</find>
+      <find>face</find>
+      <find>RequestParam</find>
+      <find>E</find>
+      <find>Emplo</find>
+      <find>Employe</find>
+      <find>EmployeeTR</find>
+      <find>EmployeeT</find>
+      <find>EmployeeR</find>
+      <find>Employee</find>
+      <find>e</find>
+      <find>em</find>
+      <find>emp</find>
+      <find>emplo</find>
+      <find>employ</find>
+      <find>employe</find>
+      <find>employee</find>
+      <find>list</find>
+      <find>Contract</find>
+      <find>coworkingSpace-new</find>
+      <find>coworkingSpace-edit</find>
+      <find>contract</find>
     </findStrings>
     <replaceStrings>
       <replace>basket</replace>
+      <replace>User</replace>
+      <replace>user</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -351,24 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/spr/service/PaymentServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/spr/service/PetServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contract-new.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/GMailAuthenticator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/ClientController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contract-download.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contract-list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/adoption-list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/accessorises-list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/accessorises-edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/pet-edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/spr/validation/AdoptionValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/spr/validation/ContractValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-page.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/adoption-edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/client-edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/client-list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee-edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee-list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee-new.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/pet-unavailable.jsp" />
@@ -392,16 +244,34 @@
         <option value="$PROJECT_DIR$/src/main/java/com/spr/validation/ClientValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/spr/utils/PdfReport.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/spr/model/Contract.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/ContractController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/NavigationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/materialize.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home_page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/materialize.min.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/coworkingSite/JSFunctions.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/materialize.min.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home_page_after_login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/materialize.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome5/fa-brands.min.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-before-login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/ContractController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/exception/EmployeeNotFound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/model/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manage-space.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-space.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/my-account.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/model/Office.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/model/CoworkingSpace.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/validation/CoworkingSpaceValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/exception/CoworkingSpaceNotFound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/CoworkingSpaceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spr/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-before-login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
       </list>
     </option>
   </component>
@@ -447,6 +317,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -513,32 +385,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spr-data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proiect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,10 +481,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="spr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -764,8 +606,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -785,22 +625,25 @@
       <recent name="com.spr.service" />
       <recent name="com.spr.testing" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.spr.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CATALINA\An4Sem1\UID\Project\proiect\src\main\webapp\resources" />
+      <recent name="E:\Catalina\AnIII_Sem2\SD\Lab\Assign3\doctors\src\main\webapp\resources\css" />
+      <recent name="E:\Catalina\AnIII_Sem2\SD\demo1\spr-data-master\src\main\webapp\resources" />
+      <recent name="E:\Catalina\AnIII_Sem2\SD\demo1\spr-data-master\src\main\resources" />
+      <recent name="E:\Catalina\AnIII_Sem2\SD\demo1\spr-data-master\src\main\webapp\WEB-INF\pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\CATALINA\An4Sem1\UID\Project\proiect\src\main\webapp\resources\css\font-awesome5" />
+      <recent name="C:\CATALINA\An4Sem1\UID\Project\proiect\src\main\webapp\resources\css" />
+      <recent name="C:\CATALINA\An4Sem1\UID\Project\proiect\src\main\webapp\resources\coworkingSite" />
       <recent name="C:\CATALINA\An4Sem1\UID\Project\proiect\src\main\webapp\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Catalina\AnIII_Sem2\SD\Lab\Assign3\doctors\src\main\webapp\resources\css" />
-      <recent name="E:\Catalina\AnIII_Sem2\SD\demo1\spr-data-master\src\main\webapp\resources" />
-      <recent name="E:\Catalina\AnIII_Sem2\SD\demo1\spr-data-master\src\main\resources" />
-      <recent name="E:\Catalina\AnIII_Sem2\SD\demo1\spr-data-master\src\main\webapp\WEB-INF\pages" />
-      <recent name="E:\Catalina\AnIII_Sem2\SD\demo1\spr-data-master\src\main\resources\css" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.spr.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1515,7 +1358,9 @@
       <workItem from="1496342540875" duration="5813000" />
       <workItem from="1496394150448" duration="6966000" />
       <workItem from="1514547923335" duration="11193000" />
-      <workItem from="1514564383404" duration="391000" />
+      <workItem from="1514564383404" duration="434000" />
+      <workItem from="1514978175680" duration="13250000" />
+      <workItem from="1515150493855" duration="4644000" />
     </task>
     <task id="LOCAL-00001" summary="try commit intellij">
       <created>1514556973225</created>
@@ -1538,7 +1383,35 @@
       <option name="project" value="LOCAL" />
       <updated>1514563991655</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="starter project v3">
+      <created>1514564798966</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1514564798966</updated>
+    </task>
+    <task id="LOCAL-00005" summary="starter project v4">
+      <created>1514991401374</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1514991401374</updated>
+    </task>
+    <task id="LOCAL-00006" summary="starter project v5">
+      <created>1514992248982</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1514992248982</updated>
+    </task>
+    <task id="LOCAL-00007" summary="starter project v6">
+      <created>1515154001258</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1515154001258</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1574,14 +1447,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302165000" />
+    <option name="totallyTimeSpent" value="320102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28869376" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29198682" sideWeight="0.315625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1591,20 +1465,21 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3150384" sideWeight="0.6302083" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3150384" sideWeight="0.6223958" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3391877" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3391877" sideWeight="0.48958334" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28869376" sideWeight="0.49375" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35675082" sideWeight="0.69739586" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22832052" sideWeight="0.49166667" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29198682" sideWeight="0.684375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.49166667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1613,7 +1488,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1626,11 +1500,15 @@
     <MESSAGE value="try commit intellij" />
     <MESSAGE value="starter project" />
     <MESSAGE value="starter project v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="starter project v2" />
+    <MESSAGE value="starter project v3" />
+    <MESSAGE value="starter project v4" />
+    <MESSAGE value="starter project v5" />
+    <MESSAGE value="starter project v6" />
+    <option name="LAST_COMMIT_MESSAGE" value="starter project v6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="157" />
+      <option name="time" value="161" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1639,111 +1517,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contract-download.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/validation/EmployeeValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="33" column="121" lean-forward="false" selection-start-line="33" selection-start-column="121" selection-end-line="33" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/validation/AccesorisesValidator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/ClientController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/validation/PetValidator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="115" lean-forward="false" selection-start-line="13" selection-start-column="115" selection-end-line="13" selection-end-column="115" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.2.RELEASE/spring-web-3.2.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/pet-view.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/PetController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/service/EmployeeService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/service/EmployeeServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/service/ClientService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/SendGmail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/AccesorisesController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/service/AccesorisesService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/service/ClientServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="40" column="21" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="40" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/loginFail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/service/AccesorisesServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/utils/ReportFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/utils/CSVUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/accessorises-new.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/adoption-new.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/AdoptionController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/model/Client.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/styleLogin.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/menu.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/structural.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/validation/ClientValidator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/materialize.min.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/utils/CsvReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="71" lean-forward="true" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/model/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1751,24 +1524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/ContractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="61" column="107" lean-forward="false" selection-start-line="61" selection-start-column="107" selection-end-line="61" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/utils/Report.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3024">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1807,31 +1566,193 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/materialize.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/NavigationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#456#457#0" expanded="false" />
+            <element signature="e#504#505#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#668#669#0" expanded="false" />
+            <element signature="e#774#775#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#934#935#0" expanded="false" />
+            <element signature="e#987#988#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home_page.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/materialize.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="1964" column="38" lean-forward="false" selection-start-line="1964" selection-start-column="30" selection-end-line="1964" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/coworkingSite/cluj-napoca_data/frame.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/coworkingSite/JSFunctions.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/materialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1606" column="2" lean-forward="false" selection-start-line="1606" selection-start-column="2" selection-end-line="1606" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms2.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="245" column="22" lean-forward="false" selection-start-line="245" selection-start-column="22" selection-end-line="245" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/embed.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/materialize.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="5075" column="18" lean-forward="false" selection-start-line="5075" selection-start-column="18" selection-end-line="5075" selection-end-column="18" />
+        <state relative-caret-position="-58">
+          <caret line="3059" column="1" lean-forward="false" selection-start-line="3059" selection-start-column="1" selection-end-line="3059" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome5/fa-brands.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome5/fa-brands.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome5/fontawesome-all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="945" column="8" lean-forward="false" selection-start-line="945" selection-start-column="4" selection-end-line="945" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin-page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contract-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contract-new.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contract-download.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/loginFail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.2.RELEASE/spring-web-3.2.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66318">
-          <caret line="3158" column="31" lean-forward="false" selection-start-line="3158" selection-start-column="29" selection-end-line="3158" selection-end-column="31" />
+        <state relative-caret-position="116466">
+          <caret line="5546" column="26" lean-forward="false" selection-start-line="5546" selection-start-column="26" selection-end-line="5546" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/exception/UserNotFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee-new.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="34" column="83" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="34" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home_page_after_login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manage-space.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
@@ -1839,35 +1760,249 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/footer.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-space.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-before-login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/my-account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="210">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/model/Office.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding>
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1774#1775#0" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/model/CoworkingSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2443#2444#0" expanded="true" />
+            <element signature="e#2476#2477#0" expanded="true" />
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2535#2536#0" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+            <element signature="e#2602#2603#0" expanded="true" />
+            <element signature="e#2634#2635#0" expanded="true" />
+            <element signature="e#2672#2673#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
+            <element signature="e#2760#2761#0" expanded="true" />
+            <element signature="e#2806#2807#0" expanded="true" />
+            <element signature="e#2843#2844#0" expanded="true" />
+            <element signature="e#2876#2877#0" expanded="true" />
+            <element signature="e#2928#2929#0" expanded="true" />
+            <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3042#3043#0" expanded="true" />
+            <element signature="e#3094#3095#0" expanded="true" />
+            <element signature="e#3138#3139#0" expanded="true" />
+            <element signature="e#3171#3172#0" expanded="true" />
+            <element signature="e#3200#3201#0" expanded="true" />
+            <element signature="e#3244#3245#0" expanded="true" />
+            <element signature="e#3280#3281#0" expanded="true" />
+            <element signature="e#3318#3319#0" expanded="true" />
+            <element signature="e#3352#3353#0" expanded="true" />
+            <element signature="e#3406#3407#0" expanded="true" />
+            <element signature="e#3452#3453#0" expanded="true" />
+            <element signature="e#3489#3490#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3574#3575#0" expanded="true" />
+            <element signature="e#3618#3619#0" expanded="true" />
+            <element signature="e#3667#3668#0" expanded="true" />
+            <element signature="e#3706#3707#0" expanded="true" />
+            <element signature="e#3776#3777#0" expanded="true" />
+            <element signature="e#3832#3833#0" expanded="true" />
+            <element signature="e#3868#3869#0" expanded="true" />
+            <element signature="e#3900#3901#0" expanded="true" />
+            <element signature="e#3950#3951#0" expanded="true" />
+            <element signature="e#3992#3993#0" expanded="true" />
+            <element signature="e#4027#4028#0" expanded="true" />
+            <element signature="e#4058#4059#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4146#4147#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#4222#4223#0" expanded="true" />
+            <element signature="e#4280#4281#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
+            <element signature="e#4374#4375#0" expanded="true" />
+            <element signature="e#4409#4410#0" expanded="true" />
+            <element signature="e#4476#4477#0" expanded="true" />
+            <element signature="e#4524#4525#0" expanded="true" />
+            <element signature="e#4570#4571#0" expanded="true" />
+            <element signature="e#4606#4607#0" expanded="true" />
+            <element signature="e#4670#4671#0" expanded="true" />
+            <element signature="e#4720#4721#0" expanded="true" />
+            <element signature="e#4751#4752#0" expanded="true" />
+            <element signature="e#4778#4779#0" expanded="true" />
+            <element signature="e#4818#4819#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/validation/UserValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/validation/ContractValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/validation/CoworkingSpaceValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/exception/PaymentNotFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/exception/CoworkingSpaceNotFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/exception/ContractNotFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/ContractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-532">
+          <caret line="136" column="5" lean-forward="true" selection-start-line="41" selection-start-column="3" selection-end-line="136" selection-end-column="5" />
+          <folding>
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/CoworkingSpaceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="161">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-before-login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="147">
+          <caret line="40" column="68" lean-forward="false" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

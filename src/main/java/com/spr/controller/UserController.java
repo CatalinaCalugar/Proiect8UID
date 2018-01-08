@@ -40,7 +40,7 @@ public class UserController {
             redirectAttributes.addFlashAttribute("message", "Unauthorized");
             return new ModelAndView("redirect:/index.html");
         }
-        if (((User) session.getAttribute("logedUser")).getUsername().equals("admin")) {
+        if (((User) session.getAttribute("loggedUser")).getUsername().equals("admin")) {
             ModelAndView mav = new ModelAndView("user-new", "user", new User());
             return mav;
         } else {
@@ -88,6 +88,7 @@ public class UserController {
             if (username.equals("admin") && password.equals("admin")) {
                 page = "home_page_after_login";
                 message = "Success!";
+                session.setAttribute("loggedUser", username);
             } else {
                 page = "loginFail";
                 message = "Login fail!";
@@ -99,7 +100,7 @@ public class UserController {
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public ModelAndView logout(HttpSession session) {
-        session.removeAttribute("logedUser");
+        session.removeAttribute("loggedUser");
         ModelAndView mav = new ModelAndView("redirect:/index.html");
         return mav;
     }
@@ -124,7 +125,7 @@ public class UserController {
             redirectAttributes.addFlashAttribute("message", "Unauthorized");
             return new ModelAndView("redirect:/index.html");
         }
-        if (((User) session.getAttribute("logedUser")).getUsername().equals("admin")) {
+        if (((User) session.getAttribute("loggedUser")).getUsername().equals("admin")) {
             ModelAndView mav = new ModelAndView("user-list");
             //List<User> userList = userService.findAll();
             //mav.addObject("userList", userList);
@@ -143,9 +144,9 @@ public class UserController {
             redirectAttributes.addFlashAttribute("message", "Unauthorized");
             return new ModelAndView("redirect:/index.html");
         }
-        if (((User) session.getAttribute("logedUser")).getUsername().equals("admin")) {
+        if (((User) session.getAttribute("loggedUser")).getUsername().equals("admin")) {
             ModelAndView mav = new ModelAndView("user-edit");
-            User user = new User("User1","admin","admin","admin");
+            User user = new User("User1", "admin", "admin", "admin");
             mav.addObject("user", user);
             return mav;
         } else {
@@ -157,13 +158,14 @@ public class UserController {
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
     public ModelAndView editUser(@ModelAttribute @Valid User user,
-                                     BindingResult result,
-                                     @PathVariable Integer id,
-                                     final RedirectAttributes redirectAttributes, HttpSession session) throws UserNotFound {
+                                 BindingResult result,
+                                 @PathVariable Integer id,
+                                 final RedirectAttributes redirectAttributes, HttpSession session) throws UserNotFound {
 
         if (result.hasErrors())
             return new ModelAndView("user-edit");
-        ModelAndView mav = new ModelAndView("user-edit");;
+        ModelAndView mav = new ModelAndView("user-edit");
+        ;
         String message = "";
 
 //        User e = userService.findById(id);
@@ -183,13 +185,20 @@ public class UserController {
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public ModelAndView deleteUser(@PathVariable Integer id,
-                                       final RedirectAttributes redirectAttributes, HttpSession session) throws UserNotFound {
+                                   final RedirectAttributes redirectAttributes, HttpSession session) throws UserNotFound {
 
         ModelAndView mav = new ModelAndView("redirect:/admin-page.html");
 
         String message = "The user " + id + " was successfully deleted.";
         redirectAttributes.addFlashAttribute("message", message);
         return mav;
+    }
+
+    @RequestMapping(value = "/account", method = RequestMethod.GET)
+    public ModelAndView myAccount(HttpSession session, final RedirectAttributes redirectAttributes) {
+        ModelAndView modelAndView = new ModelAndView("my-account", "command", new User());
+        modelAndView.addObject("username", session.getAttribute("loggedUser"));
+        return modelAndView;
     }
 
 
@@ -203,11 +212,11 @@ public class UserController {
 //                    session.setAttribute("idPet", id);
 //                    return new ModelAndView("login-register", "command", new User());
 //                }
-//            } else if (session.getAttribute("logedUser") != null && ((User) session.getAttribute("logedUser")).getRole().equals("client")) {
+//            } else if (session.getAttribute("loggedUser") != null && ((User) session.getAttribute("loggedUser")).getRole().equals("client")) {
 //
 //                mav = new ModelAndView("adoption-new");
 //                Timestamp date = new Timestamp(System.currentTimeMillis());
-//                Client cl = clientService.findByUsername(((User) session.getAttribute("logedUser")).getUsername());
+//                Client cl = clientService.findByUsername(((User) session.getAttribute("loggedUser")).getUsername());
 //                Adoption adoption = new Adoption(id, date, cl.getId());
 //                mav.addObject("adoption", adoption);
 //                List<Pet> petList = new ArrayList<>();
@@ -276,7 +285,7 @@ public class UserController {
 //
 //                    }
 //                    User clientLogged = new User(dBUser.getFname() + dBUser.getLname(), user.getUsername(), user.getPassword(), "client");
-//                    session.setAttribute("logedUser", clientLogged);
+//                    session.setAttribute("loggedUser", clientLogged);
 //                }
 //            } else {
 //                message = "Pet is unadvailable at the moment.";
@@ -297,7 +306,7 @@ public class UserController {
 //                    mav.addObject("accessorisesList", accessorisesList);
 //                }
 //                User clientLogged = new User(dBUser.getFname() + dBUser.getLname(), user.getUsername(), user.getPassword(), "client");
-//                session.setAttribute("logedUser", clientLogged);
+//                session.setAttribute("loggedUser", clientLogged);
 //            }
 //        }
 //        redirectAttributes.addFlashAttribute("message", message);

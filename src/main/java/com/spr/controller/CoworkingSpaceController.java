@@ -65,7 +65,7 @@ public class CoworkingSpaceController {
 //            message = "FAIL: CoworkingSpace already exists!";
 //        else {
 //            Adoption ad = adoptionService.findById(id);
-//            ad.setIdUser(((User) session.getAttribute("logedUser")).getId());
+//            ad.setIdUser(((User) session.getAttribute("loggedUser")).getId());
 //            ad.setIdCoworkingSpace(check.getId());
 //            coworkingSpaceId = ad.getIdCoworkingSpace();
 //            adoptionService.update(ad);

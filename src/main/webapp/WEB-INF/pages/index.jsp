@@ -22,7 +22,7 @@
     <script src="/resources/js/materialize.js"></script>
     <script src="/resources/js/init.js"></script>
 
-    <title>Login</title>
+    <title>Home page</title>
 
 </head>
 <body>

@@ -1,6 +1,6 @@
 <!-- Dropdown Structure -->
 <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="${pageContext.request.contextPath}/my-account.html">My account</a></li>
+    <li><a href="${pageContext.request.contextPath}/user/account.html">My account</a></li>
     <li class="divider"></li>
     <li><a href="${pageContext.request.contextPath}/space/create.html">Add coworking space</a></li>
     <li class="divider"></li>
@@ -15,7 +15,7 @@
             <ul class="hide-on-med-and-down">
                 <div class="left center">
                     <li><p>       </p></li>
-                    <li><img src="/resources/images/coworkingLogo.jpg" height="64" alt=""></li>
+                    <li><img src="/resources/images/coworkingLogo.jpg" width="158" height="60" alt=""></li>
                     <li><p>       </p></li>
                     <li>
                         <form>

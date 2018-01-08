@@ -5,7 +5,6 @@ package com.spr.controller;
  */
 
 import org.springframework.stereotype.Controller;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -31,5 +30,10 @@ public class NavigationController {
     @RequestMapping(value = {"/admin-page"}, method = RequestMethod.GET)
     public ModelAndView admin() {
         return new ModelAndView("admin-page");
+    }
+
+    @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
+    public ModelAndView contact() {
+        return new ModelAndView("contact");
     }
 }

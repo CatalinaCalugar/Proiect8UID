@@ -129,11 +129,11 @@ public class CoworkingSpaceController {
         return mav;
     }
 
-    @RequestMapping(value = "/view/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
     public ModelAndView viewSpace(@PathVariable Integer id,
                                        final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
-        ModelAndView mav = new ModelAndView("redirect:/view-space.html");
+        ModelAndView mav = new ModelAndView("view-space");
 
         String message = "The coworkingSpace " + id + " was successfully deleted.";
 

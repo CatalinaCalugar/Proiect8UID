@@ -13,7 +13,8 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/resources/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="/resources/css/font-awesome5/fontawesome-all.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/resources/css/font-awesome5/fontawesome-all.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!--  Scripts-->
@@ -29,7 +30,7 @@
 <jsp:include page="navbar-before-login.jsp"></jsp:include>
 
 <div class="row">
-   Home page
+    Home page
 
     <div class="w3-container">
         <h2>Coworking spaces</h2>
@@ -39,18 +40,20 @@
 
         <div class="w3-display-container mySlides">
             <div class="row">
+                <a href="${pageContext.request.contextPath}/space/view/1" id="logo1">
+                    <div class="col s4">
+                        <img src="/resources/images/genSp1.jpg" width="300" height="158">
+                        <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
+                            Space 1
+                        </div>
+                        <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
+                            dsd adsa dasdv fawaw sefe
+                        </div>
+                    </div>
+                </a>
 
                 <div class="col s4">
-                    <a href="${pageContext.request.contextPath}/space/view/{1}.html" id="logo1"><img src="/resources/images/genSp1.jpg"></a>
-                    <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
-                        Space 1
-                    </div>
-                    <div class="w3-display-bottom w3-small w3-container w3-padding-16 w3-white">
-                        dsd adsa dasdv fawaw sefe
-                    </div>
-                </div>
-                <div class="col s4">
-                    <img src="/resources/images/genSp2.jpg">
+                    <img src="/resources/images/genSp2.jpg" width="300" height="158">
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 2
                     </div>
@@ -59,7 +62,7 @@
                     </div>
                 </div>
                 <div class="col s4">
-                    <img src="/resources/images/genSp3.jpg">
+                    <img src="/resources/images/genSp3.jpg" width="300" height="158">
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 3
                     </div>
@@ -76,7 +79,8 @@
             <div class="row">
 
                 <div class="col s4">
-                    <a href="${pageContext.request.contextPath}/space/view/{4}.html" id="logo4"><img src="/resources/images/genSp4.jpg"></a>
+                    <a href="${pageContext.request.contextPath}/space/view/4.html" id="logo4"><img
+                            src="/resources/images/genSp4.jpg" width="300" height="158"></a>
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 4
                     </div>
@@ -85,7 +89,7 @@
                     </div>
                 </div>
                 <div class="col s4">
-                    <img src="/resources/images/genSp5.jpg">
+                    <img src="/resources/images/genSp5.jpg" width="300" height="158">
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 5
                     </div>
@@ -94,7 +98,7 @@
                     </div>
                 </div>
                 <div class="col s4">
-                    <img src="/resources/images/genSp6.jpg">
+                    <img src="/resources/images/genSp6.jpg" width="300" height="158">
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 6
                     </div>
@@ -110,7 +114,8 @@
             <div class="row">
 
                 <div class="col s4">
-                    <a href="${pageContext.request.contextPath}/space/view/{7}.html" id="logo"><img src="/resources/images/genSp7.jpg"></a>
+                    <a href="${pageContext.request.contextPath}/space/view/7.html" id="logo"><img
+                            src="/resources/images/genSp7.jpg" width="300" height="158"></a>
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 7
                     </div>
@@ -119,7 +124,7 @@
                     </div>
                 </div>
                 <div class="col s4">
-                    <img src="/resources/images/genSp8.jpg">
+                    <img src="/resources/images/genSp8.jpg" width="300" height="158">
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 8
                     </div>
@@ -128,7 +133,7 @@
                     </div>
                 </div>
                 <div class="col s4">
-                    <img src="/resources/images/genSp9.jpg">
+                    <img src="/resources/images/genSp9.jpg" width="300" height="158">
                     <div class="w3-display-bottom w3-large w3-container w3-padding-16 w3-white">
                         Space 9
                     </div>
@@ -159,12 +164,16 @@
     function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
-        x[slideIndex-1].style.display = "block";
+        x[slideIndex - 1].style.display = "block";
     }
 </script>
 

@@ -41,48 +41,48 @@
                 <ul>
                     <li>
                         <a href="#name-and-description-panel">
-                            <button class="waves-effect waves-light btn-large"
-                                    style="width: 250px">Name and description
+                            <button class="waves-effect waves-light btn-large b1"
+                                    style="width: 250px" >Name and description
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#contact-details-panel">
-                            <button class="waves-effect waves-light btn-large" style="width: 250px">Contact details
+                            <button class="waves-effect waves-light btn-large b2" style="width: 250px" >Contact details
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#amenities-panel">
-                            <button class="waves-effect waves-light btn-large" style="width: 250px">Amenities</button>
+                            <button class="waves-effect waves-light btn-large b3" style="width: 250px" onclick="myFunction2()">Amenities</button>
                         </a>
                     </li>
                     <li>
                         <a href="#location-panel">
-                            <button class="waves-effect waves-light btn-large" style="width: 250px">Location</button>
+                            <button class="waves-effect waves-light btn-large b4" style="width: 250px" onclick="myFunction3()">Location</button>
                         </a>
                     </li>
                     <li>
                         <a href="#offices-panel">
-                            <button class="waves-effect waves-light btn-large" style="width: 250px">Meeting rooms
+                            <button class="waves-effect waves-light btn-large b5" style="width: 250px" onclick="myFunction4()">Meeting rooms
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#opening-hours-panel">
-                            <button class="waves-effect waves-light btn-large" style="width: 250px">Opening hours
+                            <button class="waves-effect waves-light btn-large b6" style="width: 250px" onclick="myFunction5()">Opening hours
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#photos-panel">
-                            <button class="waves-effect waves-light btn-large" style="width: 250px">General photos
+                            <button class="waves-effect waves-light btn-large b7" style="width: 250px" onclick="myFunction6()">General photos
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#payment-panel">
-                            <button class="waves-effect waves-light btn-large" style="width: 250px">Payment details
+                            <button class="waves-effect waves-light btn-large b8" style="width: 250px" onclick="myFunction7()">Payment details
                             </button>
                         </a>
                     </li>
@@ -155,7 +155,7 @@
 
                 </div>
 
-                <div id="amenities-panel">
+                <div id="amenities-panel" >
                     <h1>Select amenities for your space</h1>
                     <c:forEach items="${amenities}" var="amenity">
                         <p>
@@ -187,20 +187,20 @@
                         </div></div>
                 </div>
 
-                <div id="offices-panel">
+                <div id="offices-panel" >
                     <h1>Add offices</h1>
                 </div>
 
-                <div id="opening-hours-panel">
+                <div id="opening-hours-panel" >
                     <h1>Add schedule</h1>
 
                 </div>
 
-                <div id="photos-panel">
+                <div id="photos-panel" >
                     <h1>Add general photos of the space</h1>
                 </div>
 
-                <div id="payment-panel">
+                <div id="payment-panel" >
                     <h1>Add payment details</h1>
                     <div class="row">
                         <div class="input-field col s12">
@@ -225,6 +225,137 @@
     });
 
 </script>
+<!--<script type="text/javascript" language="javascript" src="resource/js/core.js"></script> -->
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b1").click(function(){
+            $("#name-and-description-panel").show();
+            $("#contact-details-panel").hide();
+            $("#amenities-panel").hide();
+            $("#location-panel").hide();
+            $("#offices-panel").hide();
+            $("#opening-hours-panel").hide();
+            $("#photos-panel").hide();
+            $("#payment-panel").hide();
+
+        });
+
+    });
+</script>
+
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b2").click(function(){
+            $("#name-and-description-panel").hide();
+            $("#contact-details-panel").show();
+            $("#amenities-panel").hide();
+            $("#location-panel").hide();
+            $("#offices-panel").hide();
+            $("#opening-hours-panel").hide();
+            $("#photos-panel").hide();
+            $("#payment-panel").hide();
+
+        });
+
+    });
+</script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b3").click(function(){
+            $("#name-and-description-panel").hide();
+            $("#contact-details-panel").hide();
+            $("#amenities-panel").show();
+            $("#location-panel").hide();
+            $("#offices-panel").hide();
+            $("#opening-hours-panel").hide();
+            $("#photos-panel").hide();
+            $("#payment-panel").hide();
+
+        });
+
+    });
+</script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b4").click(function(){
+            $("#name-and-description-panel").hide();
+            $("#contact-details-panel").hide();
+            $("#amenities-panel").hide();
+            $("#location-panel").show();
+            $("#offices-panel").hide();
+            $("#opening-hours-panel").hide();
+            $("#photos-panel").hide();
+            $("#payment-panel").hide();
+
+        });
+
+    });
+</script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b5").click(function(){
+            $("#name-and-description-panel").hide();
+            $("#contact-details-panel").hide();
+            $("#amenities-panel").hide();
+            $("#location-panel").hide();
+            $("#offices-panel").show();
+            $("#opening-hours-panel").hide();
+            $("#photos-panel").hide();
+            $("#payment-panel").hide();
+
+        });
+
+    });
+</script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b6").click(function(){
+            $("#name-and-description-panel").hide();
+            $("#contact-details-panel").hide();
+            $("#amenities-panel").hide();
+            $("#location-panel").hide();
+            $("#offices-panel").hide();
+            $("#opening-hours-panel").show();
+            $("#photos-panel").hide();
+            $("#payment-panel").hide();
+
+        });
+
+    });
+</script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b7").click(function(){
+            $("#name-and-description-panel").hide();
+            $("#contact-details-panel").hide();
+            $("#amenities-panel").hide();
+            $("#location-panel").hide();
+            $("#offices-panel").hide();
+            $("#opening-hours-panel").hide();
+            $("#photos-panel").show();
+            $("#payment-panel").hide();
+
+        });
+
+    });
+</script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $(".b8").click(function(){
+            $("#name-and-description-panel").hide();
+            $("#contact-details-panel").hide();
+            $("#amenities-panel").hide();
+            $("#location-panel").hide();
+            $("#offices-panel").hide();
+            $("#opening-hours-panel").hide();
+            $("#photos-panel").hide();
+            $("#payment-panel").show();
+
+        });
+
+    });
+</script>
+
 
 </body>
 </html>

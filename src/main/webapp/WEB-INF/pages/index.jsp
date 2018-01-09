@@ -179,9 +179,9 @@
 
     </div>
 
-    <div  style=" padding-left:190px; padding-bottom: 20px">
+    <div style=" padding-left:190px; padding-bottom: 20px">
         <h3>My Google Map</h3>
-        <div id="map" style="width:940px; height:400px; padding-left:100px">
+        <div id="map" class="center" style="width:940px; height:400px; padding-left:100px">
         <script>
             function myMap() {
                 var mapOptions = {
@@ -198,8 +198,18 @@
         </script>
         </div></div>
 
-
 </div>
+
+<%--<!-- Element Showed -->--%>
+<%--<a id="menu" class="waves-effect waves-light btn btn-floating pulse" >Add a review!<i class="material-icons">menu</i></a>--%>
+
+<%--<!-- Tap Target Structure -->--%>
+<%--<div class="tap-target" data-activates="menu">--%>
+    <%--<div class="tap-target-content">--%>
+        <%--<h5>Add a review</h5>--%>
+        <%--<p>A bunch of text</p>--%>
+    <%--</div>--%>
+<%--</div>--%>
 
 <jsp:include page="footer.jsp"></jsp:include>
 
@@ -231,6 +241,11 @@
         }
         x[slideIndex - 1].style.display = "block";
     }
+</script>
+
+<script language="JavaScript">
+    $('.tap-target').tapTarget('open');
+    $('.tap-target').tapTarget('close');
 </script>
 
 </body>

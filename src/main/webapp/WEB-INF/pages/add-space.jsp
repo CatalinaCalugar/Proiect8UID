@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: cata_
@@ -28,7 +29,6 @@
 
 <jsp:include page="navbar-after-login.jsp"></jsp:include>
 
-<%--<img class="background" src="/resources/images/office1.jpg">--%>
 
 <div class="parallax-container">
     <div class="parallax"><img src="/resources/images/office2.jpg"></div>
@@ -40,29 +40,51 @@
             <div class="truncate">
                 <ul>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">Name and description
-                        </button>
+                        <a href="#name-and-description-panel">
+                            <button class="waves-effect waves-light btn-large"
+                                    style="width: 250px">Name and description
+                            </button>
+                        </a>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">Contact details</button>
+                        <a href="#contact-details-panel">
+                            <button class="waves-effect waves-light btn-large" style="width: 250px">Contact details
+                            </button>
+                        </a>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">Amenities</button>
+                        <a href="#amenities-panel">
+                            <button class="waves-effect waves-light btn-large" style="width: 250px">Amenities</button>
+                        </a>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">Location</button>
+                        <a href="#location-panel">
+                            <button class="waves-effect waves-light btn-large" style="width: 250px">Location</button>
+                        </a>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">Meeting rooms</button>
+                        <a href="#offices-panel">
+                            <button class="waves-effect waves-light btn-large" style="width: 250px">Meeting rooms
+                            </button>
+                        </a>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">Opening hours</button>
+                        <a href="#opening-hours-panel">
+                            <button class="waves-effect waves-light btn-large" style="width: 250px">Opening hours
+                            </button>
+                        </a>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">General photos</button>
+                        <a href="#photos-panel">
+                            <button class="waves-effect waves-light btn-large" style="width: 250px">General photos
+                            </button>
+                        </a>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 250px">Payment details</button>
+                        <a href="#payment-panel">
+                            <button class="waves-effect waves-light btn-large" style="width: 250px">Payment details
+                            </button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -70,6 +92,124 @@
 
         <div class="col s9">
             <!-- Teal page content  -->
+
+            <form class="col s12" method="POST" commandName="user"
+                  action="${pageContext.request.contextPath}/space/create.html">
+                <div id="name-and-description-panel">
+                    <h1>Enter name and description</h1>
+                    <div class="row">
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name" name="name" type="text" class="validate">
+                                <label for="name">Space name</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="description" rows="3" name="description"
+                                          class="materialize-textarea"></textarea>
+                                <label for="description" style="color: black">Description</label></div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+
+                <div id="contact-details-panel">
+                    <h1>Enter contact details</h1>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="ownerEmail" name="ownerEmail" type="text" class="validate">
+                            <label for="ownerEmail">Owner's email</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="ownerPhone" name="ownerPhone" type="text" class="validate">
+                            <label for="ownerPhone">Owner's phone</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="webURL" name="webURL" type="text" class="validate">
+                            <label for="webURL">Website</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="facebookUrl" name="facebookUrl" type="text" class="validate">
+                            <label for="facebookUrl">Facebook URL</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="twitterUrl" name="twitterUrl" type="text" class="validate">
+                            <label for="twitterUrl">Twitter URL</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="amenities-panel">
+                    <h1>Select amenities for your space</h1>
+                    <c:forEach items="${amenities}" var="amenity">
+                        <p>
+                            <input type="checkbox" id=${amenity}/>
+                            <label for=${amenity}>${amenity}</label>
+                        </p>
+                    </c:forEach>
+                </div>
+
+                <div id="location-panel">
+                    <h1>Pin your coworking space's location</h1>
+                    <div style=" padding-left:190px; padding-bottom: 20px">
+                        <h3>My Google Map</h3>
+                        <div id="map" class="center" style="width:940px; height:400px; padding-left:100px">
+                            <script>
+                                function myMap() {
+                                    var mapOptions = {
+                                        center: new google.maps.LatLng(46.770439, 23.591423),
+                                        center: new google.maps.LatLng(46.770439, 23.591423),
+                                        zoom: 10,
+                                        mapTypeId: google.maps.MapTypeId.HYBRID
+                                    }
+                                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                                }
+                            </script>
+                            <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?callback=myMap">
+                            </script>
+                        </div></div>
+                </div>
+
+                <div id="offices-panel">
+                    <h1>Add offices</h1>
+                </div>
+
+                <div id="opening-hours-panel">
+                    <h1>Add schedule</h1>
+
+                </div>
+
+                <div id="photos-panel">
+                    <h1>Add general photos of the space</h1>
+                </div>
+
+                <div id="payment-panel">
+                    <h1>Add payment details</h1>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="ISBN" name="ISBN" type="text" class="validate">
+                            <label for="ISBN">ISBN</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
         </div>
 
@@ -80,9 +220,10 @@
 <jsp:include page="footer.jsp"></jsp:include>
 
 <script language="JavaScript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.parallax').parallax();
     });
+
 </script>
 
 </body>

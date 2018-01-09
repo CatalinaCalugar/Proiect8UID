@@ -35,15 +35,15 @@ public class CoworkingSpaceController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public ModelAndView newCoworkingSpacePage() {
         ModelAndView mav = new ModelAndView("add-space", "coworkingSpace", new CoworkingSpace());
-//        List<Adoption> adoptionList = adoptionService.findAllWithoutCoworkingSpace();
-//        mav.addObject("adoptionList", adoptionList);
-//        List<Client> clientList = clientService.findAll();
-//        mav.addObject("clientList", clientList);
-//        List<Integer> adId = new ArrayList<>();
-//        for (Adoption a : adoptionList) {
-//            adId.add(a.getId());
-//        }
-        //mav.addObject("adoptionId", 1);
+        List<String> amenities = new ArrayList<>();
+        amenities.add("coffee machine");
+        amenities.add("laptop");
+        amenities.add("projector");
+        amenities.add("home cinema 5.1");
+        amenities.add("whiteboard");
+        amenities.add("markers");
+
+        mav.addObject("amenities", amenities);
         return mav;
     }
 
@@ -51,8 +51,8 @@ public class CoworkingSpaceController {
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView createNewCoworkingSpace(@ModelAttribute @Valid CoworkingSpace coworkingSpace, HttpServletResponse response,
-                                          BindingResult result, @RequestParam("type") Integer id,
-                                          final RedirectAttributes redirectAttributes, HttpSession session){
+                                                BindingResult result, @RequestParam("type") Integer id,
+                                                final RedirectAttributes redirectAttributes, HttpSession session) {
 
         if (result.hasErrors())
             return new ModelAndView("add-space");
@@ -102,9 +102,9 @@ public class CoworkingSpaceController {
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
     public ModelAndView editCoworkingSpace(@ModelAttribute @Valid CoworkingSpace coworkingSpace,
-                                     BindingResult result,
-                                     @PathVariable Integer id,
-                                     final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+                                           BindingResult result,
+                                           @PathVariable Integer id,
+                                           final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
         if (result.hasErrors())
             return new ModelAndView("manage-space");
@@ -119,7 +119,7 @@ public class CoworkingSpaceController {
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     public ModelAndView deleteCoworkingSpace(@PathVariable Integer id,
-                                       final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+                                             final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
         ModelAndView mav = new ModelAndView("redirect:/user-page.html");
 
@@ -131,7 +131,7 @@ public class CoworkingSpaceController {
 
     @RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
     public ModelAndView viewSpace(@PathVariable Integer id,
-                                       final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+                                  final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
         ModelAndView mav = new ModelAndView("view-space");
 

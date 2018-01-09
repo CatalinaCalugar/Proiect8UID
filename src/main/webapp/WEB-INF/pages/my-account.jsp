@@ -26,42 +26,42 @@
 <body>
 
 <!-- Page Layout here -->
-<%--<div class="row">--%>
 
-<div class="col s3">
-    <ul id="slide-out" class="side-nav fixed">
-        <li>
-            <div class="user-view">
-                <div class="background">
-                    <img src="/resources/images/desk.jpg">
+    <div class="col s3">
+        <ul id="slide-out" class="side-nav fixed">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="/resources/images/desk.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="/resources/images/userLogo.jpg"></a>
+                    <a href="#!name"><span class="white-text name">${username}</span></a>
+                    <a href="#!email"><span class="white-text email">email@gmail.com</span></a>
                 </div>
-                <a href="#!user"><img class="circle" src="/resources/images/userLogo.jpg"></a>
-                <a href="#!name"><span class="white-text name">${username}</span></a>
-                <a href="#!email"><span class="white-text email">email@gmail.com</span></a>
-            </div>
-        </li>
-        <li><a href="#!"><i class="material-icons">edit</i>Edit account</a></li>
-        <li><a href="${pageContext.request.contextPath}/space/create.html"><i class="material-icons">add</i>Add
-            coworking
-            space</a></li>
-        <li><a href=a href="${pageContext.request.contextPath}/space/edit.html"><i class="material-icons">create</i>Manage
-            coworking space</a></li>
-        <li><a href="#!"><i class="material-icons">content_cut</i>Ban user</a></li>
-        <li><a href="#!"><i class="material-icons">exit_to_app</i>Log out</a></li>
-    </ul>
+            </li>
+            <li><a href="#!"><i class="material-icons">edit</i>Edit account</a></li>
+            <li><a href="${pageContext.request.contextPath}/space/create.html"><i class="material-icons">add</i>Add
+                coworking
+                space</a></li>
+            <li><a href=a href="${pageContext.request.contextPath}/space/edit.html"><i class="material-icons">create</i>Manage
+                coworking space</a></li>
+            <li><a href="#!"><i class="material-icons">content_cut</i>Ban user</a></li>
+            <li><a href="#!"><i class="material-icons">exit_to_app</i>Log out</a></li>
+        </ul>
+
+    </div>
+    <jsp:include page="navbar-after-login.jsp"></jsp:include>
+
+<div class="row">
+    <div class="col s9">
+
+        My account page
+
+        <%--<jsp:include page="footer.jsp"></jsp:include>--%>
+
+    </div>
 
 </div>
-<jsp:include page="navbar-after-login.jsp"></jsp:include>
-
-<div class="col s9">
-
-    My account page
-
-    <jsp:include page="footer.jsp"></jsp:include>
-
-</div>
-
-
 </body>
 
 </html>

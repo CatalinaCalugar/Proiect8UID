@@ -33,7 +33,7 @@ public class CoworkingSpaceController {
 //    }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
-    public ModelAndView newCoworkingSpacePage() {
+    public ModelAndView newCoworkingSpacePage(HttpSession session) {
         ModelAndView mav = new ModelAndView("add-space", "coworkingSpace", new CoworkingSpace());
         List<String> amenities = new ArrayList<>();
         amenities.add("coffee machine");
@@ -44,6 +44,7 @@ public class CoworkingSpaceController {
         amenities.add("markers");
 
         mav.addObject("amenities", amenities);
+        mav.addObject("username", session.getAttribute("loggedUser"));
         return mav;
     }
 

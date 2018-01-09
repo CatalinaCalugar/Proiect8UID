@@ -55,7 +55,8 @@
 <div class="row">
     <div class="col s9">
 
-        My account page
+        <h1>Your account page</h1>
+        <img src="/resources/images/myAccountBackground.png" width="1700px">
 
         <%--<jsp:include page="footer.jsp"></jsp:include>--%>
 

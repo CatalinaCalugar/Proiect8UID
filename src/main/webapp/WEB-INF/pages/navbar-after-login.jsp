@@ -14,9 +14,10 @@
         <div class="nav-wrapper">
             <ul class="hide-on-med-and-down">
                 <div class="left center">
-                    <li><p>       </p></li>
-                    <li><img src="/resources/images/coworkingLogo.jpg" width="158" height="60" alt=""></li>
-                    <li><p>       </p></li>
+                    <li><p></p></li>
+                    <li><img src="/resources/images/coworkingLogo4.png" height="70" alt="" style="margin-left: 20%">
+                    </li>
+                    <li><p></p></li>
                     <li>
                         <form>
                             <div class="input-field">
@@ -28,12 +29,13 @@
                     </li>
                 </div>
                 <div class="right">
-                    <li><a href="${pageContext.request.contextPath}/home-page-after-login.html">Home</a></li>
+                    <li><a href="${pageContext.request.contextPath}/home_page_after_login">Home</a></li>
                     <li><a href="${pageContext.request.contextPath}/contact.html">Contact us</a></li>
                     <!-- Dropdown Trigger -->
                     <li><a class='dropdown-button' data-activates='dropdown1'>${username}</a></li>
-                    <li><img src="/resources/images/userLogo.jpg" alt="user image"></li>
-                    <li><p>       </p></li>
+                    <li><a class='dropdown-button' data-activates='dropdown1'><img src="/resources/images/userLogo.jpg"
+                                                                                   alt="user image"></a></li>
+                    <li><p></p></li>
                 </div>
             </ul>
         </div>

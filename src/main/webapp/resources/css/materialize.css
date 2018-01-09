@@ -4371,6 +4371,7 @@ nav form {
 nav .input-field {
   margin: 0;
   height: 100%;
+
 }
 
 nav .input-field input {
@@ -6333,6 +6334,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field {
+  width: 900px;
   position: relative;
   margin-top: 1rem;
 }

@@ -1,18 +1,17 @@
-
-
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper">
             <ul class="hide-on-med-and-down">
-                <div class="left center">
-                    <li><p>       </p></li>
-                    <li><img src="/resources/images/coworkingLogo.jpg" width="158" height="60" alt=""></li>
-                    <li><p>       </p></li>
+                <div class="left">
+                    <li></li>
+                    <li><img src="/resources/images/coworkingLogo4.png" height="70" alt="" style="margin-left: 20%">
+                    </li>
+                    <li></li>
                     <li>
                         <form>
                             <div class="input-field">
                                 <input id="search" type="search" required>
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <label class="label-icon" for="search" style="width: 60%"><i class="material-icons">search</i></label>
                                 <i class="material-icons">X</i>
                             </div>
                         </form>
@@ -32,7 +31,7 @@
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
     <div class="modal-content">
-        <h4>Login</h4>
+        <h1>Login</h1>
         <div class="row">
             <form class="col s12" method="POST" commandName="user"
                   action="${pageContext.request.contextPath}/user/login.html">
@@ -43,23 +42,27 @@
                     </div>
                 </div>
 
-                <br>
-
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="password" name="password" type="password" class="validate">
                         <label for="password">Password</label>
                     </div>
                 </div>
-
+                <div class="center">
+                    <a href="${pageContext.request.contextPath}/user/register.html" style="color: #00acc1">Forgot password?</a>
+                </div>
                 <br>
 
-                <button class="btn waves-effect waves-light waves-ripple " type="submit" name="action">Login
+                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Login
                     <i class="material-icons right"></i>
                 </button>
 
             </form>
         </div>
+    </div>
+
+    <div class="center">
+        <h3>Don't have an account?<a href="${pageContext.request.contextPath}/user/register.html" style="color: #00acc1"> Sign up</a></h3>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>

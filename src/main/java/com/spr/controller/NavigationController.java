@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,9 +26,11 @@ public class NavigationController {
         return model;
     }
 
-    @RequestMapping(value = {"/home-page-after-login"}, method = RequestMethod.GET)
-    public ModelAndView client() {
-        return new ModelAndView("home-page-after-login");
+    @RequestMapping(value = {"/home_page_after_login"}, method = RequestMethod.GET)
+    public ModelAndView client(HttpSession session) {
+        ModelAndView mav = new ModelAndView("home_page_after_login");
+        mav.addObject("username", session.getAttribute("loggedUser"));
+        return mav;
     }
 
     @RequestMapping(value = {"/user-page"}, method = RequestMethod.GET)

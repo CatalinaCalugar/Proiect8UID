@@ -25,8 +25,11 @@
 </head>
 <body>
 
-<header>
-    <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform: translateX(0%);">
+<!-- Page Layout here -->
+<%--<div class="row">--%>
+
+<div class="col s3">
+    <ul id="slide-out" class="side-nav fixed">
         <li>
             <div class="user-view">
                 <div class="background">
@@ -38,23 +41,26 @@
             </div>
         </li>
         <li><a href="#!"><i class="material-icons">edit</i>Edit account</a></li>
-        <li><a href="#!"><i class="material-icons">add</i>Add coworking space</a></li>
-        <li><a href="#!"><i class="material-icons">create</i>Manage coworking space</a></li>
+        <li><a href="${pageContext.request.contextPath}/space/create.html"><i class="material-icons">add</i>Add
+            coworking
+            space</a></li>
+        <li><a href=a href="${pageContext.request.contextPath}/space/edit.html"><i class="material-icons">create</i>Manage
+            coworking space</a></li>
         <li><a href="#!"><i class="material-icons">content_cut</i>Ban user</a></li>
         <li><a href="#!"><i class="material-icons">exit_to_app</i>Log out</a></li>
     </ul>
 
-</header>
+</div>
+<jsp:include page="navbar-after-login.jsp"></jsp:include>
 
-<main>
-    <div class="section no-pad-bot" id="index-banner">
-        <jsp:include page="navbar-after-login.jsp"></jsp:include>
+<div class="col s9">
 
-            beksfhakwf
+    My account page
 
-        <jsp:include page="footer.jsp"></jsp:include>
-    </div>
-</main>
+    <jsp:include page="footer.jsp"></jsp:include>
+
+</div>
+
 
 </body>
 

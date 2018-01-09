@@ -22,18 +22,10 @@
                 </ul>
 
                 <ul>
-                    <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"
-                                                                              aria-hidden="true"></i></a>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="/resources/images/img_contact_facebook_icon.png"></a>
                     </li>
-                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"
-                                                                         aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.pinterest.com"><i class="fa fa-pinterest-p"
-                                                               aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"
-                                                                               aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="https://www.youtube.com" target="_blank"><i
-                            class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="/resources/images/img_contact_twitter_icon.png"></a></li>
+                    <li><a href="https://https://www.instagram.com/"><img src="/resources/images/img_contact_instargarm_icon.png"></a></li>
                 </ul>
             </div>
         </div>

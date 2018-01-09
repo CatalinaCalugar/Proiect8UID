@@ -36,11 +36,11 @@
 }
 
 .materialize-red.lighten-2 {
-  background-color: #D3D3D3;   /*general backgroud color => gray*/ !important;
+  background-color: #4db6ac;   /*general backgroud color => gray*/ !important;
 }
 
 .materialize-red-text.text-lighten-2 {
-  color: #D3D3D3;   /*general backgroud color => gray*/ !important;
+  color: #4db6ac;   /*general backgroud color => gray*/ !important;
 }
 
 .materialize-red.lighten-1 {
@@ -2634,7 +2634,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #D3D3D3;   /*general backgroud color => gray*/;
+  border-left: 5px solid #4db6ac;   /*general backgroud color => gray*/;
 }
 
 i {
@@ -2694,7 +2694,7 @@ video.responsive-video {
 }
 
 .pagination li.active {
-  background-color: #D3D3D3;   /*general backgroud color => gray*/;
+  background-color: #4db6ac;   /*general backgroud color => gray*/;
 }
 
 .pagination li.disabled a {
@@ -2881,7 +2881,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #000000;
-  background-color: #D3D3D3;   /*general backgroud color => gray*/;
+  background-color: #4db6ac;   /*general backgroud color => gray*/;
 }
 
 .page-footer .footer-copyright {
@@ -4209,7 +4209,7 @@ nav ul a span.badge {
 
 nav {
   color: #000000;
-  background-color: #D3D3D3;   /*general backgroud color => gray*/;
+  background-color: #4db6ac;   /*general backgroud color => gray*/;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -5065,7 +5065,7 @@ small {
 
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
-  color: #D3D3D3;   /*general backgroud color => gray*/;
+  color: #4db6ac;   /*general backgroud color => gray*/;
 }
 
 .tabs .tab.disabled a,
@@ -7338,20 +7338,20 @@ input[type=range]:focus::-ms-fill-upper {
 .table-of-contents a:hover {
   color: #a8a8a8;
   padding-left: 19px;
-  border-left: 1px solid #D3D3D3;   /*general backgroud color => gray*/;
+  border-left: 1px solid #4db6ac;   /*general backgroud color => gray*/;
 }
 
 .table-of-contents a.active {
   font-weight: 500;
   padding-left: 18px;
-  border-left: 2px solid #D3D3D3;   /*general backgroud color => gray*/;
+  border-left: 2px solid #4db6ac;   /*general backgroud color => gray*/;
 }
 
 .side-nav {
   position: fixed;
-  width: 300px;
+  width: 400px;
   left: 0;
-  top: 0;
+  top: 64px;
   margin: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -7555,7 +7555,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav .collapsible-body > ul:not(.collapsible) > li.active,
 .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: #D3D3D3;   /*general backgroud color => gray*/;
+  background-color: #4db6ac;   /*general backgroud color => gray*/;
 }
 
 .side-nav .collapsible-body > ul:not(.collapsible) > li.active a,
@@ -8331,7 +8331,7 @@ input[type=range]:focus::-ms-fill-upper {
   position: absolute;
   font-size: 1rem;
   border-radius: 50%;
-  background-color: #D3D3D3;   /*general backgroud color => gray*/;
+  background-color: #4db6ac;   /*general backgroud color => gray*/;
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
   width: 100%;

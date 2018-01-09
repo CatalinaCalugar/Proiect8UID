@@ -22,7 +22,7 @@
     <script src="/resources/js/materialize.js"></script>
     <script src="/resources/js/init.js"></script>
 
-    <title>Login</title>
+    <title>Home page</title>
 
 </head>
 <body>
@@ -149,6 +149,27 @@
         <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 
     </div>
+
+    <div  style=" padding-left:190px; padding-bottom: 20px">
+        <h3>My Google Map</h3>
+        <div id="map" style="width:940px; height:400px; padding-left:100px">
+        <script>
+            function myMap() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(46.770439, 23.591423),
+                    center: new google.maps.LatLng(46.770439, 23.591423),
+                    zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=myMap">
+        </script>
+    </div>
+
+
 </div>
 
 <jsp:include page="footer.jsp"></jsp:include>

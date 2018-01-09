@@ -25,9 +25,9 @@ public class NavigationController {
         return model;
     }
 
-    @RequestMapping(value = {"/client-page"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/home-page-after-login"}, method = RequestMethod.GET)
     public ModelAndView client() {
-        return new ModelAndView("client-page");
+        return new ModelAndView("home-page-after-login");
     }
 
     @RequestMapping(value = {"/user-page"}, method = RequestMethod.GET)

@@ -28,7 +28,7 @@
                     </li>
                 </div>
                 <div class="right">
-                    <li><a href="${pageContext.request.contextPath}/index.html">Home</a></li>
+                    <li><a href="${pageContext.request.contextPath}/home-page-after-login.html">Home</a></li>
                     <li><a href="${pageContext.request.contextPath}/contact.html">Contact us</a></li>
                     <!-- Dropdown Trigger -->
                     <li><a class='dropdown-button' data-activates='dropdown1'>${username}</a></li>

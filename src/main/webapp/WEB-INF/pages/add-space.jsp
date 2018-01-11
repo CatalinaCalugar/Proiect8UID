@@ -222,6 +222,14 @@
 <script language="JavaScript">
     $(document).ready(function () {
         $('.parallax').parallax();
+        $("#name-and-description-panel").show();
+        $("#contact-details-panel").hide();
+        $("#amenities-panel").hide();
+        $("#location-panel").hide();
+        $("#offices-panel").hide();
+        $("#opening-hours-panel").hide();
+        $("#photos-panel").hide();
+        $("#payment-panel").hide();
     });
 
 </script>

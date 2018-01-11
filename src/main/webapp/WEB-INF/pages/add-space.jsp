@@ -41,48 +41,48 @@
                 <ul>
                     <li>
                         <a href="#name-and-description-panel">
-                            <button class="waves-effect waves-light btn-large b1"
-                                    style="width: 250px" >Name and description
+                            <button id = "b1" class="waves-effect waves-light btn-large b1"
+                                    style="width: 280px" >Name and description
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#contact-details-panel">
-                            <button class="waves-effect waves-light btn-large b2" style="width: 250px" >Contact details
+                            <button class="waves-effect waves-light btn-large b2" style="width: 280px" >Contact details
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#amenities-panel">
-                            <button class="waves-effect waves-light btn-large b3" style="width: 250px" onclick="myFunction2()">Amenities</button>
+                            <button class="waves-effect waves-light btn-large b3" style="width: 280px" onclick="myFunction2()">Amenities</button>
                         </a>
                     </li>
                     <li>
                         <a href="#location-panel">
-                            <button class="waves-effect waves-light btn-large b4" style="width: 250px" onclick="myFunction3()">Location</button>
+                            <button class="waves-effect waves-light btn-large b4" style="width: 280px" onclick="myFunction3()">Location</button>
                         </a>
                     </li>
                     <li>
                         <a href="#offices-panel">
-                            <button class="waves-effect waves-light btn-large b5" style="width: 250px" onclick="myFunction4()">Meeting rooms
+                            <button class="waves-effect waves-light btn-large b5" style="width: 280px" onclick="myFunction4()">Meeting rooms
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#opening-hours-panel">
-                            <button class="waves-effect waves-light btn-large b6" style="width: 250px" onclick="myFunction5()">Opening hours
+                            <button class="waves-effect waves-light btn-large b6" style="width: 280px" onclick="myFunction5()">Opening hours
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#photos-panel">
-                            <button class="waves-effect waves-light btn-large b7" style="width: 250px" onclick="myFunction6()">General photos
+                            <button class="waves-effect waves-light btn-large b7" style="width: 280px" onclick="myFunction6()">General photos
                             </button>
                         </a>
                     </li>
                     <li>
                         <a href="#payment-panel">
-                            <button class="waves-effect waves-light btn-large b8" style="width: 250px" onclick="myFunction7()">Payment details
+                            <button class="waves-effect waves-light btn-large b8" style="width: 280px" onclick="myFunction7()">Payment details
                             </button>
                         </a>
                     </li>
@@ -169,7 +169,7 @@
                     <h1>Pin your coworking space's location</h1>
                     <div style=" padding-left:190px; padding-bottom: 20px">
                         <h3>My Google Map</h3>
-                        <div id="map" class="center" style="width:940px; height:400px; padding-left:100px">
+                        <div id="map" class="center" style="width:740px; height:400px; padding-left:100px">
                             <script>
                                 function myMap() {
                                     var mapOptions = {
@@ -235,7 +235,6 @@
 </script>
 <!--<script type="text/javascript" language="javascript" src="resource/js/core.js"></script> -->
 <script language="JavaScript">
-    $(document).ready(function(){
         $(".b1").click(function(){
             $("#name-and-description-panel").show();
             $("#contact-details-panel").hide();
@@ -245,14 +244,21 @@
             $("#opening-hours-panel").hide();
             $("#photos-panel").hide();
             $("#payment-panel").hide();
-
-        });
-
+            if( $(".b1").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b1").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b1").css("background-color","#e0f2f1");
+                $(".b2").css("background-color","#26a69a");
+                $(".b3").css("background-color","#26a69a");
+                $(".b4").css("background-color","#26a69a");
+                $(".b5").css("background-color","#26a69a");
+                $(".b6").css("background-color","#26a69a");
+                $(".b7").css("background-color","#26a69a");
+                $(".b8").css("background-color","#26a69a");
+            }
     });
 </script>
 
 <script language="JavaScript">
-    $(document).ready(function(){
+
         $(".b2").click(function(){
             $("#name-and-description-panel").hide();
             $("#contact-details-panel").show();
@@ -262,13 +268,22 @@
             $("#opening-hours-panel").hide();
             $("#photos-panel").hide();
             $("#payment-panel").hide();
-
+            if( $(".b2").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b2").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b2").css("background-color","#e0f2f1");
+                $(".b1").css("background-color","#26a69a");
+                $(".b3").css("background-color","#26a69a");
+                $(".b4").css("background-color","#26a69a");
+                $(".b5").css("background-color","#26a69a");
+                $(".b6").css("background-color","#26a69a");
+                $(".b7").css("background-color","#26a69a");
+                $(".b8").css("background-color","#26a69a");
+            }
         });
 
-    });
+
 </script>
 <script language="JavaScript">
-    $(document).ready(function(){
+
         $(".b3").click(function(){
             $("#name-and-description-panel").hide();
             $("#contact-details-panel").hide();
@@ -278,13 +293,22 @@
             $("#opening-hours-panel").hide();
             $("#photos-panel").hide();
             $("#payment-panel").hide();
-
+            if( $(".b3").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b3").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b3").css("background-color","#e0f2f1");
+                $(".b1").css("background-color","#26a69a");
+                $(".b2").css("background-color","#26a69a");
+                $(".b4").css("background-color","#26a69a");
+                $(".b5").css("background-color","#26a69a");
+                $(".b6").css("background-color","#26a69a");
+                $(".b7").css("background-color","#26a69a");
+                $(".b8").css("background-color","#26a69a");
+            }
         });
 
-    });
+
 </script>
 <script language="JavaScript">
-    $(document).ready(function(){
+
         $(".b4").click(function(){
             $("#name-and-description-panel").hide();
             $("#contact-details-panel").hide();
@@ -294,13 +318,22 @@
             $("#opening-hours-panel").hide();
             $("#photos-panel").hide();
             $("#payment-panel").hide();
-
+            if( $(".b4").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b4").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b4").css("background-color","#e0f2f1");
+                $(".b1").css("background-color","#26a69a");
+                $(".b2").css("background-color","#26a69a");
+                $(".b3").css("background-color","#26a69a");
+                $(".b5").css("background-color","#26a69a");
+                $(".b6").css("background-color","#26a69a");
+                $(".b7").css("background-color","#26a69a");
+                $(".b8").css("background-color","#26a69a");
+            }
         });
 
-    });
+
 </script>
 <script language="JavaScript">
-    $(document).ready(function(){
+
         $(".b5").click(function(){
             $("#name-and-description-panel").hide();
             $("#contact-details-panel").hide();
@@ -310,13 +343,22 @@
             $("#opening-hours-panel").hide();
             $("#photos-panel").hide();
             $("#payment-panel").hide();
-
+            if( $(".b5").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b5").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b5").css("background-color","#e0f2f1");
+                $(".b1").css("background-color","#26a69a");
+                $(".b2").css("background-color","#26a69a");
+                $(".b3").css("background-color","#26a69a");
+                $(".b4").css("background-color","#26a69a");
+                $(".b6").css("background-color","#26a69a");
+                $(".b7").css("background-color","#26a69a");
+                $(".b8").css("background-color","#26a69a");
+            }
         });
 
-    });
+
 </script>
 <script language="JavaScript">
-    $(document).ready(function(){
+
         $(".b6").click(function(){
             $("#name-and-description-panel").hide();
             $("#contact-details-panel").hide();
@@ -326,13 +368,21 @@
             $("#opening-hours-panel").show();
             $("#photos-panel").hide();
             $("#payment-panel").hide();
-
+            if( $(".b6").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b6").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b6").css("background-color","#e0f2f1");
+                $(".b1").css("background-color","#26a69a");
+                $(".b2").css("background-color","#26a69a");
+                $(".b3").css("background-color","#26a69a");
+                $(".b4").css("background-color","#26a69a");
+                $(".b5").css("background-color","#26a69a");
+                $(".b7").css("background-color","#26a69a");
+                $(".b8").css("background-color","#26a69a");
+            }
         });
 
-    });
+
 </script>
 <script language="JavaScript">
-    $(document).ready(function(){
         $(".b7").click(function(){
             $("#name-and-description-panel").hide();
             $("#contact-details-panel").hide();
@@ -342,13 +392,21 @@
             $("#opening-hours-panel").hide();
             $("#photos-panel").show();
             $("#payment-panel").hide();
-
+            if( $(".b7").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b7").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b7").css("background-color","#e0f2f1");
+                $(".b1").css("background-color","#26a69a");
+                $(".b2").css("background-color","#26a69a");
+                $(".b3").css("background-color","#26a69a");
+                $(".b4").css("background-color","#26a69a");
+                $(".b5").css("background-color","#26a69a");
+                $(".b6").css("background-color","#26a69a");
+                $(".b8").css("background-color","#26a69a");
+            }
         });
 
-    });
+
 </script>
 <script language="JavaScript">
-    $(document).ready(function(){
         $(".b8").click(function(){
             $("#name-and-description-panel").hide();
             $("#contact-details-panel").hide();
@@ -358,10 +416,19 @@
             $("#opening-hours-panel").hide();
             $("#photos-panel").hide();
             $("#payment-panel").show();
-
+            if( $(".b8").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b8").css("background-color").toString() === "rgb(43, 187, 173)") {
+                $(".b8").css("background-color","#e0f2f1");
+                $(".b1").css("background-color","#26a69a");
+                $(".b2").css("background-color","#26a69a");
+                $(".b3").css("background-color","#26a69a");
+                $(".b4").css("background-color","#26a69a");
+                $(".b5").css("background-color","#26a69a");
+                $(".b6").css("background-color","#26a69a");
+                $(".b7").css("background-color","#26a69a");
+            }
         });
 
-    });
+
 </script>
 
 

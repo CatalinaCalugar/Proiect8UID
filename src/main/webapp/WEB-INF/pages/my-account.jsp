@@ -35,11 +35,11 @@
                         <img src="/resources/images/desk.jpg">
                     </div>
                     <a href="#!user"><img class="circle" src="/resources/images/userLogo.jpg"></a>
-                    <a href="#!name"><span class="white-text name">${username}</span></a>
-                    <a href="#!email"><span class="white-text email">email@gmail.com</span></a>
+                    <a href="#!name"><span class="black-text name">${username}</span></a>
+                    <a href="#!email"><span class="black-text email">email@gmail.com</span></a>
                 </div>
             </li>
-            <li><a href="#!"><i class="material-icons">edit</i>Edit account</a></li>
+            <li><a href="${pageContext.request.contextPath}/user/edit-account.html"><i class="material-icons">edit</i>Edit account</a></li>
             <li><a href="${pageContext.request.contextPath}/space/create.html"><i class="material-icons">add</i>Add
                 coworking
                 space</a></li>

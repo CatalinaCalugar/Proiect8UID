@@ -201,6 +201,32 @@ public class UserController {
         return modelAndView;
     }
 
+    @RequestMapping(value = "/edit-account", method = RequestMethod.GET)
+    public ModelAndView editAccount(HttpSession session, final RedirectAttributes redirectAttributes) {
+
+        ModelAndView mav = new ModelAndView("edit-account", "command", new User());
+        mav.addObject("username", session.getAttribute("loggedUser"));
+        mav.addObject("name", "John Doe");
+        return mav;
+    }
+
+    @RequestMapping(value = "/edit-account", method = RequestMethod.POST)
+    public ModelAndView editAccount(@ModelAttribute User user,
+                                    BindingResult result,
+                                    final RedirectAttributes redirectAttributes, HttpSession session) throws UserNotFound {
+
+        if (result.hasErrors())
+            return new ModelAndView("edit-account");
+
+        ModelAndView mav = new ModelAndView("my-account");
+
+        String message = "";
+
+
+        redirectAttributes.addFlashAttribute("message", message);
+        return mav;
+    }
+
 
 //    @RequestMapping(value = "/loginReg/{id}", method = RequestMethod.GET)
 //    public ModelAndView login1(@PathVariable Integer id, final RedirectAttributes redirectAttributes, HttpSession session) {

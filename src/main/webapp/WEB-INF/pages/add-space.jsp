@@ -169,7 +169,7 @@
                     <h1>Pin your coworking space's location</h1>
                     <div style=" padding-left:190px; padding-bottom: 20px">
                         <h3>My Google Map</h3>
-                        <div id="map" class="center" style="width:740px; height:400px; padding-left:100px">
+                        <div id="map" class="left" style="width:740px; height:400px; padding-left:100px">
                             <script>
                                 function myMap() {
                                     var mapOptions = {
@@ -189,6 +189,7 @@
 
                 <div id="offices-panel" >
                     <h1>Add offices</h1>
+
                 </div>
 
                 <div id="opening-hours-panel" >

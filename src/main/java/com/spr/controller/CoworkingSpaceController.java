@@ -37,13 +37,26 @@ public class CoworkingSpaceController {
         ModelAndView mav = new ModelAndView("add-space", "coworkingSpace", new CoworkingSpace());
         List<String> amenities = new ArrayList<>();
         amenities.add("coffee machine");
-        amenities.add("laptop");
-        amenities.add("projector");
+        amenities.add("computer devices");
+        amenities.add("projector devices");
         amenities.add("home cinema 5.1");
-        amenities.add("whiteboard");
-        amenities.add("markers");
+        amenities.add("whiteboard device");
+        amenities.add("colored markers");
 
         mav.addObject("amenities", amenities);
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        numbers.add(6);
+        numbers.add(7);
+        numbers.add(8);
+        numbers.add(9);
+        numbers.add(10);
+        mav.addObject("officeNumbers", numbers);
+
         mav.addObject("username", session.getAttribute("loggedUser"));
         return mav;
     }

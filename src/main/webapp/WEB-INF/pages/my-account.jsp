@@ -32,7 +32,7 @@
             <li>
                 <div class="user-view">
                     <div class="background">
-                        <img src="/resources/images/desk.jpg">
+                        <img src="/resources/images/whitePicture.jpg">
                     </div>
                     <a href="#!user"><img class="circle" src="/resources/images/userLogo.jpg"></a>
                     <a href="#!name"><span class="black-text name">${username}</span></a>

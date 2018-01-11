@@ -29,8 +29,8 @@
 
 <div class="row">
     <div class="col s3">
-
-        <img class="circle" src="/resources/images/userLogoBig.jpg" width="300px">
+        <br>
+        <img class="circle" src="/resources/images/userLogoBig.jpg" width="320px">
         <div class="center-align">
             <h2><span class="black-text name">${username}</span></h2>
             <h3><span class="green-text email">email@gmail.com</span></h3>
@@ -38,10 +38,11 @@
     </div>
 
     <div class="col s9">
-
+        <br>
         <h1>Tell us something about yourself <i class="material-icons">border_color</i></h1>
         <br>
         <div class="center-align">
+
             <form class="col s12" method="POST" commandName="user"
                   action="${pageContext.request.contextPath}/user/edit-account.html">
                 <div class="row">

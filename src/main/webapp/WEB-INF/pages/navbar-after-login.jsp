@@ -15,7 +15,8 @@
             <ul class="hide-on-med-and-down">
                 <div class="left center">
                     <li><p></p></li>
-                    <li><img src="/resources/images/coworkingLogo4.png" height="70" alt="" style="margin-left: 20%">
+                    <li><a href="${pageContext.request.contextPath}/home_page_after_login"><img
+                            src="/resources/images/coworkingLogo4.png" height="70" alt="" style="margin-left: 20%"></a>
                     </li>
                     <li><p></p></li>
                     <li>

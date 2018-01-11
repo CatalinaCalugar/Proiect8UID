@@ -4,7 +4,7 @@
             <ul class="hide-on-med-and-down">
                 <div class="left">
                     <li></li>
-                    <li><img src="/resources/images/coworkingLogo4.png" height="70" alt="" style="margin-left: 20%">
+                    <li><a href="${pageContext.request.contextPath}/index.html"> <img src="/resources/images/coworkingLogo4.png" height="70" alt="" style="margin-left: 20%"></a>
                     </li>
                     <li></li>
                     <li>

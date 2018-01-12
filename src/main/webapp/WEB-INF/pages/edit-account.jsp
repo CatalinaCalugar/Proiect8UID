@@ -42,7 +42,7 @@
         <br>
         <div class="center-align">
 
-            <form class="col s12" method="GET" commandName="user"
+            <form class="col s12" method="POST" commandName="user"
                   action="${pageContext.request.contextPath}/user/edit-account.html">
                 <div class="row">
                     <div class="input-field col s12 center-align">
@@ -69,11 +69,11 @@
                     </form>
                 </div>
 
-                <a href="${pageContext.request.contextPath}/user/account.html">
+                <%--<a href="${pageContext.request.contextPath}/user/account.html">--%>
                     <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Edit
                         <i class="material-icons right">send</i>
                     </button>
-                </a>
+                <%--</a>--%>
 
             </form>
         </div>

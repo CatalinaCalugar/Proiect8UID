@@ -3,6 +3,7 @@ package com.spr.controller;
 import com.spr.exception.CoworkingSpaceNotFound;
 import com.spr.model.CoworkingSpace;
 import com.spr.model.User;
+import com.spr.utils.InitialSpacesFactory;
 import com.spr.validation.CoworkingSpaceValidator;
 import com.spr.validation.CoworkingSpaceValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,12 +107,26 @@ public class CoworkingSpaceController {
         return mav;
     }
 
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    public ModelAndView manageSpace(HttpSession session) {
+        ModelAndView mav = new ModelAndView("manage-space", "command", new CoworkingSpace());
+        mav.addObject("username", session.getAttribute("loggedUser"));
+        List<CoworkingSpace> spaceList = new ArrayList<>();
+        InitialSpacesFactory spacesFactory = new InitialSpacesFactory();
+        spaceList = spacesFactory.getFirstNSpaces(4);
+
+        mav.addObject("spaceList",spaceList);
+        return mav;
+    }
+
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public ModelAndView editCoworkingSpacePage(@PathVariable Integer id) {
-        ModelAndView mav = new ModelAndView("manage-space");
+        ModelAndView mav = new ModelAndView("edit-space");
 
-        CoworkingSpace coworkingSpace = new CoworkingSpace();
-        mav.addObject("coworkingSpace", coworkingSpace);
+        InitialSpacesFactory spacesFactory = new InitialSpacesFactory();
+        CoworkingSpace space = spacesFactory.getSpaceByID(id);
+
+        mav.addObject("space", space);
         return mav;
     }
 
@@ -156,41 +171,5 @@ public class CoworkingSpaceController {
         return mav;
     }
 
-    @RequestMapping(value = "/edit", method = RequestMethod.GET)
-    public ModelAndView manageSpace(HttpSession session) {
-        ModelAndView mav = new ModelAndView("manage-space", "command", new CoworkingSpace());
-        mav.addObject("username", session.getAttribute("loggedUser"));
-        List<CoworkingSpace> spaceList = new ArrayList<>();
 
-        List<String> amenitiesList = new ArrayList<>();
-        amenitiesList.add("computers");
-        amenitiesList.add("projectors");
-        amenitiesList.add("white board");
-
-        spaceList.add(new CoworkingSpace(2,"Space 2", "Description space 2 bla bla bla", amenitiesList,
-                "owner1@gmail.com", "0786453986", "www.space2.com"));
-        spaceList.add(new CoworkingSpace(4,"Space 4", "Description space 4 bla bla bla", amenitiesList,
-                "owner1@gmail.com", "0786453986", "www.space4.com"));
-        spaceList.add(new CoworkingSpace(6,"Space 6", "Description space 6 bla bla bla", amenitiesList,
-                "owner1@gmail.com", "0786453986", "www.space6.com"));
-        mav.addObject("spaceList",spaceList);
-
-        return mav;
-    }
-
-    @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public ModelAndView manageSpace(@ModelAttribute CoworkingSpace coworkingSpace,
-                                    BindingResult result,
-                                    final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
-
-        if (result.hasErrors())
-            return new ModelAndView("manage-space");
-
-        ModelAndView mav = new ModelAndView("redirect:/user-page.html");
-        String message = "CoworkingSpace was successfully updated.";
-
-
-        redirectAttributes.addFlashAttribute("message", message);
-        return mav;
-    }
 }

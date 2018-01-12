@@ -62,6 +62,18 @@
                 <td>Owner Phone:</td>
                 <td>${space.ownerPhone}</td>
             </tr>
+            <tr class="other">
+                <td>Website:</td>
+                <td>${space.webURL}</td>
+            </tr>
+            <tr class="other">
+                <td>Facebook:</td>
+                <td>${space.facebookUrl}</td>
+            </tr>
+            <tr class="other">
+                <td>Twitter:</td>
+                <td>${space.twitterUrl}</td>
+            </tr>
         </c:forEach>
         </tbody>
     </table>

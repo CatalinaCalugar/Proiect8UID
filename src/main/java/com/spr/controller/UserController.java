@@ -184,8 +184,7 @@ public class UserController {
         if (result.hasErrors())
             return new ModelAndView("user-edit");
         ModelAndView mav = new ModelAndView("user-edit");
-        ;
-        String message = "";
+                String message = "";
 
 //        User e = userService.findById(id);
 //        if (e.getUsername().equals(user.getUsername())) {
@@ -215,7 +214,7 @@ public class UserController {
 
     @RequestMapping(value = "/account", method = RequestMethod.GET)
     public ModelAndView myAccount(HttpSession session, final RedirectAttributes redirectAttributes) {
-        ModelAndView modelAndView = new ModelAndView("my-account", "command", new User());
+        ModelAndView modelAndView = new ModelAndView("my-account", "user", new User());
         modelAndView.addObject("username", session.getAttribute("loggedUser"));
         return modelAndView;
     }
@@ -223,7 +222,7 @@ public class UserController {
     @RequestMapping(value = "/edit-account", method = RequestMethod.GET)
     public ModelAndView editAccount(HttpSession session, final RedirectAttributes redirectAttributes) {
 
-        ModelAndView mav = new ModelAndView("edit-account", "command", new User());
+        ModelAndView mav = new ModelAndView("edit-account", "user", new User());
         mav.addObject("username", session.getAttribute("loggedUser"));
         mav.addObject("name", "John Doe");
         return mav;

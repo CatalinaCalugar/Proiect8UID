@@ -16,15 +16,15 @@ public class InitialSpacesFactory {
     }
 
     private List<CoworkingSpace> initializeCoworkingSpaces() {
-        CoworkingSpace c1= new CoworkingSpace();
-        CoworkingSpace c2= new CoworkingSpace();
-        CoworkingSpace c3= new CoworkingSpace();
-        CoworkingSpace c4= new CoworkingSpace();
-        CoworkingSpace c5= new CoworkingSpace();
-        CoworkingSpace c6= new CoworkingSpace();
-        CoworkingSpace c7= new CoworkingSpace();
-        CoworkingSpace c8= new CoworkingSpace();
-        CoworkingSpace c9= new CoworkingSpace();
+        CoworkingSpace c1 = new CoworkingSpace();
+        CoworkingSpace c2 = new CoworkingSpace();
+        CoworkingSpace c3 = new CoworkingSpace();
+        CoworkingSpace c4 = new CoworkingSpace();
+        CoworkingSpace c5 = new CoworkingSpace();
+        CoworkingSpace c6 = new CoworkingSpace();
+        CoworkingSpace c7 = new CoworkingSpace();
+        CoworkingSpace c8 = new CoworkingSpace();
+        CoworkingSpace c9 = new CoworkingSpace();
 
         c1.setDescription("bllla1");
         c2.setDescription("bllla2");
@@ -57,11 +57,6 @@ public class InitialSpacesFactory {
         coworkingSpaces.add(c8);
         coworkingSpaces.add(c9);
         return coworkingSpaces;
-
-
-
-
-
 
     }
 

@@ -6334,8 +6334,9 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field {
-  width: 800px;
+  width: 230%;
   position: relative;
+  margin-left: 50px;
   margin-top: 1rem;
 }
 

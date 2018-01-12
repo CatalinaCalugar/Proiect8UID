@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/resources/js/materialize.js"></script>
     <script src="/resources/js/init.js"></script>
     <title>Edit Accout Page</title>
@@ -43,7 +42,7 @@
         <br>
         <div class="center-align">
 
-            <form class="col s12" method="POST" commandName="user"
+            <form class="col s12" method="GET" commandName="user"
                   action="${pageContext.request.contextPath}/user/edit-account.html">
                 <div class="row">
                     <div class="input-field col s12 center-align">
@@ -70,13 +69,11 @@
                     </form>
                 </div>
 
-                <div class="row">
-                    <div class="col col s12">
-                        <button id="send-message" class="btn waves-effect waves-light" type="submit" name="action">Edit
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                </div>
+                <a href="${pageContext.request.contextPath}/user/account.html">
+                    <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Edit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </a>
 
             </form>
         </div>

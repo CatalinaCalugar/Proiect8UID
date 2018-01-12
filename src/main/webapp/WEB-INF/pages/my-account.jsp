@@ -56,7 +56,7 @@
     <div class="col s9">
 
         <h1>Your account page</h1>
-        <img src="/resources/images/myAccountBackground.png" width="1700px">
+        <img src="/resources/images/myAccountBackground.png" width="140%">
 
         <%--<jsp:include page="footer.jsp"></jsp:include>--%>
 

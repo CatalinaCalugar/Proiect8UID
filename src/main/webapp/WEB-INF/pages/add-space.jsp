@@ -36,53 +36,51 @@
 <div class="section white">
     <div class="row container">
 
-        <div class="col s3">
-            <div class="truncate">
+        <div class="col s4">
                 <ul>
                     <li>
                         <button id="b1" class="waves-effect waves-light btn-large b1"
-                                style="width: 250px">Name and description
+                                style="width: 100%">Name and description
                         </button>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large b2" style="width: 250px">Contact details
+                        <button class="waves-effect waves-light btn-large b2" style="width: 100%">Contact details
                         </button>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large b3" style="width: 250px"
+                        <button class="waves-effect waves-light btn-large b3" style="width: 100%"
                                 onclick="myFunction2()">Amenities
                         </button>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large b4" style="width: 250px"
+                        <button class="waves-effect waves-light btn-large b4" style="width: 100%"
                                 onclick="myFunction3()">Location
                         </button>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large b5" style="width: 250px"
+                        <button class="waves-effect waves-light btn-large b5" style="width: 100%"
                                 onclick="myFunction4()">Meeting rooms
                         </button>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large b6" style="width: 250px"
+                        <button class="waves-effect waves-light btn-large b6" style="width: 100%"
                                 onclick="myFunction5()">Opening hours
                         </button>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large b7" style="width: 250px"
+                        <button class="waves-effect waves-light btn-large b7" style="width: 100%"
                                 onclick="myFunction6()">General photos
                         </button>
                     </li>
                     <li>
-                        <button class="waves-effect waves-light btn-large b8" style="width: 280px"
+                        <button class="waves-effect waves-light btn-large b8" style="width: 100%"
                                 onclick="myFunction7()">Payment details
                         </button>
                     </li>
                 </ul>
-            </div>
         </div>
 
-        <div class="col s9">
+        <div class="col s8">
             <!-- Teal page content  -->
 
             <form class="col s12" method="POST" commandName="user"
@@ -159,9 +157,9 @@
 
                 <div id="location-panel">
                     <h1>Pin your coworking space's location</h1>
-                    <div style=" padding-left:190px; padding-bottom: 20px">
+                    <div style=" padding-bottom: 20px">
                         <h3>My Google Map</h3>
-                        <div id="map" class="left" style="width:740px; height:400px; padding-left:100px">
+                        <div id="map" class="left" style="width:740px; height:400px;">
                             <script>
                                 function myMap() {
                                     var mapOptions = {
@@ -231,6 +229,19 @@
 
                 <div id="photos-panel">
                     <h1>Add general photos of the space</h1>
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Upload photos</span>
+                                <input type="file" multiple>
+                            </div>
+                            <br>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
 
                 <div id="payment-panel">

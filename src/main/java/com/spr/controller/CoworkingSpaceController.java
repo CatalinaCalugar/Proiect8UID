@@ -167,11 +167,11 @@ public class CoworkingSpaceController {
         amenitiesList.add("projectors");
         amenitiesList.add("white board");
 
-        spaceList.add(new CoworkingSpace("Space 2", "Description space 2 bla bla bla", amenitiesList,
+        spaceList.add(new CoworkingSpace(2,"Space 2", "Description space 2 bla bla bla", amenitiesList,
                 "owner1@gmail.com", "0786453986", "www.space2.com"));
-        spaceList.add(new CoworkingSpace("Space 4", "Description space 4 bla bla bla", amenitiesList,
+        spaceList.add(new CoworkingSpace(4,"Space 4", "Description space 4 bla bla bla", amenitiesList,
                 "owner1@gmail.com", "0786453986", "www.space4.com"));
-        spaceList.add(new CoworkingSpace("Space 6", "Description space 6 bla bla bla", amenitiesList,
+        spaceList.add(new CoworkingSpace(6,"Space 6", "Description space 6 bla bla bla", amenitiesList,
                 "owner1@gmail.com", "0786453986", "www.space6.com"));
         mav.addObject("spaceList",spaceList);
 

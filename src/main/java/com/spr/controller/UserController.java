@@ -2,6 +2,8 @@ package com.spr.controller;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -80,6 +82,13 @@ public class UserController {
         model.addAttribute("password", password);
         String message = "";
         String page = "";
+        List<User> registeredUsers;
+
+        try {
+            registeredUsers = (List<User>) session.getAttribute("registeredUsersList");
+        } catch (Exception e) {
+            registeredUsers = new ArrayList<>();
+        }
 
         if (username == null) {
             page = "loginFail";
@@ -90,8 +99,18 @@ public class UserController {
                 message = "Success!";
                 session.setAttribute("loggedUser", username);
             } else {
-                page = "loginFail";
-                message = "Login fail!";
+                if (registeredUsers.size() > 0) {
+                    for (User u : registeredUsers) {
+                        if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
+                            page = "home_page_after_login";
+                            message = "Success!";
+                            session.setAttribute("loggedUser", username);
+                        }
+                    }
+                } else {
+                    page = "loginFail";
+                    message = "Login fail!";
+                }
             }
         }
         redirectAttributes.addFlashAttribute("message", message);
@@ -218,7 +237,7 @@ public class UserController {
         if (result.hasErrors())
             return new ModelAndView("edit-account");
 
-        ModelAndView mav = new ModelAndView("my-account");
+        ModelAndView mav = new ModelAndView();
 
         String message = "";
 
@@ -227,116 +246,35 @@ public class UserController {
         return mav;
     }
 
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public ModelAndView register(@ModelAttribute User user,
+                                 BindingResult result,
+                                 final RedirectAttributes redirectAttributes, HttpSession session) throws UserNotFound {
 
-//    @RequestMapping(value = "/loginReg/{id}", method = RequestMethod.GET)
-//    public ModelAndView login1(@PathVariable Integer id, final RedirectAttributes redirectAttributes, HttpSession session) {
-//        Pet p = petService.findById(id);
-//        ModelAndView mav = null;
-//        if (p.isAvailable()) {
-//            if (!session.getAttributeNames().hasMoreElements() || session.getAttributeNames().nextElement().length() > 20) {
-//                {
-//                    session.setAttribute("idPet", id);
-//                    return new ModelAndView("login-register", "command", new User());
-//                }
-//            } else if (session.getAttribute("loggedUser") != null && ((User) session.getAttribute("loggedUser")).getRole().equals("client")) {
-//
-//                mav = new ModelAndView("adoption-new");
-//                Timestamp date = new Timestamp(System.currentTimeMillis());
-//                Client cl = clientService.findByUsername(((User) session.getAttribute("loggedUser")).getUsername());
-//                Adoption adoption = new Adoption(id, date, cl.getId());
-//                mav.addObject("adoption", adoption);
-//                List<Pet> petList = new ArrayList<>();
-//                petList.add(p);
-//                List<String> payment = new ArrayList<>();
-//                payment.add("Credit Card");
-//                payment.add("Cash");
-//                mav.addObject("petList", petList);
-//                mav.addObject("searchList", payment);
-//
-//                return mav;
-//
-//            } else {
-//                session.setAttribute("idPet", id);
-//                return new ModelAndView("login-register", "command", new User());
-//
-//            }
-//        } else {
-//            mav = new ModelAndView("pet-view");
-//            mav.addObject("pet", p);
-//        }
-//        return mav;
-//    }
-//
-//    @RequestMapping(value = "/loginReg", method = RequestMethod.POST)
-//    public ModelAndView loginClient(@ModelAttribute("SpringWeb") User user, ModelMap model,
-//                                    final RedirectAttributes redirectAttributes, HttpSession session) {
-//        model.addAttribute("username", user.getUsername());
-//        model.addAttribute("password", user.getPassword());
-//        ModelAndView mav = new ModelAndView();
-//
-//        Client dBUser = clientService.findByUsername(user.getUsername());
-//        String message;
-//        String page;
-//        message = "Success!";
-//        page = session.getAttribute("jsp").toString();
-//        if (page.equals("pet-view")) {
-//            int id = (Integer) session.getAttribute("idPet");
-//            Pet p = petService.findById(id);
-//            if (p.isAvailable()) {
-//                if (dBUser == null) {
-//                    page = "pet-view";
-//                    mav = new ModelAndView(page);
-//                    mav.addObject("pet", p);
-//                    message = "Login fail!";
-//                } else {
-//                    if (!(dBUser.getPassword().equals(user.getPassword()))) {
-//                        message = "Login fail!";
-//                        page = "pet-view";
-//                        mav.addObject("pet", p);
-//                        mav = new ModelAndView(page);
-//                    } else {
-//                        page = "adoption-new";
-//                        mav = new ModelAndView(page);
-//                        Timestamp date = new Timestamp(System.currentTimeMillis());
-//                        int idUser = dBUser.getId();
-//                        Adoption adoption = new Adoption(id, date, idUser);
-//                        mav.addObject("adoption", adoption);
-//                        List<Pet> petList = new ArrayList<>();
-//                        petList.add(p);
-//                        List<String> payment = new ArrayList<>();
-//                        payment.add("Credit Card");
-//                        payment.add("Cash");
-//                        mav.addObject("petList", petList);
-//                        mav.addObject("searchList", payment);
-//
-//                    }
-//                    User clientLogged = new User(dBUser.getFname() + dBUser.getLname(), user.getUsername(), user.getPassword(), "client");
-//                    session.setAttribute("loggedUser", clientLogged);
-//                }
-//            } else {
-//                message = "Pet is unadvailable at the moment.";
-//                mav = new ModelAndView(page);
-//                mav.addObject("pet", p);
-//            }
-//        } else {
-//            if (dBUser == null) {
-//                mav = new ModelAndView(page);
-//                message = "Login fail!";
-//            } else {
-//                if (!(dBUser.getPassword().equals(user.getPassword()))) {
-//                    message = "Login fail!";
-//                    mav = new ModelAndView(page);
-//                } else {
-//                    mav = new ModelAndView("basket-view");
-//                    List<Accessorises> accessorisesList = (List<Accessorises>) session.getAttribute("basket");
-//                    mav.addObject("accessorisesList", accessorisesList);
-//                }
-//                User clientLogged = new User(dBUser.getFname() + dBUser.getLname(), user.getUsername(), user.getPassword(), "client");
-//                session.setAttribute("loggedUser", clientLogged);
-//            }
-//        }
-//        redirectAttributes.addFlashAttribute("message", message);
-//        return mav;
-//    }
+        if (result.hasErrors())
+            return new ModelAndView("redirect:/index.html");
+
+        ModelAndView mav = new ModelAndView("redirect:/index.html");
+        String message = "";
+
+        List<User> registeredUsers;
+
+        try {
+            registeredUsers = (List<User>) session.getAttribute("registeredUsersList");
+            registeredUsers.add(user);
+            session.setAttribute("registeredUsersList", registeredUsers);
+        } catch (Exception e) {
+            registeredUsers = new ArrayList<>();
+            registeredUsers.add(user);
+            session.setAttribute("registeredUsersList", registeredUsers);
+        }
+
+        message = "Check email for confirming your account!";
+
+        //send confirmation Email
+
+        redirectAttributes.addFlashAttribute("message", message);
+        return mav;
+    }
 
 }

@@ -41,15 +41,14 @@
         </tr>
         </thead>
         <tbody>
-        <c:set var="count" value="1" scope="page"/>
         <c:forEach var="space" items="${spaceList}">
             <tr class="clicker">
-                <td><img src="/resources/images/genSp${count}.jpg" width="300" height="158"></td>
+                <td><img src="/resources/images/genSp${space.id}.jpg" width="300" height="158"></td>
                 <td>${space.name}</td>
                 <td>${space.description}</td>
                 <td>${space.generalAmenities}</td>
-                <td><a class="btn" href="${pageContext.request.contextPath}/space/edit/${count}.html">Edit</a></td>
-                <td><a class="btn" href="${pageContext.request.contextPath}/space/delete/${count}.html">Delete</a></td>
+                <td><a class="btn" href="${pageContext.request.contextPath}/space/edit/${space.id}.html">Edit</a></td>
+                <td><a class="btn" href="${pageContext.request.contextPath}/space/delete/${space.id}.html">Delete</a></td>
             </tr>
             <tr class="other">
                 <td>Name:</td>
@@ -63,7 +62,6 @@
                 <td>Owner Phone:</td>
                 <td>${space.ownerPhone}</td>
             </tr>
-            <c:set var="count" value="${count + 1}" scope="page"/>
         </c:forEach>
         </tbody>
     </table>

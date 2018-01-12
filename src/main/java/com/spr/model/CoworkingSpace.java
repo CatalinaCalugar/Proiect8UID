@@ -62,7 +62,8 @@ public class CoworkingSpace {
         this.ISBN = ISBN;
     }
 
-    public CoworkingSpace(String name, String description,List<String> generalAmenities, String ownerEmail, String ownerPhone, String webURL ) {
+    public CoworkingSpace(int id,String name, String description,List<String> generalAmenities, String ownerEmail, String ownerPhone, String webURL ) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.ownerEmail = ownerEmail;

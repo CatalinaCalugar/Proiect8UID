@@ -27,6 +27,8 @@ public class User {
 
     private String birthDate;
 
+    private String email;
+
     public User(){
 
     }
@@ -41,6 +43,14 @@ public class User {
         this.username = username;
         this.password = password;
         this.type = type;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getType() {

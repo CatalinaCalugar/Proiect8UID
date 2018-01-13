@@ -84,7 +84,6 @@ public class UserController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@ModelAttribute @Valid User user, final RedirectAttributes redirectAttributes, HttpSession session, @RequestParam("username") String username, @RequestParam("password") String password, ModelMap model) {
         model.addAttribute("username", username);
-        model.addAttribute("password", password);
         String message = "";
         String page = "";
         List<User> registeredUsers;

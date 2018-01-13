@@ -46,18 +46,11 @@ public class CoworkingSpaceController {
         amenities.add("colored markers");
 
         mav.addObject("generalAmenities", amenities);
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        numbers.add(6);
-        numbers.add(7);
-        numbers.add(8);
-        numbers.add(9);
-        numbers.add(10);
-        mav.addObject("officeNumbers", numbers);
+        List<String> type = new ArrayList<>();
+        type.add("open space");
+        type.add("private office");
+
+        mav.addObject("type", type);
 
         mav.addObject("username", session.getAttribute("loggedUser"));
         return mav;

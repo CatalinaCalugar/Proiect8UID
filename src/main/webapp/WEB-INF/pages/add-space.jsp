@@ -149,7 +149,7 @@
                     <h1>Select amenities for your space</h1>
                     <c:forEach items="${generalAmenities}" var="amenity">
                         <p>
-                            <input type="checkbox" id="${amenity}" name = ""/>
+                            <input type="checkbox" id="${amenity}" name=""/>
                             <label for="${amenity}">${amenity}</label>
                         </p>
                     </c:forEach>
@@ -168,9 +168,9 @@
                                         zoom: 5,
                                     }
 
-                                    var map=new google.maps.Map(document.getElementById("map"),mapOptions);
+                                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-                                    google.maps.event.addListener(map, 'click', function(event) {
+                                    google.maps.event.addListener(map, 'click', function (event) {
                                         alert(event.latLng.lat() + ", " + event.latLng.lng());
                                     });
                                     // var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -183,87 +183,129 @@
                     </div>
                 </div>
 
-                <div id="offices-panel">
+                <di id="offices-panel">
                     <h1>Add offices</h1>
 
-                    <div class="input-field col s12">
-                        <select>
-                            <option value="" disabled selected>Select</option>
-                            <c:forEach items="${officeNumbers}" var="number">
-                                <option value=${number}>${number}</option>
-                            </c:forEach>
-                        </select>
-                        <label>Select number of open space offices</label>
-                    </div>
+                    <table class="table-of-contents">
+                        <thead>
+                        <tr>
+                            <th data-field="type" width="300px">Select type</th>
+                            <th data-field="name" width="400px">Name</th>
+                            <th data-field="capacity" width="300px">Capacity</th>
+                            <th data-field="amenities">Office Amenities</th>
+                            <th data-field="photos" width="400px">Photos</th>
+                            <th data-field="price">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr style="border-top: solid">
+                            <form class="col s12" method="POST" commandName="space"
+                                  action="${pageContext.request.contextPath}/space/create-office.html">
+                                <td>
+                                    <select>
+                                        <option value="" disabled selected>Select</option>
+                                        <c:forEach items="${type}" var="number">
+                                            <option value="${number}" name="type">${number}</option>
+                                        </c:forEach>
+                                    </select>
+                                    <label>Office type</label>
 
-                    <div class="input-field col s12">
-                        <select>
-                            <option value="" disabled selected>Select</option>
-                            <c:forEach items="${officeNumbers}" var="number">
-                                <option value=${number}>${number}</option>
-                            </c:forEach>
-                        </select>
-                        <label>Select number of private offices</label>
-                    </div>
+                                </td>
+                                <td>
+                                    <%--<div class="input-field">--%>
+                                    <input id="officeName" name="name" type="text" class="validate">
+                                    <label for="officeName">Office name</label>
+                                    <%--</div>--%>
+                                </td>
+                                <td>
+                                    <%--<div class="input-field">--%>
+                                    <input id="capacity" name="capacity" type="text" class="validate">
+                                    <label for="capacity">Capacity</label>
+                                    <%--</div>--%>
+                                </td>
+                                <td>
+                                    <c:forEach items="${generalAmenities}" var="amenity">
+                                        <p>
+                                            <input type="checkbox" name="amenities" id=${amenity}/>
+                                            <label for=${amenity}>${amenity}</label>
+                                        </p>
+                                    </c:forEach>
+                                </td>
+                                <td>
+                                    <div class="file-field input-field">
+                                        <div class="btn">
+                                            <span>Add photo</span>
+                                            <input type="file" name="photo" multiple>
+                                        </div>
+                                        <%--<div class="file-path-wrapper">--%>
+                                        <%--<input class="file-path validate" type="text"--%>
+                                        <%--placeholder="Upload one or more files">--%>
+                                        <%--</div>--%>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-field">
+                                        <input id="price" name="price" type="text" class="validate">
+                                        <label for="price">Price</label>
+                                    </div>
+                                </td>
+                            </form>
+                        </tr>
 
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="officeName" name="officeName" type="text" class="validate">
-                            <label for="officeName">Office name</label>
+                        </tbody>
+                    </table>
+
+
+                    <div id="opening-hours-panel">
+                        <h1>Add schedule</h1>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="tp1" type="text" class="timepicker">
+                                <label for="tp1">Start hour</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <br>
+                                <input id="tp2" type="text" class="timepicker">
+                                <label for="tp2">End hour</label>
+                            </div>
                         </div>
                     </div>
 
-                </div>
+                    <div id="photos-panel">
+                        <h1>Add general photos of the space</h1>
+                        <form action="#">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>Upload photos</span>
+                                    <input type="file" name="generalPhotos" multiple>
+                                </div>
+                                <br>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text"
+                                           placeholder="Upload one or more files">
+                                </div>
+                            </div>
+                        </form>
 
-                <div id="opening-hours-panel">
-                    <h1>Add schedule</h1>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="tp1" type="text" class="timepicker">
-                            <label for="tp1">Start hour</label>
-                        </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <br>
-                            <input id="tp2" type="text" class="timepicker">
-                            <label for="tp2">End hour</label>
-                        </div>
-                    </div>
-                </div>
 
-                <div id="photos-panel">
-                    <h1>Add general photos of the space</h1>
-                    <form action="#">
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Upload photos</span>
-                                <input type="file" multiple>
+                    <div id="payment-panel">
+                        <h1>Add payment details</h1>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="ISBN" name="ISBN" type="text" class="validate">
+                                <label for="ISBN">ISBN</label>
                             </div>
                             <br>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" placeholder="Upload one or more files">
-                            </div>
+                            <br>
                         </div>
-                    </form>
 
-                </div>
-
-                <div id="payment-panel">
-                    <h1>Add payment details</h1>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="ISBN" name="ISBN" type="text" class="validate">
-                            <label for="ISBN">ISBN</label>
-                        </div>
-                        <br>
-                        <br>
+                        <button class="waves-effect waves-light btn-large" style="width: 800px"
+                                type="submit" name="action">ADD SPACE
+                        </button>
                     </div>
-
-                    <button class="waves-effect waves-light btn-large" style="width: 800px"
-                            type="submit" name="action">ADD SPACE
-                    </button>
-                </div>
             </form>
 
         </div>
@@ -273,6 +315,17 @@
 
 
 <jsp:include page="footer.jsp"></jsp:include>
+
+<script language="JavaScript">
+    function myFunction() {
+        var table = document.getElementById("addOfficesTabel");
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "NEW CELL1";
+        cell2.innerHTML = "NEW CELL2";
+    }
+</script>
 
 <script language="JavaScript">
     $(document).ready(function () {

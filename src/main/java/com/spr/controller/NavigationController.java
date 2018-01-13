@@ -30,13 +30,13 @@ public class NavigationController {
 
     @RequestMapping(value = {"/home_page_after_login"}, method = RequestMethod.GET)
     public ModelAndView client(HttpSession session) {
+        ModelAndView mav = new ModelAndView("home_page_after_login");
+
         InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
         List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
-        ModelAndView mav = new ModelAndView("home_page_after_login");
-        Map<String, Object> map = new HashMap<>();
-        map.put("username", session.getAttribute("loggedUser"));
-        map.put("cowSp", coworkingSpaces);
-        mav.addObject("model", map);
+
+        mav.addObject("username", session.getAttribute("loggedUser"));
+        mav.addObject("cowSp", coworkingSpaces);
         return mav;
     }
 
@@ -51,7 +51,9 @@ public class NavigationController {
     }
 
     @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
-    public ModelAndView contact() {
-        return new ModelAndView("contact");
+    public ModelAndView contact(HttpSession session) {
+        ModelAndView mav = new ModelAndView("contact");
+        mav.addObject("username", session.getAttribute("loggedUser"));
+        return mav;
     }
 }

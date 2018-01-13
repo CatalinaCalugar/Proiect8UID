@@ -45,7 +45,7 @@ public class CoworkingSpaceController {
         amenities.add("whiteboard device");
         amenities.add("colored markers");
 
-        mav.addObject("amenities", amenities);
+        mav.addObject("generalAmenities", amenities);
         List<Integer> numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
@@ -115,17 +115,17 @@ public class CoworkingSpaceController {
         InitialSpacesFactory spacesFactory = new InitialSpacesFactory();
         spaceList = spacesFactory.getFirstNSpaces(4);
 
-        mav.addObject("spaceList",spaceList);
+        mav.addObject("spaceList", spaceList);
         return mav;
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public ModelAndView editCoworkingSpacePage(@PathVariable Integer id) {
+    public ModelAndView editCoworkingSpacePage(@PathVariable Integer id, HttpSession session) {
         ModelAndView mav = new ModelAndView("edit-space");
 
         InitialSpacesFactory spacesFactory = new InitialSpacesFactory();
         CoworkingSpace space = spacesFactory.getSpaceByID(id);
-
+        mav.addObject("username", session.getAttribute("loggedUser"));
         mav.addObject("space", space);
         return mav;
     }

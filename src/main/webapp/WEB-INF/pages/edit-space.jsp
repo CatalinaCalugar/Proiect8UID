@@ -28,12 +28,26 @@
 
 <div class="row">
     <div class="center-align">
-        <img class="materialboxed" width="300" src=src="/resources/images/genSp${space.id}.jpg"  >
+        <img class="materialboxed" width="300" src="/resources/images/genSp${space.id}.jpg" alt="Space IMG">
     </div>
 
-    <div class="row center-align">
+    <div class="row center">
         <form class="col s6" method="POST" commandName="space"
               action="${pageContext.request.contextPath}/space/edit/${space.id}.html">
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name" name="name" type="text" class="validate" value="${space.name}">
+                    <label for="name">Space name</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                                <textarea id="description" rows="3" name="description"
+                                          class="materialize-textarea">${space.description}</textarea>
+                    <label for="description">Description</label></div>
+            </div>
 
 
 
@@ -45,7 +59,7 @@
 <jsp:include page="footer.jsp"></jsp:include>
 
 <script language="JavaScript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.materialboxed').materialbox();
     });
 </script>

@@ -76,7 +76,9 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView login() {
-        return new ModelAndView("login", "command", new User());
+
+        ModelAndView mav = new ModelAndView("index", "command", new User());
+        return mav;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -97,25 +99,29 @@ public class UserController {
         }
 
         if (username == null) {
-            page = "loginFail";
+            page = "index";
             message = "Login fail!";
+            model.addAttribute("message", message);
         } else {
             if (username.equals("admin") && password.equals("admin")) {
                 page = "home_page_after_login";
                 message = "Success!";
                 session.setAttribute("loggedUser", username);
             } else {
-                if (registeredUsers.size() > 0) {
-                    for (User u : registeredUsers) {
-                        if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
-                            page = "home_page_after_login";
-                            message = "Success!";
-                            session.setAttribute("loggedUser", username);
+                if (registeredUsers != null) {
+                    if (registeredUsers.size() > 0) {
+                        for (User u : registeredUsers) {
+                            if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
+                                page = "home_page_after_login";
+                                message = "Success!";
+                                session.setAttribute("loggedUser", username);
+                            }
                         }
                     }
                 } else {
-                    page = "loginFail";
+                    page = "index";
                     message = "Login fail!";
+                    model.addAttribute("message", message);
                 }
             }
         }
@@ -190,7 +196,7 @@ public class UserController {
         if (result.hasErrors())
             return new ModelAndView("user-edit");
         ModelAndView mav = new ModelAndView("user-edit");
-                String message = "";
+        String message = "";
 
 //        User e = userService.findById(id);
 //        if (e.getUsername().equals(user.getUsername())) {

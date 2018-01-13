@@ -92,25 +92,25 @@ public class InitialSpacesFactory {
         c8.setWebURL("www.space8.com");
         c9.setWebURL("www.space9.com");
 
-        c1.setWebURL("www.facebook.com/space1");
-        c2.setWebURL("www.facebook.com/space2");
-        c3.setWebURL("www.facebook.com/space3");
-        c4.setWebURL("www.facebook.com/space4");
-        c5.setWebURL("www.facebook.com/space5");
-        c6.setWebURL("www.facebook.com/space6");
-        c7.setWebURL("www.facebook.com/space7");
-        c8.setWebURL("www.facebook.com/space8");
-        c9.setWebURL("www.facebook.com/space9");
+        c1.setFacebookUrl("www.facebook.com/space1");
+        c2.setFacebookUrl("www.facebook.com/space2");
+        c3.setFacebookUrl("www.facebook.com/space3");
+        c4.setFacebookUrl("www.facebook.com/space4");
+        c5.setFacebookUrl("www.facebook.com/space5");
+        c6.setFacebookUrl("www.facebook.com/space6");
+        c7.setFacebookUrl("www.facebook.com/space7");
+        c8.setFacebookUrl("www.facebook.com/space8");
+        c9.setFacebookUrl("www.facebook.com/space9");
 
-        c1.setWebURL("www.twitter.com/space1");
-        c2.setWebURL("www.twitter.com/space2");
-        c3.setWebURL("www.twitter.com/space3");
-        c4.setWebURL("www.twitter.com/space4");
-        c5.setWebURL("www.twitter.com/space5");
-        c6.setWebURL("www.twitter.com/space6");
-        c7.setWebURL("www.twitter.com/space7");
-        c8.setWebURL("www.twitter.com/space8");
-        c9.setWebURL("www.twitter.com/space9");
+        c1.setTwitterUrl("www.twitter.com/space1");
+        c2.setTwitterUrl("www.twitter.com/space2");
+        c3.setTwitterUrl("www.twitter.com/space3");
+        c4.setTwitterUrl("www.twitter.com/space4");
+        c5.setTwitterUrl("www.twitter.com/space5");
+        c6.setTwitterUrl("www.twitter.com/space6");
+        c7.setTwitterUrl("www.twitter.com/space7");
+        c8.setTwitterUrl("www.twitter.com/space8");
+        c9.setTwitterUrl("www.twitter.com/space9");
 
         c1.setGeneralAmenities(amenitiesList);
         c2.setGeneralAmenities(amenitiesList);

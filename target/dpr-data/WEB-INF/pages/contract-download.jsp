@@ -30,7 +30,7 @@
         <i></i><br/><br/><br/><br/>
         <div class="content">
             <br/>
-            <i style="color: fuchsia">${message}</i><br/>
+            session.setAttribute("loggedUser", username);
             <br/><br/>
             <ul>
                 <li><a href="${pageContext.request.contextPath}/contract/download/external.html"><img

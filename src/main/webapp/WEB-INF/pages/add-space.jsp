@@ -37,47 +37,47 @@
     <div class="row container">
 
         <div class="col s4">
-                <ul>
-                    <li>
-                        <button id="b1" class="waves-effect waves-light btn-large b1"
-                                style="width: 100%">Name and description
-                        </button>
-                    </li>
-                    <li>
-                        <button class="waves-effect waves-light btn-large b2" style="width: 100%">Contact details
-                        </button>
-                    </li>
-                    <li>
-                        <button class="waves-effect waves-light btn-large b3" style="width: 100%"
-                                onclick="myFunction2()">Amenities
-                        </button>
-                    </li>
-                    <li>
-                        <button class="waves-effect waves-light btn-large b4" style="width: 100%"
-                                onclick="myFunction3()">Location
-                        </button>
-                    </li>
-                    <li>
-                        <button class="waves-effect waves-light btn-large b5" style="width: 100%"
-                                onclick="myFunction4()">Meeting rooms
-                        </button>
-                    </li>
-                    <li>
-                        <button class="waves-effect waves-light btn-large b6" style="width: 100%"
-                                onclick="myFunction5()">Opening hours
-                        </button>
-                    </li>
-                    <li>
-                        <button class="waves-effect waves-light btn-large b7" style="width: 100%"
-                                onclick="myFunction6()">General photos
-                        </button>
-                    </li>
-                    <li>
-                        <button class="waves-effect waves-light btn-large b8" style="width: 100%"
-                                onclick="myFunction7()">Payment details
-                        </button>
-                    </li>
-                </ul>
+            <ul>
+                <li>
+                    <button id="b1" class="waves-effect waves-light btn-large b1"
+                            style="width: 100%">Name and description
+                    </button>
+                </li>
+                <li>
+                    <button class="waves-effect waves-light btn-large b2" style="width: 100%">Contact details
+                    </button>
+                </li>
+                <li>
+                    <button class="waves-effect waves-light btn-large b3" style="width: 100%"
+                            onclick="myFunction2()">Amenities
+                    </button>
+                </li>
+                <li>
+                    <button class="waves-effect waves-light btn-large b4" style="width: 100%"
+                            onclick="myFunction3()">Location
+                    </button>
+                </li>
+                <li>
+                    <button class="waves-effect waves-light btn-large b5" style="width: 100%"
+                            onclick="myFunction4()">Meeting rooms
+                    </button>
+                </li>
+                <li>
+                    <button class="waves-effect waves-light btn-large b6" style="width: 100%"
+                            onclick="myFunction5()">Opening hours
+                    </button>
+                </li>
+                <li>
+                    <button class="waves-effect waves-light btn-large b7" style="width: 100%"
+                            onclick="myFunction6()">General photos
+                    </button>
+                </li>
+                <li>
+                    <button class="waves-effect waves-light btn-large b8" style="width: 100%"
+                            onclick="myFunction7()">Payment details
+                    </button>
+                </li>
+            </ul>
         </div>
 
         <div class="col s8">
@@ -147,10 +147,10 @@
 
                 <div id="amenities-panel">
                     <h1>Select amenities for your space</h1>
-                    <c:forEach items="${amenities}" var="amenity">
+                    <c:forEach items="${generalAmenities}" var="amenity">
                         <p>
-                            <input type="checkbox" id=${amenity}/>
-                            <label for=${amenity}>${amenity}</label>
+                            <input type="checkbox" id="${amenity}" name = ""/>
+                            <label for="${amenity}">${amenity}</label>
                         </p>
                     </c:forEach>
                 </div>

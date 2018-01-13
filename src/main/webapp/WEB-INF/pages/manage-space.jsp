@@ -42,7 +42,7 @@
         </thead>
         <tbody>
         <c:forEach var="space" items="${spaceList}">
-            <tr class="clicker">
+            <tr class="clicker" style="border-top: solid">
                 <td><img src="/resources/images/genSp${space.id}.jpg" width="300" height="158"></td>
                 <td>${space.name}</td>
                 <td>${space.description}</td>

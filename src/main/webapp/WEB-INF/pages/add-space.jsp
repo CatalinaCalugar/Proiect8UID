@@ -161,18 +161,23 @@
                         <h3>My Google Map</h3>
                         <div id="map" class="left" style="width:740px; height:400px;">
                             <script>
-                                function myMap() {
+                                function bla() {
                                     var mapOptions = {
                                         center: new google.maps.LatLng(46.770439, 23.591423),
                                         center: new google.maps.LatLng(46.770439, 23.591423),
-                                        zoom: 10,
-                                        mapTypeId: google.maps.MapTypeId.HYBRID
+                                        zoom: 5,
                                     }
-                                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                                    var map=new google.maps.Map(document.getElementById("map"),mapOptions);
+
+                                    google.maps.event.addListener(map, 'click', function(event) {
+                                        alert(event.latLng.lat() + ", " + event.latLng.lng());
+                                    });
+                                    // var map = new google.maps.Map(document.getElementById("map"), mapOptions);
                                 }
                             </script>
                             <script async defer
-                                    src="https://maps.googleapis.com/maps/api/js?callback=myMap">
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=bla">
                             </script>
                         </div>
                     </div>

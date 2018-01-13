@@ -3,7 +3,9 @@ package com.spr.controller;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -11,6 +13,7 @@ import javax.validation.Valid;
 import com.spr.exception.UserNotFound;
 import com.spr.model.*;
 
+import com.spr.utils.InitialSpacesFactory;
 import com.spr.validation.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -83,6 +86,9 @@ public class UserController {
         String message = "";
         String page = "";
         List<User> registeredUsers;
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        model.addAttribute("cowSp", coworkingSpaces);
 
         try {
             registeredUsers = (List<User>) session.getAttribute("registeredUsersList");

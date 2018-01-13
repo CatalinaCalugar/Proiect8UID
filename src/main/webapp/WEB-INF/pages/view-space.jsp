@@ -29,6 +29,95 @@
 
 View space page
 
+<div class="carousel carousel-slider" data-indicators="true">
+    <a class="carousel-item" ><img  src="/resources/images/genSp1.jpg"></a>
+    <a class="carousel-item" ><img  src="/resources/images/genSp2.jpg"></a>
+    <a class="carousel-item" ><img  src="/resources/images/genSp3.jpg"></a>
+    <a class="carousel-item" ><img  src="/resources/images/genSp4.jpg"></a>
+    <a class="carousel-item" ><img  src="/resources/images/genSp5.jpg"></a>
+</div>
+<div style="width:100%;overflow: hidden;clear:both;padding-left: 100px;">
+    <div style="width:60%;float:left;">
+        <label>Space title</label>
+
+
+        <div class="row">
+                <span class="col s12">
+                    <ul class="tabs" style="display: flex;">
+                        <li class="tab col s3"><a class="active" href="#Overview">Overview</a></li>
+                        <li class="tab col s3"><a href="#Amenities">Amenities</a></li>
+                        <li class="tab col s3"><a href="#Prices">Prices</a></li>
+                        <li class="tab col s3"><a href="#Map">Map</a></li>
+                        <li class="tab col s3"><a href="#Reviews">Reviews</a></li>
+                    </ul>
+                </span>
+            <div id="Overview" class="col s12" style="margin-top: 20px;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+            </div>
+            <div id="Amenities" class="col s12" style="margin-top: 20px;">
+                Amenities list
+            </div>
+            <div id="Prices" class="col s12" style="margin-top: 20px;">
+                Prices section
+            </div>
+
+
+
+            <div id="Map" class="col s12">
+
+                <div>
+                    <div id="map" class="center" style="width:100%; height:400px; padding-left:100px">
+                        <script>
+                            function myMap() {
+                                var mapOptions = {
+                                    center: new google.maps.LatLng(46.770439, 23.591423),
+                                    center: new google.maps.LatLng(46.770439, 23.591423),
+                                    zoom: 8,
+                                }
+                                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                            }
+                        </script>
+                        <script async defer
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=myMap">
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="Reviews" class="col s12">
+                Reviews section
+            </div>
+        </div>
+
+
+    </div>
+
+    <div style="width:30%;float:left; border: 2px ridge green; border-radius: 2px; margin-top: 60px;">
+        <h1 style=" text-align: center;">Contact Us</h1>
+        <p style=" text-align: center;" ><a href="${pageContext.request.contextPath}/scheduleTour/1" id="scheduleTour">Schedule Tour</a></p>
+        <p style="text-align: center;" ><a href="${pageContext.request.contextPath}/messageSpace/1" id="messageSpace">Message Space</a></p>
+        <h3 style=" margin-top: 40px;">Share</h3>
+
+    </div>
+</div>
+
 <jsp:include page="footer.jsp"></jsp:include>
+
+
+
+<script language="JavaScript">
+    $(document).ready(function(){
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+    });
+
+</script>
 </body>
 </html>

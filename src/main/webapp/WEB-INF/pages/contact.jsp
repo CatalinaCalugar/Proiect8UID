@@ -28,7 +28,10 @@
 <jsp:include page="navbar-before-login.jsp"></jsp:include>
 
 <div class="row">
-    <h2 style="align-content: center">Contact us</h2>
+    <iv class="w3-content w3-display-container">
+    <div style=" padding-left:190px;">
+        <h3>Contact us</h3>
+    </div>
 
     <div class="row" style="width:1000px; padding-left:80px">
         <form class="col s12">

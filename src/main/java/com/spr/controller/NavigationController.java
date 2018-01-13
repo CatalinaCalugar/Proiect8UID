@@ -12,24 +12,31 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class NavigationController {
 
     @RequestMapping(value = {"/", "index"}, method = RequestMethod.GET)
     public ModelAndView index() {
-        InitialSpacesFactory initialSpacesFactory= new InitialSpacesFactory();
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
         List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
         ModelAndView model = new ModelAndView("index");
-        model.addObject("cowSp",coworkingSpaces);
+        model.addObject("cowSp", coworkingSpaces);
         return model;
     }
 
     @RequestMapping(value = {"/home_page_after_login"}, method = RequestMethod.GET)
     public ModelAndView client(HttpSession session) {
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
         ModelAndView mav = new ModelAndView("home_page_after_login");
-        mav.addObject("username", session.getAttribute("loggedUser"));
+        Map<String, Object> map = new HashMap<>();
+        map.put("username", session.getAttribute("loggedUser"));
+        map.put("cowSp", coworkingSpaces);
+        mav.addObject("model", map);
         return mav;
     }
 

@@ -90,7 +90,7 @@
 
                     <div class="input-field col s6" >
                         <input id="email" name="email" type="text" class="validate">
-                        <label for="email">Email</label>
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
                     </div>
                 </div>
 

@@ -32,6 +32,9 @@
         <li>
             <div class="user-view">
                 <div class="background">
+                    <div class="center-align">
+                        <h1>${message}</h1>
+                    </div>
                     <img src="/resources/images/whitePicture.jpg">
                 </div>
                 <a href="#!user"><img class="circle" src="/resources/images/userLogo.jpg"></a>

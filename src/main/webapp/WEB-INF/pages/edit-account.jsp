@@ -43,7 +43,7 @@
         <div class="center-align">
 
             <form class="col s12" method="POST" commandName="user"
-                  action="${pageContext.request.contextPath}/user/edit-account.html">
+                  action="${pageContext.request.contextPath}/user/edit-account">
                 <div class="row">
                     <div class="input-field col s12 center-align">
                         <input id="name" name="name" type="text" class="validate" value="${name}" readonly
@@ -69,9 +69,9 @@
                     </form>
                 </div>
 
-                <%--<a href="${pageContext.request.contextPath}/user/account.html">--%>
-                    <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Edit
-                        <i class="material-icons right">send</i>
+               <%--/ <a href="${pageContext.request.contextPath}/user/account.html">--%>
+                    <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Save changes
+                        <i class="material-icons right"></i>
                     </button>
                 <%--</a>--%>
 

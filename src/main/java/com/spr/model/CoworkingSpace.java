@@ -20,14 +20,15 @@ public class CoworkingSpace {
     private String longitude;
     private String latitude;
     private List<Office> officeList;
-    private Map<String,Time> openingHours;
+    private String openingHour;
+    private String closingHour;
     private List<String> generalPhotos;
     private String ISBN;
 
     public CoworkingSpace() {
     }
 
-    public CoworkingSpace(String name, String description, String ownerEmail, String ownerPhone, String webURL, String facebookUrl, String twitterUrl, List<String> generalAmenities, String longitude, String latitude, List<Office> officeList, Map<String, Time> openingHours, List<String> generalPhotos, String ISBN) {
+    public CoworkingSpace(String name, String description, String ownerEmail, String ownerPhone, String webURL, String facebookUrl, String twitterUrl, List<String> generalAmenities, String longitude, String latitude, List<Office> officeList, String openingHour, String closingHour, List<String> generalPhotos, String ISBN) {
         this.name = name;
         this.description = description;
         this.ownerEmail = ownerEmail;
@@ -39,12 +40,13 @@ public class CoworkingSpace {
         this.longitude = longitude;
         this.latitude = latitude;
         this.officeList = officeList;
-        this.openingHours = openingHours;
+        this.openingHour = openingHour;
+        this.closingHour = closingHour;
         this.generalPhotos = generalPhotos;
         this.ISBN = ISBN;
     }
 
-    public CoworkingSpace(int id, String name, String description, String ownerEmail, String ownerPhone, String webURL, String facebookUrl, String twitterUrl, List<String> generalAmenities, String longitude, String latitude, List<Office> officeList, Map<String, Time> openingHours, List<String> generalPhotos, String ISBN) {
+    public CoworkingSpace(int id, String name, String description, String ownerEmail, String ownerPhone, String webURL, String facebookUrl, String twitterUrl, List<String> generalAmenities, String longitude, String latitude, List<Office> officeList, String openingHour, String closingHour, List<String> generalPhotos, String ISBN) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -57,12 +59,13 @@ public class CoworkingSpace {
         this.longitude = longitude;
         this.latitude = latitude;
         this.officeList = officeList;
-        this.openingHours = openingHours;
+        this.openingHour = openingHour;
+        this.closingHour = closingHour;
         this.generalPhotos = generalPhotos;
         this.ISBN = ISBN;
     }
 
-    public CoworkingSpace(int id,String name, String description,List<String> generalAmenities, String ownerEmail, String ownerPhone, String webURL ) {
+    public CoworkingSpace(int id, String name, String description, List<String> generalAmenities, String ownerEmail, String ownerPhone, String webURL) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -168,12 +171,20 @@ public class CoworkingSpace {
         this.officeList = officeList;
     }
 
-    public Map<String, Time> getOpeningHours() {
-        return openingHours;
+    public String getOpeningHour() {
+        return openingHour;
     }
 
-    public void setOpeningHours(Map<String, Time> openingHours) {
-        this.openingHours = openingHours;
+    public void setOpeningHour(String openingHour) {
+        this.openingHour = openingHour;
+    }
+
+    public String getClosingHour() {
+        return closingHour;
+    }
+
+    public void setClosingHour(String closingHour) {
+        this.closingHour = closingHour;
     }
 
     public List<String> getGeneralPhotos() {

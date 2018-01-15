@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: cata_
@@ -7,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -26,9 +26,7 @@
 </head>
 <body>
 
-
 <jsp:include page="navbar-after-login.jsp"></jsp:include>
-
 
 <div class="parallax-container">
     <div class="parallax"><img src="/resources/images/office2.jpg"></div>
@@ -161,7 +159,7 @@
                         <h3>My Google Map</h3>
                         <div id="map" class="left" style="width:740px; height:400px;">
                             <script>
-                                function bla() {
+                                function myMap() {
                                     var mapOptions = {
                                         center: new google.maps.LatLng(46.770439, 23.591423),
                                         center: new google.maps.LatLng(46.770439, 23.591423),
@@ -173,11 +171,10 @@
                                     google.maps.event.addListener(map, 'click', function (event) {
                                         alert(event.latLng.lat() + ", " + event.latLng.lng());
                                     });
-                                    // var map = new google.maps.Map(document.getElementById("map"), mapOptions);
                                 }
                             </script>
                             <script async defer
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=bla">
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=myMap">
                             </script>
                         </div>
                     </div>

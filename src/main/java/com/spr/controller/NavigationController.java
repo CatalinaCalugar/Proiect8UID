@@ -56,4 +56,13 @@ public class NavigationController {
         mav.addObject("username", session.getAttribute("loggedUser"));
         return mav;
     }
+
+    @RequestMapping(value = {"/allSpaces"}, method = RequestMethod.GET)
+    public ModelAndView allSpaces() {
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        ModelAndView model = new ModelAndView("allSpaces");
+        model.addObject("cowSp", coworkingSpaces);
+        return model;
+    }
 }

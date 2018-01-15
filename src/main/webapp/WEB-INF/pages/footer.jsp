@@ -13,25 +13,24 @@
             <div class="col m6 l6 s12">
                 <div class="row">
                     <div class="col m12">
-                        <div class="footer-drop-title">Drop us a line</div>
+                        <div class="black-text">Drop us a line!</div>
                     </div>
                 </div>
                 <form id="drop-a-line" role="form">
                     <div class="row">
                         <div class="input-field col m12 s12">
-                            <input id="your-email" type="email" style="color: black">
-                            <label for="your-email" style="color: black">Your email address</label></div>
+                            <input id="your-email" type="email" style="color: black" required="" aria-required="true" class="validate">
+                            <label for="your-email" class="white-text">Your email address</label></div>
                     </div>
                     <div class="row">
                         <div class="input-field col m12 s12">
                             <textarea id="your-message" rows="3"
-                                      class="materialize-textarea" style="color: black"></textarea><label
-                                for="your-message" style="color: black">Your message</label></div>
+                                      class="materialize-textarea" style="color: black" required="" aria-required="true"></textarea><label
+                                for="your-message" class="white-text">Your message</label></div>
                     </div>
                     <div class="row">
                         <div class="col col s12">
-                            <%--<button  class="footer-send">SEND</button>--%>
-                            <button id="send-message" class="btn waves-effect waves-light" type="submit" name="action">SEND
+                            <button id="send-message" class="btn waves-effect waves-light" type="submit" name="action" >SEND
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
@@ -47,15 +46,14 @@
                         <br>We'll get back to you a soon as we find it.<br><i>(usually in a few hours)</i></p></div>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="black-text">Links</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="#!">Search</a></li>
                     <li><a class="grey-text text-lighten-3" href="${pageContext.request.contextPath}/contact.html">Contact</a>
                     </li>
                     <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
                 </ul>
-
+                <h5 class="black-text">Social media</h5>
                 <ul>
                     <li><a href="https://www.facebook.com" target="_blank"><img
                             src="/resources/images/img_contact_facebook_icon.png"></a>
@@ -74,8 +72,8 @@
 
     <div class="footer-copyright">
         <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2018 Copyright Coworking spaces
+            <a class="grey-text text-lighten-4 right">Group 8</a>
         </div>
     </div>
 </footer>

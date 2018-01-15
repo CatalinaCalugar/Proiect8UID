@@ -19,8 +19,10 @@
                     </li>
                 </div>
                 <div class="right">
-                    <li><a href="${pageContext.request.contextPath}/index.html">Home</a></li>
-                    <li><a href="${pageContext.request.contextPath}/contact.html">Contact us</a></li>
+                    <li><a class="waves-effect waves-light"
+                           href="${pageContext.request.contextPath}/index.html">Home</a></li>
+                    <li><a class="waves-effect waves-light" href="${pageContext.request.contextPath}/contact.html">Contact
+                        us</a></li>
                     <%--<li><a href="${pageContext.request.contextPath}/user/login.html">Login</a></li>--%>
                     <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Login</a></li>
                     <li><a class="waves-effect waves-light modal-trigger" href="#modalRegister">Sign up</a></li>
@@ -39,14 +41,16 @@
                   action="${pageContext.request.contextPath}/user/login.html">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="username" name="username" type="text" class="validate">
+                        <input id="username" name="username" type="text" class="validate" required=""
+                               aria-required="true">
                         <label for="username">Username</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" name="password" type="password" class="validate">
+                        <input id="password" name="password" type="password" class="validate" required=""
+                               aria-required="true">
                         <label for="password">Password</label>
                     </div>
                 </div>
@@ -65,8 +69,9 @@
     </div>
 
     <div class="center">
-        <h3>Don't have an account?<a class="waves-effect waves-light modal-trigger modal-action modal-close "
-                                     href="#modalRegister" style="color: #00acc1"> Sign up</a></h3>
+        <h3 class="black-text">Don't have an account?</h3><a
+            class="waves-effect waves-light modal-trigger modal-action modal-close "
+            href="#modalRegister" style="color: #00acc1; font-size:30px"> Sign up</a>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -78,37 +83,39 @@
 <div id="modalRegister" class="modal" style="height: auto">
     <div class="modal-content">
         <h2>Sign up!</h2>
-        <div class="row center-align">
+        <div class="center-align">
             <form class="col s6" method="POST" commandName="user"
                   action="${pageContext.request.contextPath}/user/register.html">
 
                 <div class="row">
-                    <div class="input-field col s6" >
-                        <input id="name" name="name" type="text" class="validate">
+                    <div class="input-field col s6">
+                        <input id="name" name="name" type="text" class="validate" required="" aria-required="true">
                         <label for="name">Name</label>
                     </div>
 
-                    <div class="input-field col s6" >
-                        <input id="email" name="email" type="text" class="validate">
+                    <div class="input-field col s6">
+                        <input id="email" name="email" type="text" class="validate" required="" aria-required="true">
                         <label for="email" data-error="wrong" data-success="right">Email</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="usernameR" name="username" type="text" class="validate">
+                        <input id="usernameR" name="username" type="text" class="validate" required=""
+                               aria-required="true">
                         <label for="usernameR">Username</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="passwordR" name="password" type="password" class="validate">
+                        <input id="passwordR" name="password" type="password" class="validate" required=""
+                               aria-required="true">
                         <label for="passwordR">Password</label>
                     </div>
 
                     <div class="input-field col s6">
-                        <input id="confirmPassword" type="password" class="validate">
+                        <input id="confirmPassword" type="password" class="validate" required="" aria-required="true">
                         <label for="confirmPassword">Confirm password</label>
                     </div>
                 </div>

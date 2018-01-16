@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: cata_
-  Date: 12/29/2017
-  Time: 2:32 PM
+  User: LacraDanciu
+  Date: 01/15/2018
+  Time: 12:32 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -26,11 +26,12 @@
 
     <%@ page isELIgnored="false" %>
 
-    <title>Coworking spaces</title>
+    <title>Home page</title>
+
 </head>
 <body>
 
-<jsp:include page="navbar-after-login.jsp"></jsp:include>
+<jsp:include page="navbar-before-login.jsp"></jsp:include>
 
 <div class="row">
 
@@ -46,34 +47,34 @@
         </div>
 
         <c:set var="count" value="1" scope="page"/>
-        <div class="carousel">
+        <div class="row">
+
             <c:forEach items="${cowSp}" var="cs">
-                <div class="carousel-item carousel-item-adjustment">
+                <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img src="/resources/images/genSp${count}.jpg" width="300" height="158">
+                            <img class="activator" src="/resources/images/genSp${count}.jpg" width="150" height="200">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">${cs.name}<i
-                                    class="material-icons right">more_vert</i></span>
-                            <p><a href="${pageContext.request.contextPath}/space/view/${count}" id="logo">View Space</a>
-                            </p>
+                        <span class="card-title activator grey-text text-darken-4">${cs.name}<i
+                                class="material-icons right">more_vert</i></span>
+                            <p><a href="${pageContext.request.contextPath}/space/view/${count}">View Space</a></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">${cs.name}<i class="material-icons right">close</i></span>
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
                             <p>${cs.description}</p>
                         </div>
                     </div>
-
                 </div>
                 <c:set var="count" value="${count + 1}" scope="page"/>
             </c:forEach>
-        </div>
 
+        </div>
 </div>
 
-<div class="center-align" style="padding-bottom:20px; margin-bottom: 10px">
-    <h3>My Google Map</h3>
+<div class="center-align" style="padding-bottom:40px">
+    <h3>Where you can find us:</h3>
     <div id="map" style="width:940px; height:400px; margin: 0 auto 0 auto; padding-bottom: 40px">
         <script>
             function myMap() {
@@ -89,35 +90,8 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=myMap">
         </script>
     </div>
-
-    <form class="col s12" method="POST" commandName="user"
-          action="${pageContext.request.contextPath}/user/login.html">
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="username" name="username" type="text" class="validate">
-                <label for="username">Username</label>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password" name="password" type="password" class="validate">
-                <label for="password">Password</label>
-            </div>
-        </div>
-
-        <br>
-
-        <button class="btn waves-effect waves-light waves-ripple " type="submit" name="action">Login
-            <i class="material-icons right"></i>
-        </button>
-
-    </form>
 </div>
 
-</div>
 
 <jsp:include page="footer.jsp"></jsp:include>
 

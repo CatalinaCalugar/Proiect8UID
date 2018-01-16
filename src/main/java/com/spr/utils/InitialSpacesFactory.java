@@ -1,6 +1,7 @@
 package com.spr.utils;
 
 import com.spr.model.CoworkingSpace;
+import com.spr.model.Office;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,16 @@ public class InitialSpacesFactory {
         amenitiesList.add("projectors");
         amenitiesList.add("white board");
         amenitiesList.add("markers");
+
+        List<String> generalPhotos = new ArrayList<>();
+        generalPhotos.add("genSp1.jpg");
+        generalPhotos.add("genSp2.jpg");
+
+        List<Office> officesList = new ArrayList<>();
+        officesList.add(new Office(1, "POffice1", "private office", 7, "office1.jpg", amenitiesList, 80.0));
+        officesList.add(new Office(2, "OOffice2", "open space", 40, "office2.jpg", amenitiesList, 10.0));
+        officesList.add(new Office(3, "POffice3", "private office", 5, "office3.jpg", amenitiesList, 60.0));
+        officesList.add(new Office(4, "OOffice4", "open space", 30, "office4.jpg", amenitiesList, 15.0));
 
         c1.setId(1);
         c2.setId(2);
@@ -112,6 +123,56 @@ public class InitialSpacesFactory {
         c8.setTwitterUrl("www.twitter.com/space8");
         c9.setTwitterUrl("www.twitter.com/space9");
 
+        c1.setOpeningHour("09:00");
+        c2.setOpeningHour("10:00");
+        c3.setOpeningHour("08:00");
+        c4.setOpeningHour("11:00");
+        c5.setOpeningHour("07:00");
+        c6.setOpeningHour("09:00");
+        c7.setOpeningHour("10:00");
+        c8.setOpeningHour("10:00");
+        c9.setOpeningHour("09:00");
+
+        c1.setClosingHour("20:00");
+        c2.setClosingHour("21:00");
+        c3.setClosingHour("22:00");
+        c4.setClosingHour("23:00");
+        c5.setClosingHour("24:00");
+        c6.setClosingHour("21:00");
+        c7.setClosingHour("20:00");
+        c8.setClosingHour("22:00");
+        c9.setClosingHour("20:00");
+
+        c1.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c2.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c3.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c4.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c5.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c6.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c7.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c8.setISBN("RO33 0006 1005 1978 6457 8413 26");
+        c9.setISBN("RO33 0006 1005 1978 6457 8413 26");
+
+        c1.setLongitude("23.591423");
+        c2.setLongitude("23.591423");
+        c3.setLongitude("23.591423");
+        c4.setLongitude("23.591423");
+        c5.setLongitude("23.591423");
+        c6.setLongitude("23.591423");
+        c7.setLongitude("23.591423");
+        c8.setLongitude("23.591423");
+        c9.setLongitude("23.591423");
+
+        c1.setLatitude("46.770439");
+        c2.setLatitude("46.770439");
+        c3.setLatitude("46.770439");
+        c4.setLatitude("46.770439");
+        c5.setLatitude("46.770439");
+        c6.setLatitude("46.770439");
+        c7.setLatitude("46.770439");
+        c8.setLatitude("46.770439");
+        c9.setLatitude("46.770439");
+
         c1.setGeneralAmenities(amenitiesList);
         c2.setGeneralAmenities(amenitiesList);
         c3.setGeneralAmenities(amenitiesList);
@@ -121,6 +182,26 @@ public class InitialSpacesFactory {
         c7.setGeneralAmenities(amenitiesList);
         c8.setGeneralAmenities(amenitiesList);
         c9.setGeneralAmenities(amenitiesList);
+
+        c1.setGeneralPhotos(generalPhotos);
+        c2.setGeneralPhotos(generalPhotos);
+        c3.setGeneralPhotos(generalPhotos);
+        c4.setGeneralPhotos(generalPhotos);
+        c5.setGeneralPhotos(generalPhotos);
+        c6.setGeneralPhotos(generalPhotos);
+        c7.setGeneralPhotos(generalPhotos);
+        c8.setGeneralPhotos(generalPhotos);
+        c9.setGeneralPhotos(generalPhotos);
+
+        c1.setOfficeList(officesList);
+        c2.setOfficeList(officesList);
+        c3.setOfficeList(officesList);
+        c4.setOfficeList(officesList);
+        c5.setOfficeList(officesList);
+        c6.setOfficeList(officesList);
+        c7.setOfficeList(officesList);
+        c8.setOfficeList(officesList);
+        c9.setOfficeList(officesList);
 
         List<CoworkingSpace> coworkingSpaces = new ArrayList<>();
         coworkingSpaces.add(c1);
@@ -159,7 +240,7 @@ public class InitialSpacesFactory {
         return firstSpaces;
     }
 
-    public CoworkingSpace getSpaceByID(int id){
+    public CoworkingSpace getSpaceByID(int id) {
         return coworkingSpaces.get(id);
     }
 }

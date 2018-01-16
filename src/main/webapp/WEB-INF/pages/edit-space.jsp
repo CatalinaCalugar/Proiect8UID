@@ -132,9 +132,9 @@
                             <h2>Edit your coworking space's location</h2>
                         </div>
                         <div class="collapsible-body">
-                            <div style=" padding-bottom: 20px">
+                            <div>
                                 <h3>My Google Map</h3>
-                                <div id="map" class="left" style="width:740px; height:400px;">
+                                <div id="map" style="width:740px; height:400px;">
                                     <script>
                                         function myMap() {
                                             var mapOptions = {
@@ -309,6 +309,26 @@
 <script language="JavaScript">
     $(document).ready(function () {
         $('.materialboxed').materialbox();
+    });
+</script>
+<script language="JavaScript">
+    $('.timepicker').pickatime({
+        default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+        fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+        twelvehour: false, // Use AM/PM or 24-hour format
+        donetext: 'OK', // text for done-button
+        cleartext: 'Clear', // text for clear-button
+        canceltext: 'Cancel', // Text for cancel-button
+        autoclose: false, // automatic close timepicker
+        ampmclickable: true, // make AM PM clickable
+        aftershow: function () {
+        } //Function for after opening timepicker
+    });
+</script>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        $('select').material_select();
     });
 </script>
 </body>

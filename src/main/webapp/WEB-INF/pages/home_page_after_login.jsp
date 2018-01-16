@@ -70,8 +70,12 @@
                 <c:set var="count" value="${count + 1}" scope="page"/>
             </c:forEach>
         </div>
-
+        <div class="center-align">
+            <a class="waves-effect waves-light btn" href="${pageContext.request.contextPath}/allSpaces.html">See all
+                spaces</a>
+        </div>
 </div>
+
 
 <div class="center-align" style="padding-bottom:40px">
     <h3>My Google Map</h3>

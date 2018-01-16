@@ -290,11 +290,24 @@ public class CoworkingSpaceController {
 
         InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
         List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
-        CoworkingSpace cs = coworkingSpaces.get(id-1);
+        CoworkingSpace cs = coworkingSpaces.get(id - 1);
         ModelAndView mav = new ModelAndView("view-space");
-        mav.addObject("cs",cs);
+        mav.addObject("cs", cs);
 
         String message = "The coworkingSpace " + id + " was successfully deleted.";
+        boolean isLogged = false;
+        String user;
+        try {
+            user = (String) session.getAttribute("loggedUser");
+            if (user != null && user != "") {
+                isLogged = true;
+                mav.addObject("username", session.getAttribute("loggedUser"));
+            }
+        } catch (Exception e) {
+
+        }
+
+        mav.addObject("isLogged", isLogged);
 
         redirectAttributes.addFlashAttribute("message", message);
         return mav;

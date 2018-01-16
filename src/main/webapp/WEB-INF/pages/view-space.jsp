@@ -27,7 +27,14 @@
 
 </head>
 <body>
-<jsp:include page="navbar-before-login.jsp"></jsp:include>
+<c:choose>
+    <c:when test="${isLogged == true}">
+        <jsp:include page="navbar-after-login.jsp"></jsp:include>
+    </c:when>
+    <c:when test="${isLogged == false}">
+        <jsp:include page="navbar-before-login.jsp"></jsp:include>
+    </c:when>
+</c:choose>
 <h1 class="header">${cs.name}</h1>
 <div class="row">
     <iv class="w3-content w3-display-container">

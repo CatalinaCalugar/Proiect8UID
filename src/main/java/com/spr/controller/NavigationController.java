@@ -51,16 +51,42 @@ public class NavigationController {
     @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
     public ModelAndView contact(HttpSession session) {
         ModelAndView mav = new ModelAndView("contact");
-        mav.addObject("username", session.getAttribute("loggedUser"));
+        boolean isLogged = false;
+        String user;
+        try {
+            user = (String) session.getAttribute("loggedUser");
+            if (user != null && user != "") {
+                isLogged = true;
+                mav.addObject("username", session.getAttribute("loggedUser"));
+            }
+        } catch (Exception e) {
+
+        }
+
+        mav.addObject("isLogged", isLogged);
         return mav;
     }
 
     @RequestMapping(value = {"/allSpaces"}, method = RequestMethod.GET)
-    public ModelAndView allSpaces() {
+    public ModelAndView allSpaces(HttpSession session) {
         InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
         List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
         ModelAndView model = new ModelAndView("allSpaces");
         model.addObject("cowSp", coworkingSpaces);
+
+        boolean isLogged = false;
+        String user;
+        try {
+            user = (String) session.getAttribute("loggedUser");
+            if (user != null && user != "") {
+                isLogged = true;
+                model.addObject("username", session.getAttribute("loggedUser"));
+            }
+        } catch (Exception e) {
+
+        }
+
+        model.addObject("isLogged", isLogged);
         return model;
     }
 }

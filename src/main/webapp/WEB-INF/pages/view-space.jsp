@@ -85,7 +85,7 @@
                                             <p>${off.name}</p>
                                         </div>
                                         <div class="card-action">
-                                            <a href="#">Price: ${off.price}</a>
+                                            <a>Price: ${off.price}</a>
                                         </div>
                                     </div>
                                 </div>

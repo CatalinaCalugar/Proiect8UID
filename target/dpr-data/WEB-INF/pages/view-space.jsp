@@ -35,7 +35,7 @@
         <jsp:include page="navbar-before-login.jsp"></jsp:include>
     </c:when>
 </c:choose>
-<h1 class="header">${cs.name}</h1>
+<h1 style="width: 100%; text-align: center;" class="header">${cs.name}</h1>
 <div class="row">
     <iv class="w3-content w3-display-container">
         <div class="carousel carousel-slider center-align customCarusel" data-indicators="true">
@@ -52,7 +52,6 @@
         </div>
         <div style="width:100%;overflow: hidden;clear:both;padding-left: 100px;">
             <div style="width:60%;float:left;">
-                <label>${cs.name}</label>
 
 
                 <div class="row">
@@ -122,8 +121,8 @@
                         <div class="row">
                             <div class="col s12">
                                 <ul class="tabs">
-                                    <li class="tab col s3"><a href="#test1">Reviews</a></li>
-                                    <li class="tab col s3"><a class="active" href="#test2">Tips</a></li>
+                                    <li class="tab col s3"><a class="active" href="#test1">Reviews</a></li>
+                                    <li class="tab col s3"><a href="#test2">Tips</a></li>
                                     <li class="tab col s3"><a href="#test3">Q&A</a></li>
                                 </ul>
                             </div>

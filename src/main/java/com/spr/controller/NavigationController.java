@@ -7,8 +7,10 @@ package com.spr.controller;
 import com.spr.model.CoworkingSpace;
 import com.spr.utils.InitialSpacesFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
@@ -61,6 +63,22 @@ public class NavigationController {
         List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
         ModelAndView model = new ModelAndView("allSpaces");
         model.addObject("cowSp", coworkingSpaces);
+        return model;
+    }
+
+    @RequestMapping(value = {"/allSpaces/{query}"}, method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView filteredSpaces(@PathVariable("query") String query) {
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getFilteredCoworkingSpaces(query);
+
+        if (coworkingSpaces.size() == 0) {
+            coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        }
+        ModelAndView model = new ModelAndView("allSpaces");
+        model.addObject("cowSp", coworkingSpaces);
+        model.addObject("message", "No coworkspaces found, please make another search");
+
         return model;
     }
 }

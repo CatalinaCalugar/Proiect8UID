@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+  <component name="DataSourceManagerImpl" format="xml" hash="0">
     <data-source source="LOCAL" name="petstore@localhost" uuid="883b841b-84a3-4a6f-9822-c7fe7b3a49c2">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>

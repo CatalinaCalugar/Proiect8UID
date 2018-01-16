@@ -248,6 +248,19 @@ public class InitialSpacesFactory {
         return coworkingSpaces;
     }
 
+    public List<CoworkingSpace> getFilteredCoworkingSpaces(String query) {
+        List<CoworkingSpace> filteredCoworkingSpaces = new ArrayList<CoworkingSpace>();
+
+        for (CoworkingSpace space : coworkingSpaces) {
+
+            if (space.getName().contains(query)) {
+
+                filteredCoworkingSpaces.add(space);
+            }
+        }
+        return filteredCoworkingSpaces;
+    }
+
     public void setCoworkingSpaces(List<CoworkingSpace> coworkingSpaces) {
         this.coworkingSpaces = coworkingSpaces;
     }

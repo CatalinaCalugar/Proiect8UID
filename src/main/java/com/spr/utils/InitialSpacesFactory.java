@@ -53,25 +53,52 @@ public class InitialSpacesFactory {
         c8.setId(8);
         c9.setId(9);
 
-        c1.setDescription("bllla1");
-        c2.setDescription("bllla2");
-        c3.setDescription("bllla3");
-        c4.setDescription("bllla4");
-        c5.setDescription("bllla5");
-        c6.setDescription("bllla6");
-        c7.setDescription("bllla7");
-        c8.setDescription("bllla8");
-        c9.setDescription("bllla9");
+        c1.setDescription("Set in the center of the city, Marasti HUB, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c2.setDescription("Set in the center of the city, City Center, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c3.setDescription("Set in the center of the city, Manastur HUB, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c4.setDescription("Set in the center of the city, Grigo Hub, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c5.setDescription("Set in the center of the city, Ghiorgheni HUB, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c6.setDescription("Set in the center of the city, Observatorului HUB, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c7.setDescription("Set in the center of the city, Zorilor HUB, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c8.setDescription("Set in the center of the city, Manastur Team, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
+        c9.setDescription("Set in the center of the city, Grigorescu Team, is the perfect place to find a" +
+                " spot for work. Join the others who have chosen such a comfortable way to work." +
+                " For more inforation veiw the page of the space." +
+                "Feel free to contact us any time.");
 
-        c1.setName("space 1");
-        c2.setName("space 2");
-        c3.setName("space 3");
-        c4.setName("space 4");
-        c5.setName("space 5");
-        c6.setName("space 6");
-        c7.setName("space 7");
-        c8.setName("space 8");
-        c9.setName("space 9");
+        c1.setName("Marasti HUB");
+        c2.setName("Cluj Center");
+        c3.setName("Manastur HUB");
+        c4.setName("Grigo Hub");
+        c5.setName("Gheorgheni Hub");
+        c6.setName("Observatorului HUB");
+        c7.setName("Zorilor Hub");
+        c8.setName("Manastur Team");
+        c9.setName("Grigorescu Team");
 
         c1.setOwnerEmail("owner1@gmail.com");
         c2.setOwnerEmail("owner1@gmail.com");

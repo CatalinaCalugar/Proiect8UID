@@ -96,6 +96,8 @@
 
 <script>
     function validateForm() {
+        var form = document.getElementById("contact");
+
         $(document).ready(function () {
             var error_free = true;
 
@@ -107,6 +109,8 @@
             if (error_free) {
                 $('#modalSuccess').modal();
             }
+
+            form.reset();
         });
     }
 </script>

@@ -48,7 +48,7 @@
         <li><a href="${pageContext.request.contextPath}/space/edit.html"><i class="material-icons">create</i>Manage
             coworking space</a></li>
         <li><a href="#!"><i class="material-icons">content_cut</i>Ban user</a></li>
-        <li><a href="#!"><i class="material-icons">exit_to_app</i>Log out</a></li>
+        <li><a href="${pageContext.request.contextPath}/user/logout.html"><i class="material-icons">exit_to_app</i>Log out</a></li>
     </ul>
 
 </div>

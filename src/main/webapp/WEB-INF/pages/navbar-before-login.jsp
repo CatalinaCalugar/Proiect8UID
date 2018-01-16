@@ -94,8 +94,8 @@
                     </div>
 
                     <div class="input-field col s6">
-                        <input id="email" name="email" type="text" class="validate" required="" aria-required="true">
-                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                        <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
+                        <label for="email" data-error="Email is not in the required format!" data-success="right">Email</label>
                     </div>
                 </div>
 
@@ -112,11 +112,13 @@
                         <input id="passwordR" name="password" type="password" class="validate" required=""
                                aria-required="true">
                         <label for="passwordR">Password</label>
+                        <span id="messageFirst" class="col s6"></span>
                     </div>
 
                     <div class="input-field col s6">
                         <input id="confirmPassword" type="password" class="validate" required="" aria-required="true">
                         <label for="confirmPassword">Confirm password</label>
+                        <span id="message" class="col s6"></span>
                     </div>
                 </div>
 
@@ -135,5 +137,19 @@
 </div>
 
 <script language="JavaScript">
+    $('#passwordR').on('keyup', function () {
+        if($('#passwordR').val().length < 8) {
+            // checks the password value length
+            $('#messageFirst').html('You have entered less than 8 characters for password!').css('color', 'red');
+        }
+        else
+            $('#messageFirst').html('You are good to go!').css('color', 'green');
+    });
+    $('#confirmPassword').on('keyup', function () {
+        if ($('#passwordR').val() == $('#confirmPassword').val()) {
+            $('#message').html('Matching passwords!').css('color', 'green');
+        } else
+            $('#message').html('Password do not match!').css('color', 'red');
+    });
     $('.modal').modal();
 </script>

@@ -32,7 +32,7 @@
         <li>
             <div class="user-view">
                 <div class="background">
-                    <div class="center-align">
+                    <div class="center-align" style="color: #00bfa5">
                         <h1>${message}</h1>
                     </div>
                     <img src="/resources/images/whitePicture.jpg">

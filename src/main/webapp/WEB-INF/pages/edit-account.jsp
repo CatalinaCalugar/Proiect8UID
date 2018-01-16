@@ -69,11 +69,13 @@
                     </form>
                 </div>
 
-               <%--/ <a href="${pageContext.request.contextPath}/user/account.html">--%>
-                    <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Save changes
+                <a href="${pageContext.request.contextPath}/user/account.html">
+                    <button class="btn waves-effect waves-light waves-ripple tooltipped" data-position="top"
+                            data-delay="50"
+                            data-tooltip="Finish your edit" type="submit" name="action">Save changes
                         <i class="material-icons right"></i>
                     </button>
-                <%--</a>--%>
+                </a>
 
             </form>
         </div>
@@ -90,6 +92,12 @@
         clear: 'Clear',
         close: 'Ok',
         closeOnSelect: false // Close upon selecting a date,
+    });
+</script>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        $('.tooltipped').tooltip({delay: 50});
     });
 </script>
 </body>

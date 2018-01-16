@@ -79,9 +79,9 @@
         </div>
 
         <div class="col s8">
-            <!-- Teal page content  -->
+            <!-- Teal page content -->
 
-            <form class="col s12" method="POST" commandName="user"
+            <form class="col s12" method="POST" commandName="space"
                   action="${pageContext.request.contextPath}/space/create.html">
                 <div id="name-and-description-panel">
                     <h1>Enter name and description</h1>
@@ -89,7 +89,8 @@
 
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" name="name" type="text" class="validate">
+                                <input id="name" name="name" type="text" class="validate" required=""
+                                       aria-required="true">
                                 <label for="name">Space name</label>
                             </div>
                         </div>
@@ -97,7 +98,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="description" rows="3" name="description"
-                                          class="materialize-textarea"></textarea>
+                                          class="materialize-textarea" required="" aria-required="true"></textarea>
                                 <label for="description">Description</label></div>
                         </div>
                         <br>
@@ -108,35 +109,40 @@
                     <h1>Enter contact details</h1>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="ownerEmail" name="ownerEmail" type="text" class="validate">
+                            <input id="ownerEmail" name="ownerEmail" type="text" class="validate" required=""
+                                   aria-required="true">
                             <label for="ownerEmail">Owner's email</label>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="ownerPhone" name="ownerPhone" type="text" class="validate">
+                            <input id="ownerPhone" name="ownerPhone" type="text" class="validate" required=""
+                                   aria-required="true">
                             <label for="ownerPhone">Owner's phone</label>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="webURL" name="webURL" type="text" class="validate">
+                            <input id="webURL" name="webURL" type="text" class="validate" required=""
+                                   aria-required="true">
                             <label for="webURL">Website</label>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="facebookUrl" name="facebookUrl" type="text" class="validate">
+                            <input id="facebookUrl" name="facebookUrl" type="text" class="validate" required=""
+                                   aria-required="true">
                             <label for="facebookUrl">Facebook URL</label>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="twitterUrl" name="twitterUrl" type="text" class="validate">
+                            <input id="twitterUrl" name="twitterUrl" type="text" class="validate" required=""
+                                   aria-required="true">
                             <label for="twitterUrl">Twitter URL</label>
                         </div>
                     </div>
@@ -147,7 +153,7 @@
                     <h1>Select amenities for your space</h1>
                     <c:forEach items="${generalAmenities}" var="amenity">
                         <p>
-                            <input type="checkbox" id="${amenity}" name=""/>
+                            <input type="checkbox" id="${amenity}" name="" required="" aria-required="true"/>
                             <label for="${amenity}">${amenity}</label>
                         </p>
                     </c:forEach>
@@ -197,144 +203,60 @@
                         </thead>
                         <tbody>
 
-                        <tr style="border-bottom: solid">
-                            <td>
-                                Add office
-                            </td>
-                            <td>
-                                1
-                            </td>
+                        <c:forEach items="${numberOfOffices}" var="ofNr">
+                            <tr style="border-bottom: solid">
+                                <form class="col s12" method="POST" commandName="space"
+                                      action="${pageContext.request.contextPath}/space/create-office/${ofNr}.html">
+                                    <td>
+                                        <select id="selector">
+                                            <option value="" disabled selected>Select</option>
+                                            <c:forEach items="${type}" var="number">
+                                                <option value="${number}" name="type">${number}</option>
+                                            </c:forEach>
+                                        </select>
+                                        <label for="selector">Office type</label>
 
-                        </tr>
-                        <tr>
-                            <form class="col s12" method="POST" commandName="space"
-                                  action="${pageContext.request.contextPath}/space/create-office.html">
-                                <td>
-                                    <select id="selector">
-                                        <option value="" disabled selected>Select</option>
-                                        <c:forEach items="${type}" var="number">
-                                            <option value="${number}" name="type">${number}</option>
+                                    </td>
+                                    <td>
+                                            <%--<div class="input-field">--%>
+                                        <input id="officeName" name="name" type="text" >
+                                        <label for="officeName">Office name</label>
+                                            <%--</div>--%>
+                                    </td>
+                                    <td>
+                                            <%--<div class="input-field">--%>
+                                        <input id="capacity" name="capacity" type="text" >
+                                        <label for="capacity">Capacity</label>
+                                            <%--</div>--%>
+                                    </td>
+                                    <td>
+                                        <c:forEach items="${generalAmenities}" var="amenity">
+                                            <p>
+                                                <input type="checkbox" name="amenities" id=${ofNr}/>
+                                                <label for=${ofNr}>${amenity}</label>
+                                            </p>
                                         </c:forEach>
-                                    </select>
-                                    <label for="selector">Office type</label>
-
-                                </td>
-                                <td>
-                                    <%--<div class="input-field">--%>
-                                    <input id="officeName" name="name" type="text" class="validate">
-                                    <label for="officeName">Office name</label>
-                                    <%--</div>--%>
-                                </td>
-                                <td>
-                                    <%--<div class="input-field">--%>
-                                    <input id="capacity" name="capacity" type="text" class="validate">
-                                    <label for="capacity">Capacity</label>
-                                    <%--</div>--%>
-                                </td>
-                                <td>
-                                    <c:forEach items="${generalAmenities}" var="amenity">
-                                        <p>
-                                            <input type="checkbox" name="amenities" id=${amenity}/>
-                                            <label for=${amenity}>${amenity}</label>
-                                        </p>
-                                    </c:forEach>
-                                </td>
-                                <td>
-                                    <div class="file-field input-field">
-                                        <div class="btn">
-                                            <span>Photo</span>
-                                            <input type="file" name="photo" multiple>
+                                    </td>
+                                    <td>
+                                        <div class="file-field input-field">
+                                            <div class="btn">
+                                                <span>Photo</span>
+                                                <input type="file" name="photo" multiple>
+                                            </div>
                                         </div>
-                                        <%--<div class="file-path-wrapper">--%>
-                                        <%--<input class="file-path validate" type="text"--%>
-                                        <%--placeholder="Upload one or more files">--%>
-                                        <%--</div>--%>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input id="price" name="price" type="text" class="validate" width="300px">
-                                        <label for="price">Price</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <%--<button  class="btn waves-effect waves-light" type="submit"--%>
-                                            <%--name="action">Add--%>
-                                        <%--offices--%>
-                                        <%--<i class="material-icons right">send</i>--%>
-                                    <%--</button>--%>
-                                </td>
-                            </form>
-                        </tr>
-                        <td>
-                            Add office
-                        </td>
-                        <td>
-                            2
-                        </td>
-                        <td>
-
-                        </td>
-                        <tr style="border-top: solid">
-                            <form class="col s12" method="POST" commandName="space"
-                                  action="${pageContext.request.contextPath}/space/create-office.html">
-                                <td>
-                                    <select>
-                                        <option value="" disabled selected>Select</option>
-                                        <c:forEach items="${type}" var="number">
-                                            <option value="${number}" name="type">${number}</option>
-                                        </c:forEach>
-                                    </select>
-                                    <label>Office type</label>
-
-                                </td>
-                                <td>
-                                    <%--<div class="input-field">--%>
-                                    <input id="officeName" name="name" type="text" class="validate">
-                                    <label for="officeName">Office name</label>
-                                    <%--</div>--%>
-                                </td>
-                                <td>
-                                    <%--<div class="input-field">--%>
-                                    <input id="capacity" name="capacity" type="text" class="validate">
-                                    <label for="capacity">Capacity</label>
-                                    <%--</div>--%>
-                                </td>
-                                <td>
-                                    <c:forEach items="${generalAmenities}" var="amenity">
-                                        <p>
-                                            <input type="checkbox" name="amenities" id=${amenity}/>
-                                            <label for=${amenity}>${amenity}</label>
-                                        </p>
-                                    </c:forEach>
-                                </td>
-                                <td>
-                                    <div class="file-field input-field">
-                                        <div class="btn">
-                                            <span>Add photo</span>
-                                            <input type="file" name="photo" multiple>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input id="price" name="price" type="text">
+                                            <label for="price">Price</label>
                                         </div>
-                                        <%--<div class="file-path-wrapper">--%>
-                                        <%--<input class="file-path validate" type="text"--%>
-                                        <%--placeholder="Upload one or more files">--%>
-                                        <%--</div>--%>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-field">
-                                        <input id="price2" name="price" type="text" class="validate">
-                                        <label for="price2">Price</label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <button id="send-message" class="btn waves-effect waves-light" type="submit"
-                                            name="action">Add
-                                        offices
-                                        <i class="material-icons right">send</i>
-                                    </button>
-                                </td>
-                            </form>
-                        </tr>
+                                    </td>
+                                    <%--<td>--%>
+                                        <%--<button class="btn" type="submit" name="action">Addoffice ${ofNr}</button>--%>
+                                    <%--</td>--%>
+                                </form>
+                            </tr>
+                        </c:forEach>
                         </tbody>
                     </table>
 
@@ -345,14 +267,14 @@
                     <h1>Add schedule</h1>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="tp1" type="text" class="timepicker">
+                            <input id="tp1" type="text" class="timepicker" required="" aria-required="true">
                             <label for="tp1">Start hour</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <br>
-                            <input id="tp2" type="text" class="timepicker">
+                            <input id="tp2" type="text" class="timepicker" required="" aria-required="true">
                             <label for="tp2">End hour</label>
                         </div>
                     </div>
@@ -364,12 +286,12 @@
                         <div class="file-field input-field">
                             <div class="btn">
                                 <span>Upload photos</span>
-                                <input type="file" name="generalPhotos" multiple>
+                                <input type="file" name="generalPhotos" multiple required="" aria-required="true">
                             </div>
                             <br>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text"
-                                       placeholder="Upload one or more files">
+                                       placeholder="Upload one or more files" required="" aria-required="true">
                             </div>
                         </div>
                     </form>
@@ -380,14 +302,15 @@
                     <h1>Add payment details</h1>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="ISBN" name="ISBN" type="text" class="validate">
+                            <input id="ISBN" name="ISBN" type="text" class="validate" required="" aria-required="true">
                             <label for="ISBN">ISBN</label>
                         </div>
                         <br>
                         <br>
                     </div>
 
-                    <button class="waves-effect waves-light btn-large" style="width: 800px"
+                    <button class="waves-effect waves-light btn-large tooltipped" data-position="top" data-delay="50"
+                            data-tooltip="Finish and add your space" style="width: 800px"
                             type="submit" name="action">ADD SPACE
                     </button>
                 </div>
@@ -615,7 +538,7 @@
 <script language="JavaScript">
     $('.timepicker').pickatime({
         default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-        fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+        fromnow: 0, // set default time to * milliseconds from now (using with default = 'now')
         twelvehour: false, // Use AM/PM or 24-hour format
         donetext: 'OK', // text for done-button
         cleartext: 'Clear', // text for clear-button
@@ -630,6 +553,12 @@
 <script language="JavaScript">
     $(document).ready(function () {
         $('select').material_select();
+    });
+</script>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        $('.tooltipped').tooltip({delay: 50});
     });
 </script>
 

@@ -233,7 +233,7 @@ public class InitialSpacesFactory {
 
         List<CoworkingSpace> firstSpaces = new ArrayList<>();
 
-        for (int i = 0; i < coworkingSpaces.size(); i++) {
+        for (int i = 0; i < n; i++) {
             firstSpaces.add(coworkingSpaces.get(i));
         }
 

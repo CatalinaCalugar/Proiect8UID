@@ -191,14 +191,14 @@
                                             </td>
                                             <td>
                                                     <%--<div class="input-field">--%>
-                                                <input id="officeName" name="name" type="text" class="validate"
+                                                <input id="officeName" name="officeName" type="text" class="validate"
                                                        value="${office.name}">
                                                 <label for="officeName">Office name</label>
                                                     <%--</div>--%>
                                             </td>
                                             <td>
                                                     <%--<div class="input-field">--%>
-                                                <input id="capacity" name="capacity" type="text" class="validate"
+                                                <input id="capacity" name="officeCapacity" type="text" class="validate"
                                                        value="${office.capacity}">
                                                 <label for="capacity">Capacity</label>
                                                     <%--</div>--%>
@@ -206,7 +206,7 @@
                                             <td>
                                                 <c:forEach items="${office.amenities}" var="amenity">
                                                     <p>
-                                                        <input type="checkbox" name="amenities" id=${amenity}/>
+                                                        <input type="checkbox" name="officeAmenities" id=${amenity}/>
                                                         <label for=${amenity}>${amenity}</label>
                                                     </p>
                                                 </c:forEach>
@@ -294,7 +294,9 @@
                     </li>
 
                     <li>
-                        <button class="waves-effect waves-light btn-large" style="width: 800px"
+                        <button class="waves-effect waves-light btn-large tooltipped" data-position="top"
+                                data-delay="50"
+                                data-tooltip="Finish your edit" style="width: 800px"
                                 type="submit" name="action">Edit space
                         </button>
                     </li>
@@ -329,6 +331,12 @@
 <script language="JavaScript">
     $(document).ready(function () {
         $('select').material_select();
+    });
+</script>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        $('.tooltipped').tooltip({delay: 50});
     });
 </script>
 </body>

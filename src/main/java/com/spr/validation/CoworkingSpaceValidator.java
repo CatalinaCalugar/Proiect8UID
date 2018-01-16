@@ -3,7 +3,6 @@ package com.spr.validation;
 import com.spr.model.CoworkingSpace;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 /**
@@ -22,6 +21,6 @@ public class CoworkingSpaceValidator implements Validator {
         CoworkingSpace coworkingSpace = (CoworkingSpace) target;
 
         //ValidationUtils.rejectIfEmpty(errors, "date", "coworkingSpace.date.empty");
-       // ValidationUtils.rejectIfEmpty(errors, "description", "coworkingSpace.description.empty");
+        // ValidationUtils.rejectIfEmpty(errors, "description", "coworkingSpace.description.empty");
     }
 }

@@ -236,12 +236,14 @@
             <div style="width:30%;float:left; border: 2px ridge green; border-radius: 50px; margin-top: 60px;">
                 <div style="align:center;">
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
-                       class="waves-effect waves-light btn-large" href="${pageContext.request.contextPath}/scheduleTour/1"
-                    id="scheduleTour"><i class="material-icons left">assignment</i>Schedule Tour</a>
+                       class="waves-effect waves-light btn-large"
+                       href="${pageContext.request.contextPath}/scheduleTour/1"
+                       id="scheduleTour"><i class="material-icons left">assignment</i>Schedule Tour</a>
 
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
-                       class="waves-effect waves-light btn-large" href="${pageContext.request.contextPath}/messageSpace/1"
-                    id="messageSpace"><i class="material-icons left">message</i>Message space</a>
+                       class="waves-effect waves-light btn-large"
+                       href="${pageContext.request.contextPath}/messageSpace/1"
+                       id="messageSpace"><i class="material-icons left">message</i>Message space</a>
 
                     <a style="margin-top: 100px; margin-left: 20px; margin-right: 20px; margin-bottom:30px;
                     width: 90%;" class="waves-effect waves-light btn-large disabled "
@@ -249,19 +251,22 @@
 
 
                     <div style=" margin-bottom: 20px;">
-                        <button id="fb"style="background-color: transparent; border: none;">
+                        <button id="fb" style="background-color: transparent; border: none;">
                             <img style="width: 70px; height:70px; margin-left: 30px; margin-right: 20px;
-                            border: 2px solid green; border-radius: 20px;" src="/resources/images/fb-art.png" alt="Facebook">
+                            border: 2px solid green; border-radius: 20px;" src="/resources/images/fb-art.png"
+                                 alt="Facebook">
                         </button>
 
-                        <button id="insta"style="background-color: transparent; border: none;">
+                        <button id="insta" style="background-color: transparent; border: none;">
                             <img style="width: 70px; height:70px; margin-left: 10px; margin-right: 10px;
-                            border: 2px solid green; border-radius: 20px;" src="/resources/images/instagram-logo.jpg" alt="insta">
+                            border: 2px solid green; border-radius: 20px;" src="/resources/images/instagram-logo.jpg"
+                                 alt="insta">
                         </button>
 
-                        <button id="gmail"style="background-color: transparent; border: none;">
+                        <button id="gmail" style="background-color: transparent; border: none;">
                             <img style="width: 70px; height:70px; margin-left: 10px; margin-right: 10px;
-                            border: 2px solid green; border-radius: 20px;" src="/resources/images/gmail.png" alt="gmail">
+                            border: 2px solid green; border-radius: 20px;" src="/resources/images/gmail.png"
+                                 alt="gmail">
                         </button>
                     </div>
 

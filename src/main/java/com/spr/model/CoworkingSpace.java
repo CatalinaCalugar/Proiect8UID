@@ -1,8 +1,6 @@
 package com.spr.model;
 
-import java.sql.Time;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by cata_ on 1/5/2018.

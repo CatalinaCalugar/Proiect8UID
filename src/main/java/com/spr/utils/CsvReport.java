@@ -15,10 +15,10 @@ public class CsvReport implements Report {
     @Override
     public void generate(Contract contract, User client, Float total) {
         String csvFilePath = " E:\\Catalina\\AnIII_Sem2\\SD\\Project\\proiect\\src\\main\\resources\\";
-        String csvFile = "Contract"+contract.getId().toString()+".csv";
+        String csvFile = "Contract" + contract.getId().toString() + ".csv";
         FileWriter writer = null;
         try {
-            writer = new FileWriter(csvFilePath+csvFile);
+            writer = new FileWriter(csvFilePath + csvFile);
             CSVUtils.writeLine(writer, Arrays.asList("Contract: ", contract.getDate().toString()));
             CSVUtils.writeLine(writer, Arrays.asList("ID ", "Adoption Id", "Description"));
 
@@ -34,7 +34,7 @@ public class CsvReport implements Report {
 //            adList.add(adoption.getIdUser().toString());
 //            CSVUtils.writeLine(writer, adList);
 
-            CSVUtils.writeLine(writer, Arrays.asList("Find it in: ", csvFilePath+csvFile));
+            CSVUtils.writeLine(writer, Arrays.asList("Find it in: ", csvFilePath + csvFile));
 
             writer.flush();
             writer.close();

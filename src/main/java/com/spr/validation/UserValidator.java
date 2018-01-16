@@ -12,15 +12,15 @@ import org.springframework.validation.Validator;
 @Component
 public class UserValidator implements Validator {
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return User.class.isAssignableFrom(clazz);
-    }
-
     final String EMPLOYEE_TYPE = "user";
     final String ADMIN_TYPE = "admin";
     final String CLIENT_TYPE = "client";
     final String DUMMY_TYPE = "client";
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return User.class.isAssignableFrom(clazz);
+    }
 
     @Override
     public void validate(Object target, Errors errors) {
@@ -31,7 +31,7 @@ public class UserValidator implements Validator {
         ValidationUtils.rejectIfEmpty(errors, "username", "user.username.empty");
         ValidationUtils.rejectIfEmpty(errors, "password", "user.password.empty");
 
-        if (!(type.equals(EMPLOYEE_TYPE) || type.equals(CLIENT_TYPE) || type.equals(ADMIN_TYPE) || type.equals(DUMMY_TYPE))){
+        if (!(type.equals(EMPLOYEE_TYPE) || type.equals(CLIENT_TYPE) || type.equals(ADMIN_TYPE) || type.equals(DUMMY_TYPE))) {
             errors.rejectValue("type", "user.type.notValid");
 
         }

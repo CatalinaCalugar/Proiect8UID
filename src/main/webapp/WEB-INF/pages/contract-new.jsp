@@ -20,7 +20,8 @@
 </head>
 <body>
 
-<div id="header"><a href="${pageContext.request.contextPath}/index.html" id="logo"><img src="/resources/images/logo.gif" width="310" height="114" alt=""></a>
+<div id="header"><a href="${pageContext.request.contextPath}/index.html" id="logo"><img src="/resources/images/logo.gif"
+                                                                                        width="310" height="114" alt=""></a>
     <ul class="navigation">
         <li><a href="${pageContext.request.contextPath}/index.html"> Home page </a></li>
         <li><a href="${pageContext.request.contextPath}/user-page.html"> User page </a></li>

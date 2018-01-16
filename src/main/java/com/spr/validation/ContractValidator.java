@@ -10,7 +10,7 @@ import org.springframework.validation.Validator;
  * Created by Catalina on 5/10/2017.
  */
 @Component
-public class ContractValidator implements Validator{
+public class ContractValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> clazz) {

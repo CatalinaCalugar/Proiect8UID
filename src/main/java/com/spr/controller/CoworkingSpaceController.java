@@ -3,19 +3,13 @@ package com.spr.controller;
 import com.spr.exception.CoworkingSpaceNotFound;
 import com.spr.model.CoworkingSpace;
 import com.spr.model.Office;
-import com.spr.model.User;
 import com.spr.utils.InitialSpacesFactory;
-import com.spr.validation.CoworkingSpaceValidator;
-import com.spr.validation.CoworkingSpaceValidator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -35,6 +29,8 @@ public class CoworkingSpaceController {
 //    private void initBinder(WebDataBinder binder) {
 //        binder.setValidator(coworkingSpaceValidator);
 //    }
+
+    private int coworkingSpaceId;
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public ModelAndView newCoworkingSpacePage(HttpSession session) {
@@ -68,8 +64,6 @@ public class CoworkingSpaceController {
         mav.addObject("username", session.getAttribute("loggedUser"));
         return mav;
     }
-
-    private int coworkingSpaceId;
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView createNewCoworkingSpace(@ModelAttribute @Valid CoworkingSpace coworkingSpace, HttpServletResponse response,

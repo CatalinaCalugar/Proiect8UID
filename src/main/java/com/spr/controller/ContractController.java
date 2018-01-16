@@ -1,9 +1,7 @@
 package com.spr.controller;
 
 import com.spr.exception.ContractNotFound;
-import com.spr.model.*;
-import com.spr.utils.PdfReport;
-import com.spr.utils.Report;
+import com.spr.model.Contract;
 import com.spr.validation.ContractValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +18,6 @@ import javax.validation.Valid;
 import java.io.*;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +30,7 @@ public class ContractController {
 
     @Autowired
     private ContractValidator contractValidator;
+    private int contractId;
 
     @InitBinder
     private void initBinder(WebDataBinder binder) {
@@ -54,12 +52,10 @@ public class ContractController {
         return mav;
     }
 
-    private int contractId;
-
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView createNewContract(@ModelAttribute @Valid Contract contract, HttpServletResponse response,
                                           BindingResult result, @RequestParam("type") Integer id,
-                                          final RedirectAttributes redirectAttributes, HttpSession session){
+                                          final RedirectAttributes redirectAttributes, HttpSession session) {
 
         if (result.hasErrors())
             return new ModelAndView("contract-new");

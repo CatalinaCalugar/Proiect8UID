@@ -22,7 +22,7 @@ public class PdfReport implements Report {
         String pdfFile = "Contract" + contract.getId().toString() + ".pdf";
         String path = new File(".").getAbsolutePath();
         try {
-            PdfWriter.getInstance(document, new FileOutputStream(path+pdfFile));
+            PdfWriter.getInstance(document, new FileOutputStream(path + pdfFile));
             document.open();
             document.add(new Paragraph("Contract: " + contract.getDate().toString()));
             document.add(new Paragraph("ID: " + contract.getId().toString()));

@@ -19,18 +19,21 @@
                 <form id="drop-a-line" role="form">
                     <div class="row">
                         <div class="input-field col m12 s12">
-                            <input id="your-email" type="email" style="color: black" required="" aria-required="true" class="validate">
+                            <input id="your-email" type="email" style="color: black" required="" aria-required="true"
+                                   class="validate">
                             <label for="your-email" class="white-text">Your email address</label></div>
                     </div>
                     <div class="row">
                         <div class="input-field col m12 s12">
                             <textarea id="your-message" rows="3"
-                                      class="materialize-textarea" style="color: black" required="" aria-required="true"></textarea><label
+                                      class="materialize-textarea" style="color: black" required=""
+                                      aria-required="true"></textarea><label
                                 for="your-message" class="white-text">Your message</label></div>
                     </div>
                     <div class="row">
                         <div class="col col s12">
-                            <button id="send-message" class="btn waves-effect waves-light" type="submit" name="action" >SEND
+                            <button id="send-message" class="btn waves-effect waves-light" type="submit" name="action">
+                                SEND
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>

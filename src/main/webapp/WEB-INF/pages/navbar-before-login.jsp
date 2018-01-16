@@ -49,7 +49,8 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" name="password" type="password" class="validate" required="" aria-required="true">
+                        <input id="password" name="password" type="password" class="validate" required=""
+                               aria-required="true">
                         <label for="password">Password</label>
                     </div>
                 </div>

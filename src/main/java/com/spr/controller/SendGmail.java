@@ -14,7 +14,7 @@ import static java.lang.System.out;
  * Created by Catalina on 02.06.2017.
  */
 public class SendGmail {
-    protected static void sendEmail(String customerGmail,String title, String subject) {
+    protected static void sendEmail(String customerGmail, String title, String subject) {
         String username = "appjavatest100@gmail.com";
         String password = "test100app";
 

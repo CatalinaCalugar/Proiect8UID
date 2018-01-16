@@ -153,7 +153,7 @@
                                             });
 
                                             <%--google.maps.event.addListener(map, 'click', function (event) {--%>
-                                                <%--alert(${space.latitude} + ", " + ${space.longitude});--%>
+                                            <%--alert(${space.latitude} + ", " + ${space.longitude});--%>
                                             <%--});--%>
                                         }
                                     </script>

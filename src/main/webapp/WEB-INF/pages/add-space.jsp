@@ -175,6 +175,21 @@
                                     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
                                     google.maps.event.addListener(map, 'click', function (event) {
+                                        var myLatLng = {lat: event.latLng.lat(), lng: event.latLng.lng()};
+
+                                        var mapOptions = {
+                                            center: myLatLng,
+                                            zoom: 5,
+                                        }
+
+                                        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                                        var marker = new google.maps.Marker({
+                                            position: myLatLng,
+                                            map: map,
+                                            title: ''
+                                        });
+
                                         alert(event.latLng.lat() + ", " + event.latLng.lng());
                                     });
                                 }
@@ -219,13 +234,13 @@
                                     </td>
                                     <td>
                                             <%--<div class="input-field">--%>
-                                        <input id="officeName" name="name" type="text" >
+                                        <input id="officeName" name="name" type="text">
                                         <label for="officeName">Office name</label>
                                             <%--</div>--%>
                                     </td>
                                     <td>
                                             <%--<div class="input-field">--%>
-                                        <input id="capacity" name="capacity" type="text" >
+                                        <input id="capacity" name="capacity" type="text">
                                         <label for="capacity">Capacity</label>
                                             <%--</div>--%>
                                     </td>
@@ -251,9 +266,9 @@
                                             <label for="price">Price</label>
                                         </div>
                                     </td>
-                                    <%--<td>--%>
+                                        <%--<td>--%>
                                         <%--<button class="btn" type="submit" name="action">Addoffice ${ofNr}</button>--%>
-                                    <%--</td>--%>
+                                        <%--</td>--%>
                                 </form>
                             </tr>
                         </c:forEach>

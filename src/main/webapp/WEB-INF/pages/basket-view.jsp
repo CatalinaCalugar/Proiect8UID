@@ -55,7 +55,8 @@
                         <td><img id="profile-img" class="media-middle" align="middle" width="300" height="180"
                                  src="${accessorises.image}"/></td>
                         </td>
-                        <td><a href="${pageContext.request.contextPath}/accessorises/remove/${accessorises.id}.html">Remove</a></td>
+                        <td><a href="${pageContext.request.contextPath}/accessorises/remove/${accessorises.id}.html">Remove</a>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -63,7 +64,9 @@
             <br/><br/>
             <a href="${pageContext.request.contextPath}/accessorises/closeTotal.html">Buy</a><br/>
             <br/><br/>
-            <button type="button" name="back" onclick="document.forms[0].action = 'accessorises-buy.jsp'; return true;">back</button>
+            <button type="button" name="back" onclick="document.forms[0].action = 'accessorises-buy.jsp'; return true;">
+                back
+            </button>
 
         </div>
     </div>

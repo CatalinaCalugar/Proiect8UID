@@ -17,7 +17,8 @@
 </head>
 <body>
 
-<div id="header"><a href="${pageContext.request.contextPath}/index.html" id="logo"><img src="/resources/images/logo.gif" width="310" height="114" alt=""></a>
+<div id="header"><a href="${pageContext.request.contextPath}/index.html" id="logo"><img src="/resources/images/logo.gif"
+                                                                                        width="310" height="114" alt=""></a>
     <ul class="navigation">
         <li><a href="${pageContext.request.contextPath}/index.html"> Home page </a></li>
         <li><a href="${pageContext.request.contextPath}/user-page.html"> User page </a></li>
@@ -37,7 +38,8 @@
                         src="/resources/images/DPS_download.jpg" width="160" height="160" alt=""></a>
                     <h2>Download contract</h2>
                     <p><a class="more"
-                          href="${pageContext.request.contextPath}/contract/download/external.html">View contract now</a></p>
+                          href="${pageContext.request.contextPath}/contract/download/external.html">View contract
+                        now</a></p>
                 </li>
             </ul>
         </div>

@@ -11,7 +11,8 @@
 </head>
 
 <body>
-<div id="header"><a href="${pageContext.request.contextPath}/index.html" id="logo"><img src="/resources/images/logo.gif" width="310" height="114" alt=""></a>
+<div id="header"><a href="${pageContext.request.contextPath}/index.html" id="logo"><img src="/resources/images/logo.gif"
+                                                                                        width="310" height="114" alt=""></a>
     <ul class="navigation">
         <li><a href="${pageContext.request.contextPath}/index.html"> Home page </a></li>
     </ul>
@@ -37,7 +38,7 @@
         <li><a href="${pageContext.request.contextPath}/client/create.html"> Register now </a></li>
         <br/>
         <button class="button" type="button" name="back" onclick="history.back()">Back</button>
-        
+
         <br/>
         <div class="banneLogin">&nbsp;</div>
     </div>

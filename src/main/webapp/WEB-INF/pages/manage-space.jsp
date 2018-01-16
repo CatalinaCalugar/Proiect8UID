@@ -29,6 +29,11 @@
 <jsp:include page="navbar-after-login.jsp"></jsp:include>
 
 <div class="w3-content w3-display-container">
+
+    <div class="center-align" style="color: #00bfa5">
+        <h1>${message}</h1>
+    </div>
+
     <table class="tabelForSpaces">
         <thead>
         <tr>
@@ -47,8 +52,10 @@
                 <td>${space.name}</td>
                 <td>${space.description}</td>
                 <td>${space.generalAmenities}</td>
-                <td><a class="btn" href="${pageContext.request.contextPath}/space/edit/${space.id}.html">Edit</a></td>
-                <td><a class="btn" href="${pageContext.request.contextPath}/space/delete/${space.id}.html">Delete</a></td>
+                <td><a class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Edit your space"
+                       href="${pageContext.request.contextPath}/space/edit/${space.id}.html">Edit</a></td>
+                <td><a class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Delete your space"
+                       href="${pageContext.request.contextPath}/space/delete/${space.id}.html">Delete</a></td>
             </tr>
             <tr class="other">
                 <td>Name:</td>
@@ -91,6 +98,12 @@
         $(this).nextUntil('.clicker').slideToggle('normal');
     });
 
+</script>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        $('.tooltipped').tooltip({delay: 50});
+    });
 </script>
 
 </body>

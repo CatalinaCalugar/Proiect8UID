@@ -137,17 +137,24 @@
                                 <div id="map" style="width:740px; height:400px;">
                                     <script>
                                         function myMap() {
+                                            var myLatLng = {lat: ${space.latitude}, lng: ${space.longitude}};
+
                                             var mapOptions = {
-                                                center: new google.maps.LatLng(46.770439, 23.591423),
-                                                center: new google.maps.LatLng(46.770439, 23.591423),
+                                                center: myLatLng,
                                                 zoom: 5,
                                             }
 
                                             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-                                            google.maps.event.addListener(map, 'click', function (event) {
-                                                alert(event.latLng.lat() + ", " + event.latLng.lng());
+                                            var marker = new google.maps.Marker({
+                                                position: myLatLng,
+                                                map: map,
+                                                title: ''
                                             });
+
+                                            <%--google.maps.event.addListener(map, 'click', function (event) {--%>
+                                                <%--alert(${space.latitude} + ", " + ${space.longitude});--%>
+                                            <%--});--%>
                                         }
                                     </script>
                                     <script async defer

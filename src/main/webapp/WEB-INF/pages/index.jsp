@@ -82,12 +82,19 @@
     <div id="map" style="width:940px; height:400px; margin: 0 auto 0 auto; padding-bottom: 40px">
         <script>
             function myMap() {
+                var myLatLng = {lat: 46.770439, lng: 23.591423};
                 var mapOptions = {
-                    center: new google.maps.LatLng(46.770439, 23.591423),
-                    center: new google.maps.LatLng(46.770439, 23.591423),
+                    center: myLatLng,
                     zoom: 8,
                 }
+
                 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: ''
+                });
             }
         </script>
         <script async defer

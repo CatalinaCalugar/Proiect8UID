@@ -130,7 +130,6 @@
                                     function myMap() {
                                         var mapOptions = {
                                             center: new google.maps.LatLng(46.770439, 23.591423),
-                                            center: new google.maps.LatLng(46.770439, 23.591423),
                                             zoom: 16,
                                         }
                                         var map = new google.maps.Map(document.getElementById("map"), mapOptions);

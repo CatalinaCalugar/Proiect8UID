@@ -208,6 +208,10 @@
             <div style="width:30%;float:left; border: 2px ridge green; border-radius: 50px; margin-top: 60px;">
                 <div style="align:center;">
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
+                       class="waves-effect waves-light btn-large modal-trigger" href="#modalReservation"
+                       id="makeAReservation"><i class="material-icons left">payment</i>Make a reservation</a>
+
+                    <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
                        class="waves-effect waves-light btn-large modal-trigger" href="#modalSchedule"
                        id="scheduleTour"><i class="material-icons left">assignment</i>Schedule Tour</a>
 
@@ -339,6 +343,75 @@
                 </div>
 
                 <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Book me in!
+                    <i class="material-icons right"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+
+<!-- Modal Reservation Structure -->
+<div id="modalReservation" class="modal" style="height: auto">
+    <div class="modal-content">
+        <h2>Make a reservation</h2>
+        <div class="center-align">
+            <form class="col s4" >
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="usernameR" name="usernameR" type="text" class="validate" required=""
+                               aria-required="true">
+                        <label for="usernameR">Username</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="emailR" name="emailR" type="email" class="validate" required="" aria-required="true">
+                        <label for="emailR" data-error="Email is not in the required format!"
+                               data-success="right">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">people</i>
+                        <input id="nrPeople" name="nrPeople" type="text" class="validate" required=""
+                               aria-required="true">
+                        <label for="nrPeople">Number of people</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <br>
+                        <i class="material-icons prefix">date_range</i>
+                        <input id="tp2" type="text" class="datepicker">
+                        <label for="tp2">Select date</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">schedule</i>
+                        <input id="days" name="days" type="text" class="validate" required=""
+                               aria-required="true">
+                        <label for="days">Duration</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="optMessage" class="materialize-textarea" name="optMessage"></textarea>
+                        <label for="optMessage">Optional message for us</label>
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Pay
                     <i class="material-icons right"></i>
                 </button>
 

@@ -51,10 +51,15 @@
             <div class="col l4 offset-l2 s12">
                 <h5 class="black-text">Links</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Search</a></li>
+                    <li><a class="grey-text text-lighten-3" onclick="searchCoworkSpaces()" >Search</a></li>
+                    <script>
+                        function searchCoworkSpaces(){
+                            var searchString = document.getElementById("search").value;
+                            window.location = "${pageContext.request.contextPath}/allSpaces/" + searchString;
+                        }
+                    </script>
                     <li><a class="grey-text text-lighten-3" href="${pageContext.request.contextPath}/contact.html">Contact</a>
                     </li>
-                    <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
                 </ul>
                 <h5 class="black-text">Social media</h5>
                 <ul>

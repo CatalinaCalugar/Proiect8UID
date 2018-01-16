@@ -14,7 +14,7 @@
                                 <input id="search" type="search" required>
                                 <label class="label-icon" for="search" style="width: 60%"><i class="large material-icons">search</i></label>
 
-                                <i class="large material-icons " style="background-color: inherit; border:none;" onclick="searchCoworkSpaces()">SEARCH
+                                <i class="large material-icons " style="background-color: inherit; border:none;" onclick="searchCoworkSpaces()">arrow_forward
                                 </i>
 
                                 <script>

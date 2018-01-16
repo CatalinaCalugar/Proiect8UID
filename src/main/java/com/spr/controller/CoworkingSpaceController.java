@@ -32,8 +32,19 @@ public class CoworkingSpaceController {
 
     private int coworkingSpaceId;
 
-    @RequestMapping(value = "/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/create/message", method = RequestMethod.GET)
     public ModelAndView newCoworkingSpacePage(HttpSession session) {
+        ModelAndView mav = new ModelAndView("my-account", "space", new CoworkingSpace());
+        String message = "";
+        message = "Space added successfully";
+
+        mav.addObject("message", message);
+        mav.addObject("username", session.getAttribute("loggedUser"));
+        return mav;
+    }
+
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
+    public ModelAndView afterCreateSendMessage(HttpSession session) {
         ModelAndView mav = new ModelAndView("add-space", "coworkingSpace", new CoworkingSpace());
         List<String> amenities = new ArrayList<>();
         amenities.add("coffee machine");
@@ -59,6 +70,9 @@ public class CoworkingSpaceController {
         officeNr.add(5);
         officeNr.add(6);
         officeNr.add(7);
+        officeNr.add(8);
+        officeNr.add(9);
+        officeNr.add(10);
         mav.addObject("numberOfOffices", officeNr);
 
         mav.addObject("username", session.getAttribute("loggedUser"));

@@ -109,7 +109,7 @@
                     <h1>Enter contact details</h1>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="ownerEmail" name="ownerEmail" type="text" class="validate" required=""
+                            <input id="ownerEmail" name="ownerEmail" type="email" class="validate" required=""
                                    aria-required="true">
                             <label for="ownerEmail">Owner's email</label>
                         </div>
@@ -117,7 +117,7 @@
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="ownerPhone" name="ownerPhone" type="text" class="validate" required=""
+                            <input id="ownerPhone" name="ownerPhone" type="number" class="validate" required=""
                                    aria-required="true">
                             <label for="ownerPhone">Owner's phone</label>
                         </div>
@@ -125,7 +125,7 @@
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="webURL" name="webURL" type="text" class="validate" required=""
+                            <input id="webURL" name="webURL" type="url" class="validate" required=""
                                    aria-required="true">
                             <label for="webURL">Website</label>
                         </div>
@@ -133,7 +133,7 @@
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="facebookUrl" name="facebookUrl" type="text" class="validate" required=""
+                            <input id="facebookUrl" name="facebookUrl" type="url" class="validate" required=""
                                    aria-required="true">
                             <label for="facebookUrl">Facebook URL</label>
                         </div>
@@ -141,7 +141,7 @@
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="twitterUrl" name="twitterUrl" type="text" class="validate" required=""
+                            <input id="twitterUrl" name="twitterUrl" type="url" class="validate" required=""
                                    aria-required="true">
                             <label for="twitterUrl">Twitter URL</label>
                         </div>
@@ -204,76 +204,71 @@
                 <div id="offices-panel">
                     <h1>Add offices</h1>
 
-                    <table id="myTabel" class="table-of-contents">
-                        <thead>
-                        <tr>
-                            <th data-field="type" width="500px">Select office type</th>
-                            <th data-field="name" width="400px">Name</th>
-                            <th data-field="capacity" width="300px">Capacity</th>
-                            <th data-field="amenities">Office Amenities</th>
-                            <th data-field="photos" width="400px">Photos</th>
-                            <th data-field="price" width="200px">Price</th>
-                            <th width="500px"></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
+                    <ul class="collapsible" data-collapsible="accordion">
                         <c:forEach items="${numberOfOffices}" var="ofNr">
-                            <tr style="border-bottom: solid">
-                                <form class="col s12" method="POST" commandName="space"
-                                      action="${pageContext.request.contextPath}/space/create-office/${ofNr}.html">
-                                    <td>
-                                        <select id="selector">
+
+                            <li>
+                                <%--<form class="col s12" method="POST" commandName="space"--%>
+                                      <%--action="${pageContext.request.contextPath}/space/create-office/${ofNr}.html">--%>
+
+                                    <div class="collapsible-header">
+                                        <h5>Add office ${ofNr}</h5>
+                                    </div>
+
+                                    <div class="collapsible-body">
+                                        <select id="selector${ofNr}">
                                             <option value="" disabled selected>Select</option>
                                             <c:forEach items="${type}" var="number">
                                                 <option value="${number}" name="type">${number}</option>
                                             </c:forEach>
                                         </select>
-                                        <label for="selector">Office type</label>
+                                        <label for="selector${ofNr}">Office type</label>
 
-                                    </td>
-                                    <td>
-                                            <%--<div class="input-field">--%>
-                                        <input id="officeName" name="name" type="text">
-                                        <label for="officeName">Office name</label>
-                                            <%--</div>--%>
-                                    </td>
-                                    <td>
-                                            <%--<div class="input-field">--%>
-                                        <input id="capacity" name="capacity" type="text">
-                                        <label for="capacity">Capacity</label>
-                                            <%--</div>--%>
-                                    </td>
-                                    <td>
-                                        <c:forEach items="${generalAmenities}" var="amenity">
-                                            <p>
-                                                <input type="checkbox" name="amenities" id=${ofNr}/>
-                                                <label for=${ofNr}>${amenity}</label>
-                                            </p>
-                                        </c:forEach>
-                                    </td>
-                                    <td>
-                                        <div class="file-field input-field">
-                                            <div class="btn">
-                                                <span>Photo</span>
-                                                <input type="file" name="photo" multiple>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="officeName${ofNr}" name="name" type="text" class="validate">
+                                                <label for="officeName${ofNr}">Office name</label>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-field">
-                                            <input id="price" name="price" type="text">
-                                            <label for="price">Price</label>
+
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="capacity" name="capacity" type="number" class="validate">
+                                                <label for="capacity">Capacity</label>
+                                            </div>
                                         </div>
-                                    </td>
-                                        <%--<td>--%>
-                                        <%--<button class="btn" type="submit" name="action">Addoffice ${ofNr}</button>--%>
-                                        <%--</td>--%>
-                                </form>
-                            </tr>
+
+                                        <c:forEach items="${generalAmenities}" var="amenity">
+                                            <p>
+                                                <input type="checkbox" name="amenities" id=${ofNr}${amenity}/>
+                                                <label for=${ofNr}${amenity}>${amenity}</label>
+                                            </p>
+                                        </c:forEach>
+
+                                        <div class="row">
+                                            <div class="file-field input-field col s12">
+                                                <div class="btn">
+                                                    <span>Photo for office ${ofNr}</span>
+                                                    <input type="file" name="photo" multiple style="width: 300px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="price" name="price" type="number" class="validate">
+                                                <label for="price">Price</label>
+                                            </div>
+                                        </div>
+
+                                            <%--<td>--%>
+                                            <%--<button class="btn" type="submit" name="action">Addoffice ${ofNr}</button>--%>
+                                            <%--</td>--%>
+                                    </div>
+                                <%--</form>--%>
+                            </li>
                         </c:forEach>
-                        </tbody>
-                    </table>
+                    </ul>
 
 
                 </div>
@@ -318,21 +313,22 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="ISBN" name="ISBN" type="text" class="validate" required="" aria-required="true">
-                            <label for="ISBN">ISBN</label>
+                            <label for="ISBN">IBAN</label>
                         </div>
                         <br>
                         <br>
                     </div>
-
-                    <button class="waves-effect waves-light btn-large tooltipped" data-position="top" data-delay="50"
-                            data-tooltip="Finish and add your space" style="width: 800px"
-                            type="submit" name="action">ADD SPACE
-                    </button>
+                    <a href="${pageContext.request.contextPath}/space/create/message.html">
+                        <button class="waves-effect waves-light btn-large tooltipped .deep-purple-text.text-lighten-5"
+                                data-position="top"
+                                data-delay="50"
+                                data-tooltip="Finish and add your space" style="width: 800px"
+                                type="submit" name="action">ADD SPACE
+                        </button>
+                    </a>
                 </div>
             </form>
-
         </div>
-
     </div>
 </div>
 
@@ -568,12 +564,6 @@
 <script language="JavaScript">
     $(document).ready(function () {
         $('select').material_select();
-    });
-</script>
-
-<script language="JavaScript">
-    $(document).ready(function () {
-        $('.tooltipped').tooltip({delay: 50});
     });
 </script>
 

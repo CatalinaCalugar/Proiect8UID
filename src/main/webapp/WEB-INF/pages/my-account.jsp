@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: cata_
@@ -32,9 +33,6 @@
         <li>
             <div class="user-view">
                 <div class="background">
-                    <div class="center-align" style="color: #00bfa5">
-                        <h1>${message}</h1>
-                    </div>
                     <img src="/resources/images/whitePicture.jpg">
                 </div>
                 <a href="#!user"><img class="circle" src="/resources/images/userLogo.jpg"></a>
@@ -56,12 +54,16 @@
 </div>
 <jsp:include page="navbar-after-login.jsp"></jsp:include>
 
+<c:if test=""></c:if>
+
 <div class="row">
     <div class="col s9">
 
         <h1>Your account page</h1>
+        <div class="right-align" style="color: orange;">
+            <h1 class="text-darken-4">${message}</h1>
+        </div>
         <img src="/resources/images/myAccountBackground.png" width="140%">
-
         <%--<jsp:include page="footer.jsp"></jsp:include>--%>
 
     </div>

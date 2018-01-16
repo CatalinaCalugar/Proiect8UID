@@ -41,7 +41,7 @@
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header">
-                            <h2>Edit name and description</h2>
+                            <h4>Edit name and description</h4>
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
@@ -67,12 +67,12 @@
 
                     <li>
                         <div class="collapsible-header">
-                            <h2>Edit contact details</h2>
+                            <h4>Edit contact details</h4>
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="ownerEmail" name="ownerEmail" type="text" class="validate"
+                                    <input id="ownerEmail" name="ownerEmail" type="email" class="validate"
                                            value="${space.ownerEmail}">
                                     <label for="ownerEmail">Owner's email</label>
                                 </div>
@@ -80,7 +80,7 @@
                             <br>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="ownerPhone" name="ownerPhone" type="text" class="validate"
+                                    <input id="ownerPhone" name="ownerPhone" type="number" class="validate"
                                            value="${space.ownerPhone}">
                                     <label for="ownerPhone">Owner's phone</label>
                                 </div>
@@ -88,7 +88,7 @@
                             <br>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="webURL" name="webURL" type="text" class="validate"
+                                    <input id="webURL" name="webURL" type="url" class="validate"
                                            value="${space.webURL}">
                                     <label for="webURL">Website</label>
                                 </div>
@@ -96,7 +96,7 @@
                             <br>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="facebookUrl" name="facebookUrl" type="text" class="validate"
+                                    <input id="facebookUrl" name="facebookUrl" type="url" class="validate"
                                            value="${space.facebookUrl}">
                                     <label for="facebookUrl">Facebook URL</label>
                                 </div>
@@ -104,7 +104,7 @@
                             <br>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="twitterUrl" name="twitterUrl" type="text" class="validate"
+                                    <input id="twitterUrl" name="twitterUrl" type="url" class="validate"
                                            value="${space.twitterUrl}">
                                     <label for="twitterUrl">Twitter URL</label>
                                 </div>
@@ -115,7 +115,7 @@
 
                     <li>
                         <div class="collapsible-header">
-                            <h2>Edit amenities for your space</h2>
+                            <h4>Edit amenities for your space</h4>
                         </div>
                         <div class="collapsible-body">
                             <c:forEach items="${space.generalAmenities}" var="amenity">
@@ -129,7 +129,7 @@
 
                     <li>
                         <div class="collapsible-header">
-                            <h2>Edit your coworking space's location</h2>
+                            <h4>Edit your coworking space's location</h4>
                         </div>
                         <div class="collapsible-body">
                             <div>
@@ -167,7 +167,7 @@
 
                     <li>
                         <div class="collapsible-header">
-                            <h2>Edit offices</h2>
+                            <h4>Edit offices</h4>
                         </div>
                         <div class="collapsible-body">
                             <table id="myTabel" class="table-of-contents">
@@ -244,7 +244,7 @@
 
                     <li>
                         <div class="collapsible-header">
-                            <h2>Edit schedule</h2>
+                            <h4>Edit schedule</h4>
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
@@ -265,7 +265,7 @@
 
                     <li>
                         <div class="collapsible-header">
-                            <h2>Edit general photos of the space</h2>
+                            <h4>Edit general photos of the space</h4>
                         </div>
                         <div class="collapsible-body">
 
@@ -286,13 +286,13 @@
                     <li>
                         <div class="collapsible-header">
 
-                            <h2>Edit payment details</h2>
+                            <h4>Edit payment details</h4>
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="ISBN" name="ISBN" type="text" class="validate" value="${space.ISBN}">
-                                    <label for="ISBN">ISBN</label>
+                                    <label for="ISBN">IBAN</label>
                                 </div>
                                 <br>
                                 <br>
@@ -301,9 +301,7 @@
                     </li>
 
                     <li>
-                        <button class="waves-effect waves-light btn-large tooltipped" data-position="top"
-                                data-delay="50"
-                                data-tooltip="Finish your edit" style="width: 800px"
+                        <button class="waves-effect waves-light btn-large" style="width: 800px"
                                 type="submit" name="action">Edit space
                         </button>
                     </li>

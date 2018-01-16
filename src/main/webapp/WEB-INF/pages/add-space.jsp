@@ -350,6 +350,16 @@
         $("#opening-hours-panel").hide();
         $("#photos-panel").hide();
         $("#payment-panel").hide();
+        if ($(".b1").css("background-color").toString() === "rgb(38, 166, 154)" || $(".b1").css("background-color").toString() === "rgb(43, 187, 173)") {
+            $(".b1").css("background-color", "#e0f2f1");
+            $(".b2").css("background-color", "#26a69a");
+            $(".b3").css("background-color", "#26a69a");
+            $(".b4").css("background-color", "#26a69a");
+            $(".b5").css("background-color", "#26a69a");
+            $(".b6").css("background-color", "#26a69a");
+            $(".b7").css("background-color", "#26a69a");
+            $(".b8").css("background-color", "#26a69a");
+        }
     });
 
 </script>

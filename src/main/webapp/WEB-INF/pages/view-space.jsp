@@ -39,16 +39,16 @@
 <div class="row">
     <iv class="w3-content w3-display-container">
         <div class="carousel carousel-slider center-align customCarusel" data-indicators="true">
-            <a class="carousel-item center-align"><img class ="customCarImg"
-                    src="/resources/images/genSp1.jpg"></a>
-            <a class="carousel-item center-align"><img class ="customCarImg"
-                    src="/resources/images/genSp2.jpg"></a>
-            <a class="carousel-item center-align"><img class ="customCarImg"
-                    src="/resources/images/genSp3.jpg"></a>
-            <a class="carousel-item center-align"><img class ="customCarImg"
-                    src="/resources/images/genSp4.jpg"></a>
-            <a class="carousel-item center-align"><img class ="customCarImg"
-                    src="/resources/images/genSp5.jpg"></a>
+            <a class="carousel-item center-align"><img class="customCarImg"
+                                                       src="/resources/images/genSp1.jpg"></a>
+            <a class="carousel-item center-align"><img class="customCarImg"
+                                                       src="/resources/images/genSp2.jpg"></a>
+            <a class="carousel-item center-align"><img class="customCarImg"
+                                                       src="/resources/images/genSp3.jpg"></a>
+            <a class="carousel-item center-align"><img class="customCarImg"
+                                                       src="/resources/images/genSp4.jpg"></a>
+            <a class="carousel-item center-align"><img class="customCarImg"
+                                                       src="/resources/images/genSp5.jpg"></a>
         </div>
         <div style="width:100%;overflow: hidden;clear:both;padding-left: 100px;">
             <div style="width:60%;float:left;">
@@ -208,13 +208,11 @@
             <div style="width:30%;float:left; border: 2px ridge green; border-radius: 50px; margin-top: 60px;">
                 <div style="align:center;">
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
-                       class="waves-effect waves-light btn-large"
-                       href="${pageContext.request.contextPath}/scheduleTour/1"
+                       class="waves-effect waves-light btn-large modal-trigger" href="#modalSchedule"
                        id="scheduleTour"><i class="material-icons left">assignment</i>Schedule Tour</a>
 
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
-                       class="waves-effect waves-light btn-large"
-                       href="${pageContext.request.contextPath}/messageSpace/1"
+                       class="waves-effect waves-light btn-large modal-trigger" href="#modalMessage"
                        id="messageSpace"><i class="material-icons left">message</i>Message space</a>
 
                     <a style="margin-top: 100px; margin-left: 20px; margin-right: 20px; margin-bottom:30px;
@@ -249,13 +247,144 @@
     </iv>
 </div>
 
+<!-- Modal Message Structure -->
+<div id="modalMessage" class="modal" style="height: auto">
+    <div class="modal-content">
+        <h2>Message us</h2>
+        <div class="center-align">
+            <form class="col s4">
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="name" type="text" class="validate" name="name" required=""
+                               aria-required="true">
+                        <label for="name" data-error="We would like to know with who we are talking to"
+                               data-success="Checked">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="emailM" name="emailM" type="email" class="validate" required="" aria-required="true">
+                        <label for="emailM" data-error="Email is not in the required format!"
+                               data-success="right">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="messageS" class="materialize-textarea" name="messageS" required="" aria-required="true"></textarea>
+                        <label for="messageS">Message</label>
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Message us
+                    <i class="material-icons right"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+
+
+<!-- Modal Schedule Structure -->
+<div id="modalSchedule" class="modal" style="height: auto">
+    <div class="modal-content">
+        <h2>Schedule tour</h2>
+        <div class="center-align">
+            <form class="col s4" >
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="username" name="username" type="text" class="validate" required=""
+                               aria-required="true">
+                        <label for="username">Username</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
+                        <label for="email" data-error="Email is not in the required format!"
+                               data-success="right">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">date_range</i>
+                        <input id="tp1" type="text" class="datepicker">
+                        <label for="tp1">Select date</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <br>
+                        <i class="material-icons prefix">access_time</i>
+                        <input id="tp2" type="text" class="timepicker">
+                        <label for="tp2">Select hour</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="contact_message" class="materialize-textarea" name="message"></textarea>
+                        <label for="contact_message">Optional message for us</label>
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Book me in!
+                    <i class="material-icons right"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+
 <jsp:include page="footer.jsp"></jsp:include>
 
+<script language="JavaScript">
+    $('.timepicker').pickatime({
+        default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+        fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+        twelvehour: false, // Use AM/PM or 24-hour format
+        donetext: 'OK', // text for done-button
+        cleartext: 'Clear', // text for clear-button
+        canceltext: 'Cancel', // Text for cancel-button
+        autoclose: false, // automatic close timepicker
+        ampmclickable: true, // make AM PM clickable
+        aftershow: function () {
+        } //Function for after opening timepicker
+    });
+
+</script>
+<script language="JavaScript">
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false // Close upon selecting a date,
+    });
+
+</script>
 
 <script language="JavaScript">
     $(document).ready(function () {
         $('.carousel.carousel-slider').carousel({fullWidth: true});
         $('ul.tabs').tabs();
+        $('.modal').modal();
     });
 </script>
 </body>

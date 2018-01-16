@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.jws.soap.SOAPBinding;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.text.DateFormat;
@@ -49,23 +50,26 @@ public class UserController {
 
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public ModelAndView createNewUser(@ModelAttribute @Valid User user,
-                                      BindingResult result,
+    @RequestMapping(value = "/ban", method = RequestMethod.POST)
+    public ModelAndView createNewUser(@RequestParam("userToBan") String userToBan,
+                                      @RequestParam("banMessage") String banMessage,
                                       final RedirectAttributes redirectAttributes, HttpSession session) {
         String message;
-        if (result.hasErrors())
-            return new ModelAndView("user-new");
 
-        ModelAndView mav = new ModelAndView();
-        message = "New user " + user.getName() + " was successfully created.";
+        ModelAndView modelAndView = new ModelAndView("my-account", "user", new User());
+        modelAndView.addObject("username", session.getAttribute("loggedUser"));
 
-        //  userService.create(user);
+        List<String> userList = new ArrayList<>();
+        userList.add("mihai_Virgil@gmail.com");
+        userList.add("alina.gigel@yahoo.com");
+        userList.add("popescu-marcel@gmail.com");
+        userList.add("plic.sanzi@yahoo.com");
 
-        mav.setViewName("redirect:/admin-page.html");
+        modelAndView.addObject("userList", userList);
 
-        redirectAttributes.addFlashAttribute("message", message);
-        return mav;
+        message = "Your requested will pe processed!";
+        modelAndView.addObject("message", message);
+        return modelAndView;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -221,6 +225,15 @@ public class UserController {
     public ModelAndView myAccount(HttpSession session, final RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView("my-account", "user", new User());
         modelAndView.addObject("username", session.getAttribute("loggedUser"));
+
+        List<String> userList = new ArrayList<>();
+        userList.add("mihai_Virgil@gmail.com");
+        userList.add("alina.gigel@yahoo.com");
+        userList.add("popescu-marcel@gmail.com");
+        userList.add("plic.sanzi@yahoo.com");
+
+        modelAndView.addObject("userList", userList);
+        modelAndView.addObject("message", "");
         return modelAndView;
     }
 

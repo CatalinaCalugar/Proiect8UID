@@ -47,8 +47,11 @@
             space</a></li>
         <li><a href="${pageContext.request.contextPath}/space/edit.html"><i class="material-icons">create</i>Manage
             coworking space</a></li>
-        <li><a href="#!"><i class="material-icons">content_cut</i>Ban user</a></li>
-        <li><a href="${pageContext.request.contextPath}/user/logout.html"><i class="material-icons">exit_to_app</i>Log out</a></li>
+        <li><a class="modal-trigger" href="#modalBanUser"><i class="material-icons">content_cut</i>Ban
+            user</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/user/logout.html"><i class="material-icons">exit_to_app</i>Log
+            out</a></li>
     </ul>
 
 </div>
@@ -63,12 +66,47 @@
         <div class="right-align" style="color: orange;">
             <h1 class="text-darken-4">${message}</h1>
         </div>
+        <!-- Modal Structure -->
+        <div id="modalBanUser" class="modal">
+            <div class="modal-content">
+                <h4>Ban User</h4>
+                <form class="col s12" method="POST" commandName="user"
+                      action="${pageContext.request.contextPath}/user/ban.html">
+                    <h5>Users who reserved one of your spaces: </h5>
+                    <c:forEach items="${userList}" var="user">
+                        <p>
+                            <input type="checkbox" name="userToBan" id="${user}"/>
+                            <label for="${user}">${user}</label>
+                        </p>
+                    </c:forEach>
+                    <div class="row">
+                        <div class="input-field col s12">
+                                <textarea id="banMessage" rows="3" name="banMessage"
+                                          class="materialize-textarea" required="" aria-required="true"></textarea>
+                            <label for="banMessage">Tell us the reason why you want to ban this user</label></div>
+                    </div>
+                    <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Ban
+                        <i class="material-icons right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
         <img src="/resources/images/myAccountBackground.png" width="140%">
         <%--<jsp:include page="footer.jsp"></jsp:include>--%>
 
     </div>
 
 </div>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+</script>
 </body>
 
 </html>

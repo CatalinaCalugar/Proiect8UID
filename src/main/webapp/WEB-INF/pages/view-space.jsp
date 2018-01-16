@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -21,29 +22,37 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/resources/js/materialize.js"></script>
     <script src="/resources/js/init.js"></script>
+    <%@ page isELIgnored="false" %>
     <title>View space</title>
 
 </head>
 <body>
-<jsp:include page="navbar-before-login.jsp"></jsp:include>
-
+<c:choose>
+    <c:when test="${isLogged == true}">
+        <jsp:include page="navbar-after-login.jsp"></jsp:include>
+    </c:when>
+    <c:when test="${isLogged == false}">
+        <jsp:include page="navbar-before-login.jsp"></jsp:include>
+    </c:when>
+</c:choose>
+<h1 class="header">${cs.name}</h1>
 <div class="row">
     <iv class="w3-content w3-display-container">
-        <div class="carousel carousel-slider center-align" data-indicators="true">
-            <a class="carousel-item center-align"><img
+        <div class="carousel carousel-slider center-align customCarusel" data-indicators="true">
+            <a class="carousel-item center-align"><img class ="customCarImg"
                     src="/resources/images/genSp1.jpg"></a>
-            <a class="carousel-item center-align"><img
+            <a class="carousel-item center-align"><img class ="customCarImg"
                     src="/resources/images/genSp2.jpg"></a>
-            <a class="carousel-item center-align"><img
+            <a class="carousel-item center-align"><img class ="customCarImg"
                     src="/resources/images/genSp3.jpg"></a>
-            <a class="carousel-item center-align"><img
+            <a class="carousel-item center-align"><img class ="customCarImg"
                     src="/resources/images/genSp4.jpg"></a>
-            <a class="carousel-item center-align"><img
+            <a class="carousel-item center-align"><img class ="customCarImg"
                     src="/resources/images/genSp5.jpg"></a>
         </div>
         <div style="width:100%;overflow: hidden;clear:both;padding-left: 100px;">
             <div style="width:60%;float:left;">
-                <label>Space title</label>
+                <label>${cs.name}</label>
 
 
                 <div class="row">
@@ -57,68 +66,32 @@
                     </ul>
                 </span>
                     <div id="Overview" class="col s12" style="margin-top: 20px;">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                        type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap
-                        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                        publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                        type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap
-                        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                        publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                        type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap
-                        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                        publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                        type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap
-                        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                        publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                        type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap
-                        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                        publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-
+                        ${cs.description}
                     </div>
                     <div id="Amenities" class="col s12" style="margin-top: 20px;">
                         Amenities list
+                        <ul class="collection">
+                            <c:forEach items="${cs.generalAmenities}" var="cc">
+                                <li class="collection-item">${cc}</li>
+                            </c:forEach>
+                        </ul>
                     </div>
                     <div id="Prices" class="col s12" style="margin-top: 20px;">
-                        Prices section
+                        <p>Prices section</p>
+                        <c:forEach items="${cs.officeList}" var="off">
+                            <div class="col s12 m7">
+                                <div class="card horizontal">
+                                    <div class="card-stacked">
+                                        <div class="card-content">
+                                            <p>${off.name}</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="#">Price: ${off.price}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:forEach>
                     </div>
 
 

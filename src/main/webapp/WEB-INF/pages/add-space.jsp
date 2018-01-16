@@ -208,9 +208,6 @@
                         <c:forEach items="${numberOfOffices}" var="ofNr">
 
                             <li>
-                                <%--<form class="col s12" method="POST" commandName="space"--%>
-                                      <%--action="${pageContext.request.contextPath}/space/create-office/${ofNr}.html">--%>
-
                                     <div class="collapsible-header">
                                         <h5>Add office ${ofNr}</h5>
                                     </div>

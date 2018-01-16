@@ -170,75 +170,66 @@
                             <h4>Edit offices</h4>
                         </div>
                         <div class="collapsible-body">
-                            <table id="myTabel" class="table-of-contents">
-                                <thead>
-                                <tr>
-                                    <th data-field="type" width="500px">Select office type</th>
-                                    <th data-field="name" width="400px">Name</th>
-                                    <th data-field="capacity" width="300px">Capacity</th>
-                                    <th data-field="amenities">Office Amenities</th>
-                                    <th data-field="photos" width="400px">Photos</th>
-                                    <th data-field="price" width="200px">Price</th>
-                                </tr>
-                                </thead>
-                                <tbody>
+                            <ul class="collapsible" data-collapsible="accordion">
                                 <c:forEach var="office" items="${space.officeList}">
-                                    <tr>
-                                        <form class="col s12" method="POST" commandName="space"
-                                              action="${pageContext.request.contextPath}/space/edit-office/1.html">
-                                            <td>
-                                                <select id="selector">
-                                                    <option value="" disabled selected>${office.type}</option>
-                                                    <c:forEach items="${type}" var="number">
-                                                        <option value="${number}" name="type">${number}</option>
-                                                    </c:forEach>
-                                                </select>
-                                                <label for="selector">Office type</label>
-
-                                            </td>
-                                            <td>
-                                                    <%--<div class="input-field">--%>
-                                                <input id="officeName" name="officeName" type="text" class="validate"
-                                                       value="${office.name}">
-                                                <label for="officeName">Office name</label>
-                                                    <%--</div>--%>
-                                            </td>
-                                            <td>
-                                                    <%--<div class="input-field">--%>
-                                                <input id="capacity" name="officeCapacity" type="text" class="validate"
-                                                       value="${office.capacity}">
-                                                <label for="capacity">Capacity</label>
-                                                    <%--</div>--%>
-                                            </td>
-                                            <td>
-                                                <c:forEach items="${office.amenities}" var="amenity">
-                                                    <p>
-                                                        <input type="checkbox" name="officeAmenities" id=${amenity}/>
-                                                        <label for=${amenity}>${amenity}</label>
-                                                    </p>
+                                    <li>
+                                        <div class="collapsible-header">
+                                            <h5>Edit office ${office.id}</h5>
+                                        </div>
+                                        <div class="collapsible-body">
+                                            <select id="selector${office.id}">
+                                                <option value="" disabled selected>${office.type}</option>
+                                                <c:forEach items="${type}" var="number">
+                                                    <option value="${number}" name="type">${number}</option>
                                                 </c:forEach>
-                                            </td>
-                                            <td>
-                                                <div class="file-field input-field">
+                                            </select>
+                                            <label for="selector${office.id}">Office type</label>
+
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="officeName${office.id}" name="name" type="text"
+                                                           class="validate"
+                                                           value="${office.name}">
+                                                    <label for="officeName${office.id}">Office name</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="capacity" name="capacity" type="number" class="validate"
+                                                           value="${office.capacity}">
+                                                    <label for="capacity">Capacity</label>
+                                                </div>
+                                            </div>
+
+                                            <c:forEach items="${generalAmenities}" var="amenity">
+                                                <p>
+                                                    <input type="checkbox" name="amenities" id=${office.id}${amenity}/>
+                                                    <label for=${office.id}${amenity}>${amenity}</label>
+                                                </p>
+                                            </c:forEach>
+
+                                            <div class="row">
+                                                <div class="file-field input-field col s12">
                                                     <div class="btn">
-                                                        <span>Photo</span>
-                                                        <input type="file" name="photo" multiple
+                                                        <span>Photo for office ${office.id}</span>
+                                                        <input type="file" name="photo" multiple style="width: 300px"
                                                                value="${office.photo}">
                                                     </div>
                                                 </div>
-                                            </td>
-                                            <td>
-                                                <div class="input-field">
-                                                    <input id="price" name="price" type="text" class="validate"
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="price" name="price" type="number" class="validate"
                                                            value="${office.price}">
                                                     <label for="price">Price</label>
                                                 </div>
-                                            </td>
-                                        </form>
-                                    </tr>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </c:forEach>
-                                </tbody>
-                            </table>
+                            </ul>
                         </div>
                     </li>
 

@@ -31,7 +31,15 @@
 </head>
 <body>
 
-<jsp:include page="navbar-before-login.jsp"></jsp:include>
+<c:choose>
+    <c:when test="${isLogged == true}">
+        <jsp:include page="navbar-after-login.jsp"></jsp:include>
+    </c:when>
+    <c:when test="${isLogged == false}">
+        <jsp:include page="navbar-before-login.jsp"></jsp:include>
+    </c:when>
+</c:choose>
+
 
 
 
@@ -39,10 +47,6 @@
 
     <div class="messages center-align">
         <i class="teal-text" style="font-size: 30px;">${message}</i>
-        <br>
-    </div>
-    <div class="messages center-align">
-        <i class="teal-text" style="font-size: 30px;">${errorMessage}</i>
         <br>
     </div>
 

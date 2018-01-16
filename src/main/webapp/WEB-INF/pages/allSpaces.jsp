@@ -49,10 +49,6 @@
         <i class="teal-text" style="font-size: 30px;">${message}</i>
         <br>
     </div>
-    <div class="messages center-align">
-        <i class="teal-text" style="font-size: 30px;">${errorMessage}</i>
-        <br>
-    </div>
 
     <iv class="w3-content w3-display-container">
         <%--in div-ul asta is coloanele--%>

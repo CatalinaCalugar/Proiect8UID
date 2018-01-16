@@ -97,14 +97,12 @@ public class NavigationController {
     public ModelAndView filteredSpaces(@PathVariable("query") String query) {
         InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
         List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getFilteredCoworkingSpaces(query);
-
+        ModelAndView model = new ModelAndView("allSpaces");
         if (coworkingSpaces.size() == 0) {
             coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+            model.addObject("message", "No coworkspaces found, please make another search");
         }
-        ModelAndView model = new ModelAndView("allSpaces");
         model.addObject("cowSp", coworkingSpaces);
-        model.addObject("message", "No coworkspaces found, please make another search");
-
         return model;
     }
 }

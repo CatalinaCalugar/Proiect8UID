@@ -22,8 +22,17 @@
                         <form>
                             <div class="input-field">
                                 <input id="search" type="search" required>
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">X</i>
+                                <label class="label-icon" for="search" style="width: 60%"><i class="large material-icons">search</i></label>
+
+                                <i class="large material-icons " style="background-color: inherit; border:none;" onclick="searchCoworkSpaces()">SEARCH
+                                </i>
+
+                                <script>
+                                    function searchCoworkSpaces(){
+                                        var searchString = document.getElementById("search").value;
+                                        window.location = "${pageContext.request.contextPath}/allSpaces/" + searchString;
+                                    }
+                                </script>
                             </div>
                         </form>
                     </li>

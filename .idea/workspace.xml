@@ -7,23 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0b0045e-1b67-48c2-b613-903a6becb572" name="Default" comment="Account page v1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/CoworkingSpaceController.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/controller/CoworkingSpaceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/NavigationController.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/controller/NavigationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/spr/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/spr/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/CoworkingSpaceController.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/CoworkingSpaceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/NavigationController.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/NavigationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/UserController.class" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/classes/com/spr/controller/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/spr/controller/NavigationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/spr/controller/NavigationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/allSpaces.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/allSpaces.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/navbar-after-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/allSpaces.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/allSpaces.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contact.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/contact.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/home_page_after_login.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/home_page_after_login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/my-account.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/my-account.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/navbar-after-login.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/navbar-after-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/view-space.jsp" afterPath="$PROJECT_DIR$/target/dpr-data/WEB-INF/pages/view-space.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dpr-data/resources/css/materialize.css" afterPath="$PROJECT_DIR$/target/dpr-data/resources/css/materialize.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -76,8 +61,8 @@
       <file leaf-file-name="NavigationController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/NavigationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.625">
-              <caret line="102" column="39" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.78640777">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1279,7 +1264,7 @@
       <workItem from="1516125770397" duration="1388000" />
       <workItem from="1516128261145" duration="1949000" />
       <workItem from="1516130237915" duration="1884000" />
-      <workItem from="1516132148174" duration="1408000" />
+      <workItem from="1516132148174" duration="1728000" />
     </task>
     <task id="LOCAL-00001" summary="try commit intellij">
       <created>1514556973225</created>
@@ -1413,7 +1398,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352213000" />
+    <option name="totallyTimeSpent" value="352533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="806" extended-state="6" />
@@ -1428,7 +1413,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64033616" sideWeight="0.48958334" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36635005" sideWeight="0.6791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36635005" sideWeight="0.6791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1436,7 +1421,7 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17552084" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.49166667" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.49166667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1892,8 +1877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spr/controller/NavigationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.625">
-          <caret line="102" column="39" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.78640777">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

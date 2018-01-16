@@ -76,6 +76,27 @@ public class NavigationController {
         ModelAndView model = new ModelAndView("allSpaces");
         model.addObject("cowSp", coworkingSpaces);
 
+        model.addObject("isLogged", isUserLogged(session, model));
+        return model;
+    }
+
+    @RequestMapping(value = {"/allSpaces/{query}"}, method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView filteredSpaces(@PathVariable("query") String query, HttpSession session) {
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getFilteredCoworkingSpaces(query);
+        ModelAndView model = new ModelAndView("allSpaces");
+        if (coworkingSpaces.size() == 0) {
+            coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+            model.addObject("message", "No coworkspaces found, please make another search");
+        }
+        model.addObject("cowSp", coworkingSpaces);
+        model.addObject("isLogged", isUserLogged(session, model));
+
+        return model;
+    }
+
+    boolean isUserLogged(HttpSession session, ModelAndView model) {
         boolean isLogged = false;
         String user;
         try {
@@ -88,21 +109,6 @@ public class NavigationController {
 
         }
 
-        model.addObject("isLogged", isLogged);
-        return model;
-    }
-
-    @RequestMapping(value = {"/allSpaces/{query}"}, method = RequestMethod.GET)
-    @ResponseBody
-    public ModelAndView filteredSpaces(@PathVariable("query") String query) {
-        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
-        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getFilteredCoworkingSpaces(query);
-        ModelAndView model = new ModelAndView("allSpaces");
-        if (coworkingSpaces.size() == 0) {
-            coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
-            model.addObject("message", "No coworkspaces found, please make another search");
-        }
-        model.addObject("cowSp", coworkingSpaces);
-        return model;
+        return isLogged;
     }
 }

@@ -288,7 +288,11 @@ public class CoworkingSpaceController {
     public ModelAndView viewSpace(@PathVariable Integer id,
                                   final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        CoworkingSpace cs = coworkingSpaces.get(id-1);
         ModelAndView mav = new ModelAndView("view-space");
+        mav.addObject("cs",cs);
 
         String message = "The coworkingSpace " + id + " was successfully deleted.";
 

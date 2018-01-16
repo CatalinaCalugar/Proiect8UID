@@ -156,14 +156,14 @@
                                     <li>
                                         <div class="collapsible-header">
                                             <i class="material-icons">lightbulb_outline</i>
-                                            First tip
+                                            First review
                                             <span class="badge">User 1</span></div>
                                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                                     </li>
                                     <li>
                                         <div class="collapsible-header">
                                             <i class="material-icons">lightbulb_outline</i>
-                                            Second tip
+                                            Second review
                                             <span class="badge">User 2</span></div>
                                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                                     </li>
@@ -181,14 +181,14 @@
                                     <li>
                                         <div class="collapsible-header">
                                             <i class="material-icons">question_answer</i>
-                                            First question
+                                            First review
                                             <span class="badge">User 1</span></div>
                                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                                     </li>
                                     <li>
                                         <div class="collapsible-header">
                                             <i class="material-icons">question_answer</i>
-                                            Second question
+                                            Second review
                                             <span class="badge">User 2</span></div>
                                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                                     </li>

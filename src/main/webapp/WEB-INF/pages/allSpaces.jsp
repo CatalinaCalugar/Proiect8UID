@@ -61,7 +61,7 @@
                             <p><a href="${pageContext.request.contextPath}/space/view/${count}">View Space</a></p>
                         </div>
                         <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i
+                        <span class="card-title grey-text text-darken-4">${cs.name}<i
                                 class="material-icons right">close</i></span>
                             <p>${cs.description}</p>
                         </div>

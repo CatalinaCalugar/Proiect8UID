@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="center">
-                    <a href="${pageContext.request.contextPath}/user/register.html" style="color: #00acc1">Forgot
+                    <a class="modal-trigger modal-action modal-close" href="#modalFP" style="color: #00acc1">Forgot
                         password?</a>
                 </div>
                 <br>
@@ -143,6 +143,30 @@
         </div>
     </div>
 
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+
+<!-- Modal Forgot Pass Structure -->
+<div id="modalFP" class="modal">
+    <div class="modal-content">
+        <h4>Forgot you password?</h4>
+        <form class="col s6" method="POST" commandName="user"
+              action="${pageContext.request.contextPath}/user/forgotPass.html">
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="fpEmail" name="fpEmail" type="email" class="validate" required="" aria-required="true">
+                    <label for="fpEmail">Write your email</label>
+                </div>
+            </div>
+
+            <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Send mail
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     </div>

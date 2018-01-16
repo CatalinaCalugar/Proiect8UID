@@ -294,4 +294,22 @@ public class UserController {
         return mav;
     }
 
+    @RequestMapping(value = "/forgotPass", method = RequestMethod.POST)
+    public ModelAndView forgotPass(@RequestParam("fpEmail") String userToBan,
+                                   final RedirectAttributes redirectAttributes, HttpSession session) {
+        String message;
+
+        ModelAndView modelAndView = new ModelAndView("index");
+
+        //send mail
+        message = "Check your email to reset your password";
+        modelAndView.addObject("message", message);
+        redirectAttributes.addFlashAttribute("message", message);
+
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        modelAndView.addObject("cowSp", coworkingSpaces);
+        return modelAndView;
+    }
+
 }

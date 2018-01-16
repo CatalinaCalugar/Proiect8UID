@@ -70,29 +70,30 @@
                 <c:set var="count" value="${count + 1}" scope="page"/>
             </c:forEach>
         </div>
+        <div class="center-align">
+            <a class="waves-effect waves-light btn" href="${pageContext.request.contextPath}/allSpaces.html">See all
+                spaces</a>
+        </div>
 
 </div>
 
-<div style=" padding-left:190px; padding-bottom: 20px">
-    <h3>My Google Map</h3>
-    <div id="map" class="center-align" style="width:940px; height:400px;">
+<div class="center-align" style="padding-bottom:40px">
+    <h3>Where you can find us:</h3>
+    <div id="map" style="width:940px; height:400px; margin: 0 auto 0 auto; padding-bottom: 40px">
         <script>
             function myMap() {
                 var mapOptions = {
                     center: new google.maps.LatLng(46.770439, 23.591423),
                     center: new google.maps.LatLng(46.770439, 23.591423),
-                    zoom: 10,
-                    mapTypeId: google.maps.MapTypeId.HYBRID
+                    zoom: 8,
                 }
                 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
             }
         </script>
         <script async defer
-                src="https://maps.googleapis.com/maps/api/js?callback=myMap">
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=myMap">
         </script>
     </div>
-</div>
-
 </div>
 
 <jsp:include page="footer.jsp"></jsp:include>

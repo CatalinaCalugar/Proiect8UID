@@ -40,15 +40,11 @@
     <iv class="w3-content w3-display-container">
         <div class="carousel carousel-slider center-align customCarusel" data-indicators="true">
             <a class="carousel-item center-align"><img class="customCarImg"
-                                                       src="/resources/images/genSp1.jpg"></a>
+                                                       src="/resources/images/spaceDetails1.jpg"></a>
             <a class="carousel-item center-align"><img class="customCarImg"
-                                                       src="/resources/images/genSp2.jpg"></a>
+                                                       src="/resources/images/spaceDetails2.jpg"></a>
             <a class="carousel-item center-align"><img class="customCarImg"
-                                                       src="/resources/images/genSp3.jpg"></a>
-            <a class="carousel-item center-align"><img class="customCarImg"
-                                                       src="/resources/images/genSp4.jpg"></a>
-            <a class="carousel-item center-align"><img class="customCarImg"
-                                                       src="/resources/images/genSp5.jpg"></a>
+                                                       src="/resources/images/spaceDetails3.jpg"></a>
         </div>
         <div style="width:100%;overflow: hidden;clear:both;padding-left: 100px;">
             <div style="width:60%;float:left;">

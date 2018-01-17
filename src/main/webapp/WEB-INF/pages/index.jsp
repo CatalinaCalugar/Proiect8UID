@@ -102,6 +102,33 @@
         </script>
     </div>
 </div>
+<br>
+<br>
+<div class="row">
+    <div class="center-align">
+        <div class="col s4">
+            <div class="center card-panel">
+                <img src="/resources/images/tips-tricks.png" width="300" height="225">
+
+                <p>Leave us a tip about your experience with our spaces!</p>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="center card-panel">
+                <img src="/resources/images/review.jpg" width="300" height="225">
+
+                <p>Write a review...</p>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="center card-panel">
+                <img src="/resources/images/qa.jpg" width="300" height="225">
+
+                <p>Or maybe ask some questions?</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <jsp:include page="footer.jsp"></jsp:include>
 

@@ -120,7 +120,7 @@ public class InitialSpacesFactory {
         c8.setOwnerPhone("0756843708");
         c9.setOwnerPhone("0756843709");
 
-        c1.setWebURL("www.space1.com");
+        c1.setWebURL("http://www.space1.com");
         c2.setWebURL("www.space2.com");
         c3.setWebURL("www.space3.com");
         c4.setWebURL("www.space4.com");

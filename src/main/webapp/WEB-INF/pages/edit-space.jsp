@@ -89,7 +89,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="webURL" name="webURL" type="url" class="validate"
-                                           value="${space.webURL}">
+                                           value="http://${space.webURL}">
                                     <label for="webURL">Website</label>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="facebookUrl" name="facebookUrl" type="url" class="validate"
-                                           value="${space.facebookUrl}">
+                                           value="http://${space.facebookUrl}">
                                     <label for="facebookUrl">Facebook URL</label>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="twitterUrl" name="twitterUrl" type="url" class="validate"
-                                           value="${space.twitterUrl}">
+                                           value="http://${space.twitterUrl}">
                                     <label for="twitterUrl">Twitter URL</label>
                                 </div>
                             </div>

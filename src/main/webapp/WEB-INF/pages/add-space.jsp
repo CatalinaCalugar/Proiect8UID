@@ -125,7 +125,7 @@
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="webURL" name="webURL" type="url" class="validate" required=""
+                            <input id="webURL" name="webURL" type="url" class="validate" required="" value="http://"
                                    aria-required="true">
                             <label for="webURL">Website</label>
                         </div>
@@ -133,7 +133,7 @@
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="facebookUrl" name="facebookUrl" type="url" class="validate" required=""
+                            <input id="facebookUrl" name="facebookUrl" type="url" class="validate" required="" value="http://"
                                    aria-required="true">
                             <label for="facebookUrl">Facebook URL</label>
                         </div>
@@ -141,7 +141,7 @@
                     <br>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="twitterUrl" name="twitterUrl" type="url" class="validate" required=""
+                            <input id="twitterUrl" name="twitterUrl" type="url" class="validate" required="" value="http://"
                                    aria-required="true">
                             <label for="twitterUrl">Twitter URL</label>
                         </div>

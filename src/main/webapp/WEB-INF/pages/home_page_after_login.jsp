@@ -40,7 +40,7 @@
         <br>
     </div>
 
-    <iv class="w3-content w3-display-container">
+    <div class="w3-content w3-display-container">
         <%--in div-ul asta is coloanele--%>
         <div style=" padding-left:190px;">
             <h3>Coworking spaces</h3>
@@ -74,36 +74,65 @@
             <a class="waves-effect waves-light btn" href="${pageContext.request.contextPath}/allSpaces.html">See all
                 spaces</a>
         </div>
-</div>
-
-
-<div class="center-align" style="padding-bottom:40px">
-    <h3>My Google Map</h3>
-    <div id="map" style="width:940px; height:400px; margin: 0 auto 0 auto; padding-bottom: 40px">
-        <script>
-            function myMap() {
-                var myLatLng = {lat: 46.770439, lng: 23.591423};
-                var mapOptions = {
-                    center: myLatLng,
-                    zoom: 8,
-                }
-
-                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    title: ''
-                });
-            }
-        </script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=myMap">
-        </script>
     </div>
-</div>
+
+
+    <div class="center-align" style="padding-bottom:40px">
+        <h3>My Google Map</h3>
+        <div id="map" style="width:940px; height:400px; margin: 0 auto 0 auto; padding-bottom: 40px">
+            <script>
+                function myMap() {
+                    var myLatLng = {lat: 46.770439, lng: 23.591423};
+                    var mapOptions = {
+                        center: myLatLng,
+                        zoom: 8,
+                    }
+
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title: ''
+                    });
+                }
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-g3ZM2QSUL_ABCvv1msN6LKfcMyx2Q0&callback=myMap">
+            </script>
+        </div>
+    </div>
 
 </div>
+
+
+<br>
+<br>
+<div class="row">
+    <div class="center-align">
+        <div class="col s4">
+            <div class="center card-panel">
+                <img src="/resources/images/tips-tricks.png" width="300" height="225">
+
+                <p>Leave us a tip about your experience with our spaces!</p>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="center card-panel">
+                <img src="/resources/images/review.jpg" width="300" height="225">
+
+                <p>Write a review...</p>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="center card-panel">
+                <img src="/resources/images/qa.jpg" width="300" height="225">
+
+                <p>Or maybe ask some questions?</p>
+            </div>
+        </div>
+    </div>
+</div>s
 
 <jsp:include page="footer.jsp"></jsp:include>
 

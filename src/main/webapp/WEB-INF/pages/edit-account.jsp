@@ -20,7 +20,7 @@
     <!--  Scripts-->
     <script src="/resources/js/materialize.js"></script>
     <script src="/resources/js/init.js"></script>
-    <title>Edit Accout Page</title>
+    <title>Edit Account Page</title>
 </head>
 <body>
 

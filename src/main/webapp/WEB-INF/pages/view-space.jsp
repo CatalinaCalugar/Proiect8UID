@@ -42,6 +42,7 @@
 </div>
 <h1 style="width: 100%; text-align: center;" class="header">${cs.name}</h1>
 <div class="row">
+    <h1 class="text-darken-4">${message}</h1>
     <iv class="w3-content w3-display-container">
         <div class="carousel carousel-slider center-align customCarusel" data-indicators="true">
             <a class="carousel-item center-align"><img class="customCarImg"
@@ -151,7 +152,8 @@
                                     </li>
                                 </ul>
                                 <div class="right-align">
-                                    <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a>
+                                    <a class="waves-effect waves-light btn-large modal-trigger" href="#modalReview"><i
+                                            class="material-icons">edit</i></a>
                                 </div>
                             </div>
 
@@ -175,7 +177,8 @@
                                     </li>
                                 </ul>
                                 <div class="right-align">
-                                    <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a>
+                                    <a class="waves-effect waves-light btn-large modal-trigger" href="#modalTip"><i
+                                            class="material-icons">edit</i></a>
                                 </div>
 
                             </div>
@@ -200,7 +203,8 @@
                                     </li>
                                 </ul>
                                 <div class="right-align">
-                                    <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a>
+                                    <a class="waves-effect waves-light btn-large modal-trigger" href="#modalQA"><i
+                                            class="material-icons">edit</i></a>
                                 </div>
 
                             </div>
@@ -261,53 +265,6 @@
     </iv>
 </div>
 
-<%--<!-- Modal Message Structure -->--%>
-<%--<div id="modalMessage" class="modal" style="height: auto">--%>
-<%--<div class="modal-content">--%>
-<%--<h2>Message us</h2>--%>
-<%--<div class="center-align">--%>
-<%--<form class="col s4">--%>
-
-<%--<div class="row">--%>
-<%--<div class="input-field col s6">--%>
-<%--<i class="material-icons prefix">person</i>--%>
-<%--<input id="name" type="text" class="validate" name="name" required=""--%>
-<%--aria-required="true">--%>
-<%--<label for="name" data-error="We would like to know with who we are talking to"--%>
-<%--data-success="Checked">Name</label>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="row">--%>
-<%--<div class="input-field col s6">--%>
-<%--<i class="material-icons prefix">email</i>--%>
-<%--<input id="emailM" name="emailM" type="email" class="validate" required="" aria-required="true">--%>
-<%--<label for="emailM" data-error="Email is not in the required format!"--%>
-<%--data-success="right">Email</label>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="row">--%>
-<%--<div class="input-field col s12">--%>
-<%--<i class="material-icons prefix">message</i>--%>
-<%--<textarea id="messageS" class="materialize-textarea" name="messageS" required="" aria-required="true"></textarea>--%>
-<%--<label for="messageS">Message</label>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<button--%>
-<%--class="waves-effect waves-light btn-large modal-trigger" data-target="#modalSuccess" >Message us--%>
-<%--<i class="material-icons right"></i>--%>
-<%--</button>--%>
-
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="modal-footer">--%>
-<%--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>--%>
-<%--</div>--%>
-<%--</div>--%>
-
 <div id="modalTest" class="modal" style="z-index: 1003; display: none; opacity: 0; transform: scaleX(0.7); top: 4%;">
     <div class="modal-content">
         <h2>Message us</h2>
@@ -359,18 +316,6 @@
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     </div>
 </div>
-<%--<!-- Modal Structure -->--%>
-<%--<div id="modalMessageSuccessH" class="modal"--%>
-<%--style="z-index: 1005; display: none; opacity: 0; transform: scaleX(0.7); top: 4%;">--%>
-<%--<div class="modal-content">--%>
-<%--<p>Your message was sent!</p>--%>
-<%--<p>We will contact you soon!</p>--%>
-<%--</div>--%>
-
-<%--<div class="modal-footer">--%>
-<%--<a href="javascript:history.go(0)" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>--%>
-<%--</div>--%>
-<%--</div>--%>
 
 <!-- Modal Schedule Structure -->
 <div id="modalSchedule" class="modal" style="height: auto">
@@ -568,10 +513,8 @@
         <h4>Invite users</h4>
         <form class="col s12" method="GET" commandName="user"
               action="${pageContext.request.contextPath}/space/invite/${currentSpID}.html">
-            <%--method="POST" commandName="user"&ndash;%&gt;--%>
-            <%--action="${pageContext.request.contextPath}/user/ban.html">--%>
             <h5>Insert the users you want to invite </h5>
-            <%--multiple="multiple" autofocus=""--%>
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">contact_mail</i>
@@ -597,168 +540,176 @@
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     </div>
 </div>
-<!-- Modal for invite
-<div id="modalInvitation" class="modal modalinivite" style="height: auto">
+
+<div id="modalReview" class="modal" style="z-index: 1003; display: none; opacity: 0; transform: scaleX(0.7); top: 4%;">
     <div class="modal-content">
-        <h2>Invite Memebers</h2>
+        <h2>Review us</h2>
         <div class="center-align">
-            <form class="col s4" >
-                <ul class="collapsible" data-collapsible="accordion">
+            <form id="formReview" class="col s4">
 
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="nameR" type="text" class="validate" name="nameR" required=""
+                               aria-required="true">
+                        <label for="nameR" data-error="We would like to know with who we are talking to"
+                               data-success="Nice to meet you">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="emailReview" name="emailReview" type="email" class="validate" required=""
+                               aria-required="true">
+                        <label for="emailReview" data-error="Email is not in the required format!"
+                               data-success="Good to go">Email</label>
+                    </div>
+                </div>
 
-                        <li>
+                <div class="row">
+                    <p>How many stars would you give us:</p>
+                    <i class="material-icons prefix">stars</i>
+                    <div class="input-field col s6">
+                        <p class="range-field">
+                            <input type="range" id="test5" min="0" max="5"/>
+                        </p>
+                    </div>
+                </div>
 
-                            <div class="collapsible-header">
-                                <h5>Add memeber</h5>
-                            </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="messageReview" class="materialize-textarea" name="messageReview" required=""
+                                  aria-required="true"></textarea>
+                        <label for="messageReview">Message</label>
+                    </div>
+                </div>
 
-                            <div class="collapsible-body">
-
-
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="emailR1" name="emailR" type="email" class="validate" required="" aria-required="true">
-                                        <label for="emailR1" data-error="Email is not in the required format!"
-                                               data-success="right">Email</label>
-                                    </div>
-                                </div>
-
-                            </div>
-                                <%--</form>--%>
-                        </li>
-
-
-                    <li>
-
-
-                        <div class="collapsible-header">
-                            <h5>Add memeber</h5>
-                        </div>
-
-                        <div class="collapsible-body">
-
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="emailR2" name="emailR" type="email" class="validate" required="" aria-required="true">
-                                    <label for="emailR2" data-error="Email is not in the required format!"
-                                           data-success="right">Email</label>
-                                </div>
-                            </div>
-                        </div>
-                        <%--</form>--%>
-                    </li>
-
-
-                    <li>
-
-
-                        <div class="collapsible-header">
-                            <h5>Add memeber</h5>
-                        </div>
-
-                        <div class="collapsible-body">
-
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="emailR3" name="emailR" type="email" class="validate" required="" aria-required="true">
-                                    <label for="emailR3" data-error="Email is not in the required format!"
-                                           data-success="right">Email</label>
-                                </div>
-                            </div>
-                        </div>
-                        <%--</form>--%>
-                    </li>
-
-
-                    <li>
-                        <div class="collapsible-header">
-                            <h5>Add memeber</h5>
-                        </div>
-
-                        <div class="collapsible-body">
-
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="emailR4" name="emailR" type="email" class="validate" required="" aria-required="true">
-                                    <label for="emailR4" data-error="Email is not in the required format!"
-                                           data-success="right">Email</label>
-                                </div>
-                            </div>
-                        </div>
-                        <%--</form>--%>
-                    </li>
-
-                    <li>
-                        <div class="collapsible-header">
-                            <h5>Add memeber</h5>
-                        </div>
-
-                        <div class="collapsible-body">
-
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="emailR5" name="emailR" type="email" class="validate" required="" aria-required="true">
-                                    <label for="emailR5" data-error="Email is not in the required format!"
-                                           data-success="right">Email</label>
-                                </div>
-                            </div>
-                        </div>
-                        <%--</form>--%>
-                    </li>
-
-                    <li>
-                        <div class="collapsible-header">
-                            <h5>Add memeber</h5>
-                        </div>
-
-                        <div class="collapsible-body">
-
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="emailR6" name="emailR" type="email" class="validate" required="" aria-required="true">
-                                    <label for="emailR6" data-error="Email is not in the required format!"
-                                           data-success="right">Email</label>
-                                </div>
-                            </div>
-                        </div>
-                        <%--</form>--%>
-                    </li>
-
-                </ul>
-
-                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Add
+                <div class="row">
+                    <button id="forReview"
+                            class="modal-action modal-open waves-effect waves-light btn modal-trigger"
+                            data-target="#modalMessageSuccessH">Send review
+                    </button>
                     <i class="material-icons right"></i>
-                </button>
+
+                </div>
 
             </form>
         </div>
     </div>
 
     <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat bclose">Close</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     </div>
-</div>-->
+</div>
+
+
+<div id="modalTip" class="modal" style="z-index: 1003; display: none; opacity: 0; transform: scaleX(0.7); top: 4%;">
+    <div class="modal-content">
+        <h2>Leave a tip or trick</h2>
+        <div class="center-align">
+            <form id="formTip" class="col s4">
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="nameT" type="text" class="validate" name="nameT" required=""
+                               aria-required="true">
+                        <label for="nameT" data-error="We would like to know with who we are talking to"
+                               data-success="Nice to meet you">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="emailTip" name="emailTip" type="email" class="validate" required=""
+                               aria-required="true">
+                        <label for="emailTip" data-error="Email is not in the required format!"
+                               data-success="Good to go">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="messageTip" class="materialize-textarea" name="messageTip" required=""
+                                  aria-required="true"></textarea>
+                        <label for="messageTip">Tip</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button id="forTip"
+                            class="modal-action modal-open waves-effect waves-light btn modal-trigger"
+                            data-target="#modalMessageSuccessH">Leave tip
+                    </button>
+                    <i class="material-icons right"></i>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+
+<div id="modalQA" class="modal" style="z-index: 1003; display: none; opacity: 0; transform: scaleX(0.7); top: 4%;">
+    <div class="modal-content">
+        <h2>Leave a question</h2>
+        <div class="center-align">
+            <form id="formQA" class="col s4">
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="nameQ" type="text" class="validate" name="nameQ" required=""
+                               aria-required="true">
+                        <label for="nameQ" data-error="We would like to know with who we are talking to"
+                               data-success="Nice to meet you">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="emailQ" name="emailQ" type="email" class="validate" required=""
+                               aria-required="true">
+                        <label for="emailQ" data-error="Email is not in the required format!"
+                               data-success="Good to go">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="messageQ" class="materialize-textarea" name="messageQ" required=""
+                                  aria-required="true"></textarea>
+                        <label for="messageQ">Question</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button id="forQ"
+                            class="modal-action modal-open waves-effect waves-light btn modal-trigger"
+                            data-target="#modalMessageSuccessH">Leave a question
+                    </button>
+                    <i class="material-icons right"></i>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
 
 <jsp:include page="footer.jsp"></jsp:include>
-<!--<script>
 
-
-
-    $(document).ready(function () {
-        $(".modalinivite").hide();
-    });
-</script>
-
-<script>
-    $(".bclose").click(function () {
-        $(".modalinivite").show();
-    });
-</script> -->
 <script language="JavaScript">
     $('.timepicker').pickatime({
         default: 'now', // Set default time: 'now', '1:30AM', '16:30'
@@ -793,111 +744,7 @@
         $('.modal').modal();
     });
 </script>
-
-<%--<script language="JavaScript">--%>
-<%--function openM() {--%>
-<%--$(document).ready(function () {--%>
-<%--$('#modalTest').modal('hide');--%>
-<%--$('#modalMessageSuccessH').modal('show');--%>
-<%--});--%>
-<%--}--%>
-<%--</script>--%>
 </body>
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

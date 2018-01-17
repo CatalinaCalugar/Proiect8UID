@@ -312,7 +312,7 @@
     <div class="modal-content">
         <h2>Message us</h2>
         <div class="center-align">
-            <form id="formMessage" class="col s4" method="GET" commandName="user"
+            <form id="formMessage" class="col s4" method="GET" commandName="space"
                   action="${pageContext.request.contextPath}/space/messageUs/${currentSpID}.html">
 
                 <div class="row">
@@ -377,7 +377,7 @@
     <div class="modal-content">
         <h2>Schedule tour</h2>
         <div class="center-align">
-            <form class="col s12" method="GET" commandName="user"
+            <form class="col s12" method="GET" commandName="space"
                   action="${pageContext.request.contextPath}/space/scheduleTour/${currentSpID}.html">
                 <div class="row">
                     <div class="input-field col s6">
@@ -566,7 +566,7 @@
 <div id="modalInvitation" class="modal">
     <div class="modal-content">
         <h4>Invite users</h4>
-        <form class="col s12" method="GET" commandName="user"
+        <form class="col s12" method="GET" commandName="space"
               action="${pageContext.request.contextPath}/space/invite/${currentSpID}.html">
             <%--method="POST" commandName="user"&ndash;%&gt;--%>
             <%--action="${pageContext.request.contextPath}/user/ban.html">--%>

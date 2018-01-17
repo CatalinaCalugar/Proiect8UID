@@ -433,7 +433,7 @@ public class CoworkingSpaceController {
     }
 
     @RequestMapping(value = "/invite/{id}", method = RequestMethod.GET)
-    public ModelAndView invite(@PathVariable Integer id, @PathVariable String email,
+    public ModelAndView invite(@PathVariable Integer id,
                                final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 
         InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
@@ -463,7 +463,7 @@ public class CoworkingSpaceController {
         return mav;
     }
 
-    @RequestMapping(value = "/reserve/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/pay/{id}", method = RequestMethod.GET)
     public ModelAndView reserve(@PathVariable Integer id,
                                 final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
 

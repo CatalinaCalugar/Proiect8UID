@@ -41,7 +41,7 @@
 <div class="row">
     <iv class="w3-content w3-display-container">
         <div style=" padding-left:190px;">
-            <h3>Contact us</h3>
+            <h1>Contact us</h1>
         </div>
 
         <div class="row" style="width:1000px; padding-left:80px">

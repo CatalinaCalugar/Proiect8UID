@@ -294,7 +294,7 @@ public class CoworkingSpaceController {
         ModelAndView mav = new ModelAndView("view-space");
         mav.addObject("cs", cs);
 
-        String message = "The coworkingSpace " + id + " was successfully deleted.";
+        String message = "";
         boolean isLogged = false;
         String user;
         try {
@@ -308,6 +308,7 @@ public class CoworkingSpaceController {
         }
 
         mav.addObject("isLogged", isLogged);
+        mav.addObject("currentSpID", id);
 
         redirectAttributes.addFlashAttribute("message", message);
         return mav;
@@ -366,6 +367,130 @@ public class CoworkingSpaceController {
             session.removeAttribute("addedOfficesList");
             session.setAttribute("addedOfficesList", offices);
         }
+        return mav;
+    }
+
+    @RequestMapping(value = "/messageUs/{id}", method = RequestMethod.GET)
+    public ModelAndView messageUs(@PathVariable Integer id,
+                                  final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        CoworkingSpace cs = coworkingSpaces.get(id - 1);
+        ModelAndView mav = new ModelAndView("view-space");
+        mav.addObject("cs", cs);
+
+        String message = "Message to space " + cs.getName() + " was successfully sent.";
+        boolean isLogged = false;
+        String user;
+        try {
+            user = (String) session.getAttribute("loggedUser");
+            if (user != null && user != "") {
+                isLogged = true;
+                mav.addObject("username", session.getAttribute("loggedUser"));
+            }
+        } catch (Exception e) {
+
+        }
+
+        mav.addObject("isLogged", isLogged);
+        mav.addObject("currentSpID", id);
+        mav.addObject("message", message);
+
+        redirectAttributes.addFlashAttribute("message", message);
+        return mav;
+    }
+
+    @RequestMapping(value = "/scheduleTour/{id}", method = RequestMethod.GET)
+    public ModelAndView scheduleTour(@PathVariable Integer id,
+                                     final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        CoworkingSpace cs = coworkingSpaces.get(id - 1);
+        ModelAndView mav = new ModelAndView("view-space");
+        mav.addObject("cs", cs);
+
+        String message = "Tour was scheduled at space " + cs.getName() + ".";
+        boolean isLogged = false;
+        String user;
+        try {
+            user = (String) session.getAttribute("loggedUser");
+            if (user != null && user != "") {
+                isLogged = true;
+                mav.addObject("username", session.getAttribute("loggedUser"));
+            }
+        } catch (Exception e) {
+
+        }
+
+        mav.addObject("isLogged", isLogged);
+        mav.addObject("currentSpID", id);
+        mav.addObject("message", message);
+
+        redirectAttributes.addFlashAttribute("message", message);
+        return mav;
+    }
+
+    @RequestMapping(value = "/invite/{id}", method = RequestMethod.GET)
+    public ModelAndView invite(@PathVariable Integer id, @PathVariable String email,
+                               final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        CoworkingSpace cs = coworkingSpaces.get(id - 1);
+        ModelAndView mav = new ModelAndView("view-space");
+        mav.addObject("cs", cs);
+
+        String message = "Invitation sent!";
+        boolean isLogged = false;
+        String user;
+        try {
+            user = (String) session.getAttribute("loggedUser");
+            if (user != null && user != "") {
+                isLogged = true;
+                mav.addObject("username", session.getAttribute("loggedUser"));
+            }
+        } catch (Exception e) {
+
+        }
+
+        mav.addObject("isLogged", isLogged);
+        mav.addObject("currentSpID", id);
+        mav.addObject("message", message);
+
+        redirectAttributes.addFlashAttribute("message", message);
+        return mav;
+    }
+
+    @RequestMapping(value = "/reserve/{id}", method = RequestMethod.GET)
+    public ModelAndView reserve(@PathVariable Integer id,
+                                final RedirectAttributes redirectAttributes, HttpSession session) throws CoworkingSpaceNotFound {
+
+        InitialSpacesFactory initialSpacesFactory = new InitialSpacesFactory();
+        List<CoworkingSpace> coworkingSpaces = initialSpacesFactory.getCoworkingSpaces();
+        CoworkingSpace cs = coworkingSpaces.get(id - 1);
+        ModelAndView mav = new ModelAndView("view-space");
+        mav.addObject("cs", cs);
+
+        String message = "Reservation to " + cs.getName() + " is made and payment is process by an external service";
+        boolean isLogged = false;
+        String user;
+        try {
+            user = (String) session.getAttribute("loggedUser");
+            if (user != null && user != "") {
+                isLogged = true;
+                mav.addObject("username", session.getAttribute("loggedUser"));
+            }
+        } catch (Exception e) {
+
+        }
+
+        mav.addObject("isLogged", isLogged);
+        mav.addObject("currentSpID", id);
+        mav.addObject("message", message);
+
+        redirectAttributes.addFlashAttribute("message", message);
         return mav;
     }
 }

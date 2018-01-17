@@ -35,6 +35,11 @@
         <jsp:include page="navbar-before-login.jsp"></jsp:include>
     </c:when>
 </c:choose>
+
+<div class="messages center-align">
+    <i class="teal-text" style="font-size: 30px;">${message}</i>
+    <br>
+</div>
 <h1 style="width: 100%; text-align: center;" class="header">${cs.name}</h1>
 <div class="row">
     <iv class="w3-content w3-display-container">
@@ -50,6 +55,8 @@
             <a class="carousel-item center-align"><img class="customCarImg"
                                                        src="/resources/images/genSp5.jpg"></a>
         </div>
+
+
         <div style="width:100%;overflow: hidden;clear:both;padding-left: 100px;">
             <div style="width:60%;float:left;">
 
@@ -87,7 +94,8 @@
                                             <p>Maximum Capacity: ${off.capacity} </p>
                                         </div>
                                         <div class="card-action">
-                                            <a class="waves-effect waves-light btn-large modal-trigger" href="#modalReservationOffice">Reserve</a>
+                                            <a class="waves-effect waves-light btn-large modal-trigger"
+                                               href="#modalReservationOffice">Reserve</a>
                                         </div>
                                     </div>
                                 </div>
@@ -308,7 +316,8 @@
     <div class="modal-content">
         <h2>Message us</h2>
         <div class="center-align">
-            <form id="formMessage" class="col s4">
+            <form id="formMessage" class="col s4" method="GET" commandName="user"
+                  action="${pageContext.request.contextPath}/space/messageUs/${currentSpID}.html">
 
                 <div class="row">
                     <div class="input-field col s6">
@@ -372,7 +381,8 @@
     <div class="modal-content">
         <h2>Schedule tour</h2>
         <div class="center-align">
-            <form class="col s4">
+            <form class="col s12" method="GET" commandName="user"
+                  action="${pageContext.request.contextPath}/space/scheduleTour/${currentSpID}.html">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -429,7 +439,8 @@
     <div class="modal-content">
         <h2>Reserve an office</h2>
         <div class="center-align">
-            <form class="col s4">
+            <form class="col s12" method="GET" commandName="user"
+                  action="${pageContext.request.contextPath}/space/pay/${currentSpID}.html">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -498,7 +509,7 @@
     <div class="modal-content">
         <h2>Make a reservation</h2>
         <div class="center-align">
-            <form class="col s4" >
+            <form class="col s4">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -509,7 +520,8 @@
 
                     <div class="input-field col s6">
                         <i class="material-icons prefix">email</i>
-                        <input id="emailR1" name="emailR" type="email" class="validate" required="" aria-required="true">
+                        <input id="emailR1" name="emailR" type="email" class="validate" required=""
+                               aria-required="true">
                         <label for="emailR1" data-error="Email is not in the required format!"
                                data-success="right">Email</label>
                     </div>
@@ -558,7 +570,8 @@
 <div id="modalInvitation" class="modal">
     <div class="modal-content">
         <h4>Invite users</h4>
-        <form id="emailFrm" class="col s12">
+        <form class="col s12" method="GET" commandName="user"
+              action="${pageContext.request.contextPath}/space/invite/${currentSpID}.html">
             <%--method="POST" commandName="user"&ndash;%&gt;--%>
             <%--action="${pageContext.request.contextPath}/user/ban.html">--%>
             <h5>Insert the users you want to invite </h5>
@@ -566,7 +579,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">contact_mail</i>
-                    <input type="email" multiple="multiple" autofocus="" id="mails" name="email" class="validate" required="" aria-required="true">
+                    <input type="email" multiple="multiple" autofocus="" id="mails" name="email" class="validate"
+                           required="" aria-required="true">
                     <label for="mails" data-error="Email is not in the required format!"
                            data-success="right">Email</label>
                 </div>
@@ -793,11 +807,6 @@
 <%--}--%>
 <%--</script>--%>
 </body>
-
-
-
-
-
 
 
 </html>

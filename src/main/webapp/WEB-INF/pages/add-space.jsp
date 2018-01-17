@@ -98,7 +98,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="description" rows="3" name="description"
-                                          class="materialize-textarea" required="" aria-required="true"></textarea>
+                                          class="materialize-textarea"></textarea>
                                 <label for="description">Description</label></div>
                         </div>
                         <br>
@@ -153,7 +153,7 @@
                     <h1>Select amenities for your space</h1>
                     <c:forEach items="${generalAmenities}" var="amenity">
                         <p>
-                            <input type="checkbox" id="${amenity}" name="" required="" aria-required="true"/>
+                            <input type="checkbox" id="${amenity}" name="" />
                             <label for="${amenity}">${amenity}</label>
                         </p>
                     </c:forEach>
@@ -289,7 +289,7 @@
 
                 <div id="photos-panel">
                     <h1>Add general photos of the space</h1>
-                    <form action="#">
+                    <%--<form action="#">--%>
                         <div class="file-field input-field">
                             <div class="btn">
                                 <span>Upload photos</span>
@@ -301,7 +301,7 @@
                                        placeholder="Upload one or more files" required="" aria-required="true">
                             </div>
                         </div>
-                    </form>
+                    <%--</form>--%>
 
                 </div>
 

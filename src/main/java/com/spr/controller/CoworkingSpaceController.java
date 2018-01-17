@@ -6,7 +6,10 @@ import com.spr.model.Office;
 import com.spr.utils.InitialSpacesFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -81,13 +84,13 @@ public class CoworkingSpaceController {
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView createNewCoworkingSpace(@ModelAttribute @Valid CoworkingSpace coworkingSpace, HttpServletResponse response,
-                                                BindingResult result, @RequestParam("type") Integer id,
+                                                BindingResult result,
                                                 final RedirectAttributes redirectAttributes, HttpSession session) {
 
         if (result.hasErrors())
             return new ModelAndView("add-space");
 
-        String message = "New coworkingSpace " + coworkingSpace.getId() + " was successfully created.";
+        String message = "New coworkingSpace " + coworkingSpace.getName().replaceAll(",", "") + " was successfully created.";
 
         ModelAndView mav = new ModelAndView("manage-space", "space", new CoworkingSpace());
         mav.addObject("username", session.getAttribute("loggedUser"));

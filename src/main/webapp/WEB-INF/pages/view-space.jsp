@@ -576,9 +576,8 @@
                 </div>
 
                 <div class="row">
-                    <p>How many stars would you give us:</p>
-                    <i class="material-icons prefix">stars</i>
                     <div class="input-field col s6">
+                        <p>How many stars would you give us?</p>
                         <p class="range-field">
                             <input type="range" id="test5" min="0" max="5"/>
                         </p>

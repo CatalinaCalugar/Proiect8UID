@@ -22,7 +22,8 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/resources/js/materialize.js"></script>
     <script src="/resources/js/init.js"></script>
-    <title>My Accout Page</title>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js" type="text/javascript"></script>
+    <title>My Account Page</title>
 </head>
 <body>
 
@@ -96,7 +97,6 @@
         </div>
         <img src="/resources/images/myAccountBackground.png" width="140%">
         <%--<jsp:include page="footer.jsp"></jsp:include>--%>
-
     </div>
 
 </div>

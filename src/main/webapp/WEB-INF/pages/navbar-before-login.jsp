@@ -107,7 +107,7 @@
 
                     <div class="input-field col s6">
                         <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
-                        <label for="email" data-error="Email is not in the required format!" data-success="right">Email</label>
+                        <label for="email" data-error="Email is not in the required format!" data-success="Good to go">Email</label>
                     </div>
                 </div>
 

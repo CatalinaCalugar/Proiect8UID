@@ -110,7 +110,7 @@
             <div class="center card-panel">
                 <img src="/resources/images/tips-tricks.png" width="300" height="225">
 
-                <p>Leave us a tip about your experience with our spaces!</p>
+                <p>Leave us a tip about your experience!</p>
             </div>
         </div>
         <div class="col s4">

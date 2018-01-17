@@ -51,13 +51,13 @@
                         <input id="contact_first_name" type="text" class="validate" name="first_name" required=""
                                aria-required="true">
                         <label for="contact_first_name" data-error="We would like to know with who we are talking to"
-                               data-success="Checked">First Name</label>
+                               data-success="">First Name</label>
                     </div>
                     <div class="input-field col s6">
                         <input id="contact_last_name" type="text" class="validate" name="last_name" required=""
                                aria-required="true">
                         <label for="contact_last_name" data-error="We would like to know with who we are talking to"
-                               data-success="Checked">Last Name</label>
+                               data-success="">Last Name</label>
                     </div>
                 </div>
                 <div class="row">
@@ -65,7 +65,7 @@
                         <input id="contact_email" type="email" class="validate" name="email" required=""
                                aria-required="true">
                         <label for="contact_email" data-error="E-mail is not in the right format. Try again!"
-                               data-success="Correct">Email</label>
+                               data-success="Good to go">Email</label>
                     </div>
                 </div>
 

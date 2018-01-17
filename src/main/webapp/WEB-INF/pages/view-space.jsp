@@ -222,7 +222,7 @@
                        id="scheduleTour"><i class="material-icons left">assignment</i>Schedule Tour</a>
 
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
-                       class="waves-effect waves-light btn-large modal-trigger" href="#modalMessage"
+                       class="waves-effect waves-light btn-large modal-trigger" href="#modalTest"
                        id="messageSpace"><i class="material-icons left">message</i>Message space</a>
 
                     <a style="margin-top: 100px; margin-left: 20px; margin-right: 20px; margin-bottom:30px;
@@ -257,12 +257,58 @@
     </iv>
 </div>
 
-<!-- Modal Message Structure -->
-<div id="modalMessage" class="modal" style="height: auto">
+<%--<!-- Modal Message Structure -->--%>
+<%--<div id="modalMessage" class="modal" style="height: auto">--%>
+<%--<div class="modal-content">--%>
+<%--<h2>Message us</h2>--%>
+<%--<div class="center-align">--%>
+<%--<form class="col s4">--%>
+
+<%--<div class="row">--%>
+<%--<div class="input-field col s6">--%>
+<%--<i class="material-icons prefix">person</i>--%>
+<%--<input id="name" type="text" class="validate" name="name" required=""--%>
+<%--aria-required="true">--%>
+<%--<label for="name" data-error="We would like to know with who we are talking to"--%>
+<%--data-success="Checked">Name</label>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--<div class="row">--%>
+<%--<div class="input-field col s6">--%>
+<%--<i class="material-icons prefix">email</i>--%>
+<%--<input id="emailM" name="emailM" type="email" class="validate" required="" aria-required="true">--%>
+<%--<label for="emailM" data-error="Email is not in the required format!"--%>
+<%--data-success="right">Email</label>--%>
+<%--</div>--%>
+<%--</div>--%>
+
+<%--<div class="row">--%>
+<%--<div class="input-field col s12">--%>
+<%--<i class="material-icons prefix">message</i>--%>
+<%--<textarea id="messageS" class="materialize-textarea" name="messageS" required="" aria-required="true"></textarea>--%>
+<%--<label for="messageS">Message</label>--%>
+<%--</div>--%>
+<%--</div>--%>
+
+<%--<button--%>
+<%--class="waves-effect waves-light btn-large modal-trigger" data-target="#modalSuccess" >Message us--%>
+<%--<i class="material-icons right"></i>--%>
+<%--</button>--%>
+
+<%--</form>--%>
+<%--</div>--%>
+<%--</div>--%>
+
+<%--<div class="modal-footer">--%>
+<%--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>--%>
+<%--</div>--%>
+<%--</div>--%>
+
+<div id="modalTest" class="modal" style="z-index: 1003; display: none; opacity: 0; transform: scaleX(0.7); top: 4%;">
     <div class="modal-content">
         <h2>Message us</h2>
         <div class="center-align">
-            <form class="col s4">
+            <form id="formMessage" class="col s4">
 
                 <div class="row">
                     <div class="input-field col s6">
@@ -270,7 +316,7 @@
                         <input id="name" type="text" class="validate" name="name" required=""
                                aria-required="true">
                         <label for="name" data-error="We would like to know with who we are talking to"
-                               data-success="Checked">Name</label>
+                               data-success="Nice to meet you">Name</label>
                     </div>
                 </div>
                 <div class="row">
@@ -278,21 +324,27 @@
                         <i class="material-icons prefix">email</i>
                         <input id="emailM" name="emailM" type="email" class="validate" required="" aria-required="true">
                         <label for="emailM" data-error="Email is not in the required format!"
-                               data-success="right">Email</label>
+                               data-success="Good to go">Email</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">message</i>
-                        <textarea id="messageS" class="materialize-textarea" name="messageS" required="" aria-required="true"></textarea>
+                        <textarea id="messageS" class="materialize-textarea" name="messageS" required=""
+                                  aria-required="true"></textarea>
                         <label for="messageS">Message</label>
                     </div>
                 </div>
 
-                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Message us
+                <div class="row">
+                    <button id="forMessageInside"
+                            class="modal-action modal-open waves-effect waves-light btn modal-trigger"
+                            data-target="#modalMessageSuccessH">Message us
+                    </button>
                     <i class="material-icons right"></i>
-                </button>
+
+                </div>
 
             </form>
         </div>
@@ -302,14 +354,25 @@
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     </div>
 </div>
+<%--<!-- Modal Structure -->--%>
+<%--<div id="modalMessageSuccessH" class="modal"--%>
+<%--style="z-index: 1005; display: none; opacity: 0; transform: scaleX(0.7); top: 4%;">--%>
+<%--<div class="modal-content">--%>
+<%--<p>Your message was sent!</p>--%>
+<%--<p>We will contact you soon!</p>--%>
+<%--</div>--%>
 
+<%--<div class="modal-footer">--%>
+<%--<a href="javascript:history.go(0)" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>--%>
+<%--</div>--%>
+<%--</div>--%>
 
 <!-- Modal Schedule Structure -->
 <div id="modalSchedule" class="modal" style="height: auto">
     <div class="modal-content">
         <h2>Schedule tour</h2>
         <div class="center-align">
-            <form class="col s4" >
+            <form class="col s4">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -322,7 +385,7 @@
                         <i class="material-icons prefix">email</i>
                         <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
                         <label for="email" data-error="Email is not in the required format!"
-                               data-success="right">Email</label>
+                               data-success="Good to go">Email</label>
                     </div>
                 </div>
 
@@ -366,7 +429,7 @@
     <div class="modal-content">
         <h2>Reserve an office</h2>
         <div class="center-align">
-            <form class="col s4" >
+            <form class="col s4">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -379,7 +442,7 @@
                         <i class="material-icons prefix">email</i>
                         <input id="emailR" name="emailR" type="email" class="validate" required="" aria-required="true">
                         <label for="emailR" data-error="Email is not in the required format!"
-                               data-success="right">Email</label>
+                               data-success="Good to go">Email</label>
                     </div>
                 </div>
 
@@ -720,6 +783,15 @@
         $('.modal').modal();
     });
 </script>
+
+<%--<script language="JavaScript">--%>
+<%--function openM() {--%>
+<%--$(document).ready(function () {--%>
+<%--$('#modalTest').modal('hide');--%>
+<%--$('#modalMessageSuccessH').modal('show');--%>
+<%--});--%>
+<%--}--%>
+<%--</script>--%>
 </body>
 
 

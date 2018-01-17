@@ -83,9 +83,11 @@
                                     <div class="card-stacked">
                                         <div class="card-content">
                                             <p>${off.name}</p>
+                                            <p>Price: ${off.price}</p>
+                                            <p>Maximum Capacity: ${off.capacity} </p>
                                         </div>
                                         <div class="card-action">
-                                            <a>Price: ${off.price}</a>
+                                            <a class="waves-effect waves-light btn-large modal-trigger" href="#modalReservationOffice">Reserve</a>
                                         </div>
                                     </div>
                                 </div>
@@ -210,6 +212,10 @@
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
                        class="waves-effect waves-light btn-large modal-trigger" href="#modalReservation"
                        id="makeAReservation"><i class="material-icons left">payment</i>Make a reservation</a>
+
+                    <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
+                       class="waves-effect waves-light btn-large modal-trigger" href="#modalInvitation"
+                       id="makeInvitation"><i class="material-icons left">group_add</i>Make an invitation</a>
 
                     <a style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 90%;"
                        class="waves-effect waves-light btn-large modal-trigger" href="#modalSchedule"
@@ -356,9 +362,9 @@
 </div>
 
 <!-- Modal Reservation Structure -->
-<div id="modalReservation" class="modal" style="height: auto">
+<div id="modalReservationOffice" class="modal" style="height: auto">
     <div class="modal-content">
-        <h2>Make a reservation</h2>
+        <h2>Reserve an office</h2>
         <div class="center-align">
             <form class="col s4" >
                 <div class="row">
@@ -380,7 +386,7 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">people</i>
-                        <input id="nrPeople" name="nrPeople" type="text" class="validate" required=""
+                        <input id="nrPeople" name="nrPeople" type="text" class="validate" required="" max="6"
                                aria-required="true">
                         <label for="nrPeople">Number of people</label>
                     </div>
@@ -420,12 +426,266 @@
     </div>
 
     <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat bclose">Close</a>
     </div>
 </div>
 
-<jsp:include page="footer.jsp"></jsp:include>
+<!-- Modal Reservation Structure -->
+<div id="modalReservation" class="modal" style="height: auto">
+    <div class="modal-content">
+        <h2>Make a reservation</h2>
+        <div class="center-align">
+            <form class="col s4" >
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="usernameR1" name="usernameR" type="text" class="validate" required=""
+                               aria-required="true">
+                        <label for="usernameR1">Username</label>
+                    </div>
 
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="emailR1" name="emailR" type="email" class="validate" required="" aria-required="true">
+                        <label for="emailR1" data-error="Email is not in the required format!"
+                               data-success="right">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <br>
+                        <i class="material-icons prefix">date_range</i>
+                        <input id="tp21" type="text" class="datepicker">
+                        <label for="tp21">Select date</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">schedule</i>
+                        <input id="days1" name="days" type="text" class="validate" required=""
+                               aria-required="true">
+                        <label for="days1">Duration</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="optMessage1" class="materialize-textarea" name="optMessage"></textarea>
+                        <label for="optMessage1">Optional message for us</label>
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Pay
+                    <i class="material-icons right"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat bclose">Close</a>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modalInvitation" class="modal">
+    <div class="modal-content">
+        <h4>Invite users</h4>
+        <form id="emailFrm" class="col s12">
+            <%--method="POST" commandName="user"&ndash;%&gt;--%>
+            <%--action="${pageContext.request.contextPath}/user/ban.html">--%>
+            <h5>Insert the users you want to invite </h5>
+            <%--multiple="multiple" autofocus=""--%>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">contact_mail</i>
+                    <input type="email" multiple="multiple" autofocus="" id="mails" name="email" class="validate" required="" aria-required="true">
+                    <label for="mails" data-error="Email is not in the required format!"
+                           data-success="right">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">message</i>
+                    <textarea id="inviteMessage" rows="3" name="inviteMessage"
+                              class="materialize-textarea"></textarea>
+                    <label for="inviteMessage">Send them an optional message</label></div>
+            </div>
+            <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Invite
+                <i class="material-icons right"></i>
+            </button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+<!-- Modal for invite
+<div id="modalInvitation" class="modal modalinivite" style="height: auto">
+    <div class="modal-content">
+        <h2>Invite Memebers</h2>
+        <div class="center-align">
+            <form class="col s4" >
+                <ul class="collapsible" data-collapsible="accordion">
+
+
+                        <li>
+
+                            <div class="collapsible-header">
+                                <h5>Add memeber</h5>
+                            </div>
+
+                            <div class="collapsible-body">
+
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="emailR1" name="emailR" type="email" class="validate" required="" aria-required="true">
+                                        <label for="emailR1" data-error="Email is not in the required format!"
+                                               data-success="right">Email</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                                <%--</form>--%>
+                        </li>
+
+
+                    <li>
+
+
+                        <div class="collapsible-header">
+                            <h5>Add memeber</h5>
+                        </div>
+
+                        <div class="collapsible-body">
+
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="emailR2" name="emailR" type="email" class="validate" required="" aria-required="true">
+                                    <label for="emailR2" data-error="Email is not in the required format!"
+                                           data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <%--</form>--%>
+                    </li>
+
+
+                    <li>
+
+
+                        <div class="collapsible-header">
+                            <h5>Add memeber</h5>
+                        </div>
+
+                        <div class="collapsible-body">
+
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="emailR3" name="emailR" type="email" class="validate" required="" aria-required="true">
+                                    <label for="emailR3" data-error="Email is not in the required format!"
+                                           data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <%--</form>--%>
+                    </li>
+
+
+                    <li>
+                        <div class="collapsible-header">
+                            <h5>Add memeber</h5>
+                        </div>
+
+                        <div class="collapsible-body">
+
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="emailR4" name="emailR" type="email" class="validate" required="" aria-required="true">
+                                    <label for="emailR4" data-error="Email is not in the required format!"
+                                           data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <%--</form>--%>
+                    </li>
+
+                    <li>
+                        <div class="collapsible-header">
+                            <h5>Add memeber</h5>
+                        </div>
+
+                        <div class="collapsible-body">
+
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="emailR5" name="emailR" type="email" class="validate" required="" aria-required="true">
+                                    <label for="emailR5" data-error="Email is not in the required format!"
+                                           data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <%--</form>--%>
+                    </li>
+
+                    <li>
+                        <div class="collapsible-header">
+                            <h5>Add memeber</h5>
+                        </div>
+
+                        <div class="collapsible-body">
+
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="emailR6" name="emailR" type="email" class="validate" required="" aria-required="true">
+                                    <label for="emailR6" data-error="Email is not in the required format!"
+                                           data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <%--</form>--%>
+                    </li>
+
+                </ul>
+
+                <button class="btn waves-effect waves-light waves-ripple" type="submit" name="action">Add
+                    <i class="material-icons right"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat bclose">Close</a>
+    </div>
+</div>-->
+
+<jsp:include page="footer.jsp"></jsp:include>
+<!--<script>
+
+
+
+    $(document).ready(function () {
+        $(".modalinivite").hide();
+    });
+</script>
+
+<script>
+    $(".bclose").click(function () {
+        $(".modalinivite").show();
+    });
+</script> -->
 <script language="JavaScript">
     $('.timepicker').pickatime({
         default: 'now', // Set default time: 'now', '1:30AM', '16:30'
@@ -461,4 +721,106 @@
     });
 </script>
 </body>
+
+
+
+
+
+
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

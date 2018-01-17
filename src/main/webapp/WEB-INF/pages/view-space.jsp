@@ -449,7 +449,8 @@
     <div class="modal-content">
         <h2>Make a reservation</h2>
         <div class="center-align">
-            <form class="col s4">
+            <form class="col s4" method="GET" commandName="user"
+                  action="${pageContext.request.contextPath}/space/pay/${currentSpID}.html">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>

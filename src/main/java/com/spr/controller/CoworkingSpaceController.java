@@ -3,6 +3,7 @@ package com.spr.controller;
 import com.spr.exception.CoworkingSpaceNotFound;
 import com.spr.model.CoworkingSpace;
 import com.spr.model.Office;
+import com.spr.model.User;
 import com.spr.utils.InitialSpacesFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -90,10 +91,20 @@ public class CoworkingSpaceController {
         if (result.hasErrors())
             return new ModelAndView("add-space");
 
-        String message = "New coworkingSpace " + coworkingSpace.getName().replaceAll(",", "") + " was successfully created.";
+        String message = "Space " + coworkingSpace.getName().replaceAll(",", "") + " was successfully created.";
 
-        ModelAndView mav = new ModelAndView("manage-space", "space", new CoworkingSpace());
+        ModelAndView mav = new ModelAndView("my-account", "user", new User());
         mav.addObject("username", session.getAttribute("loggedUser"));
+
+
+        List<String> userList = new ArrayList<>();
+        userList.add("mihai_Virgil@gmail.com");
+        userList.add("alina.gigel@yahoo.com");
+        userList.add("popescu-marcel@gmail.com");
+        userList.add("plic.sanzi@yahoo.com");
+
+        mav.addObject("userList", userList);
+
         List<CoworkingSpace> spaceList;
 
         try {

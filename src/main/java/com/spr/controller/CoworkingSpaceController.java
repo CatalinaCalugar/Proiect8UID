@@ -294,6 +294,11 @@ public class CoworkingSpaceController {
         ModelAndView mav = new ModelAndView("view-space");
         mav.addObject("cs", cs);
 
+        List<String> userReservations = new ArrayList<>();
+        userReservations.add("Grigorescu Team at 16:30 for 4 hours in 20.01.2018");
+        userReservations.add("Manastur HUB at 10:30 for 2 hours in 23.01.2018");
+        mav.addObject("userReservations", userReservations);
+
         String message = "";
         boolean isLogged = false;
         String user;
@@ -306,6 +311,7 @@ public class CoworkingSpaceController {
         } catch (Exception e) {
 
         }
+
 
         mav.addObject("isLogged", isLogged);
         mav.addObject("currentSpID", id);
@@ -392,6 +398,10 @@ public class CoworkingSpaceController {
         } catch (Exception e) {
 
         }
+        List<String> userReservations = new ArrayList<>();
+        userReservations.add("Grigorescu Team at 16:30 for 4 hours in 20.01.2018");
+        userReservations.add("Manastur HUB at 10:30 for 2 hours in 23.01.2018");
+        mav.addObject("userReservations", userReservations);
 
         mav.addObject("isLogged", isLogged);
         mav.addObject("currentSpID", id);
@@ -424,6 +434,10 @@ public class CoworkingSpaceController {
 
         }
 
+        List<String> userReservations = new ArrayList<>();
+        userReservations.add("Grigorescu Team at 16:30 for 4 hours in 20.01.2018");
+        userReservations.add("Manastur HUB at 10:30 for 2 hours in 23.01.2018");
+        mav.addObject("userReservations", userReservations);
         mav.addObject("isLogged", isLogged);
         mav.addObject("currentSpID", id);
         mav.addObject("message", message);
@@ -454,6 +468,10 @@ public class CoworkingSpaceController {
         } catch (Exception e) {
 
         }
+        List<String> userReservations = new ArrayList<>();
+        userReservations.add("Grigorescu Team at 16:30 for 4 hours in 20.01.2018");
+        userReservations.add("Manastur HUB at 10:30 for 2 hours in 23.01.2018");
+        mav.addObject("userReservations", userReservations);
 
         mav.addObject("isLogged", isLogged);
         mav.addObject("currentSpID", id);
@@ -485,6 +503,11 @@ public class CoworkingSpaceController {
         } catch (Exception e) {
 
         }
+
+        List<String> userReservations = new ArrayList<>();
+        userReservations.add("Grigorescu Team at 16:30 for 4 hours in 20.01.2018");
+        userReservations.add("Manastur HUB at 10:30 for 2 hours in 23.01.2018");
+        mav.addObject("userReservations", userReservations);
 
         mav.addObject("isLogged", isLogged);
         mav.addObject("currentSpID", id);

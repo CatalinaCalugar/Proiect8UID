@@ -514,6 +514,16 @@
         <form class="col s12" method="GET" commandName="space"
               action="${pageContext.request.contextPath}/space/invite/${currentSpID}.html">
             <h5>Insert the users you want to invite </h5>
+            <div class="row">
+                <div class="col s12">
+                    <c:forEach items="${userReservations}" var="res">
+                        <p>
+                            <input type="checkbox" name="reservations" id="${res}"/>
+                            <label for="${res}">${res}</label>
+                        </p>
+                    </c:forEach>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="input-field col s12">

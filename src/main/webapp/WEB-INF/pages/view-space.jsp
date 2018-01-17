@@ -42,7 +42,6 @@
 </div>
 <h1 style="width: 100%; text-align: center;" class="header">${cs.name}</h1>
 <div class="row">
-    <h1 class="text-darken-4">${message}</h1>
     <iv class="w3-content w3-display-container">
         <div class="carousel carousel-slider center-align customCarusel" data-indicators="true">
             <a class="carousel-item center-align"><img class="customCarImg"
